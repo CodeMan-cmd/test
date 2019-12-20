@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				width: 100px;
+				height: 100px;
+				background: red;
+				margin: 10px;
+			}
+		</style>
+		<!--defaultStatus默认文本-->
+		<script type="text/javascript">
+			window.onload = function() {
+				var oDiv = document.getElementsByTagName('div');
+				for(var i = 0; i < oDiv.length; i++) {
+					/*自定义属性*/
+					oDiv[i].timer = null;
+					oDiv[i].onmouseover = function() {
+						startMove(this, 400);
+					};
+					oDiv[i].onmouseout = function() {
+						startMove(this, 100);
+					};
+				};
+			};
+			function startMove(obj, iTarget) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function() {
+					var speed = (iTarget - obj.offsetWidth) / 6;
+					speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+					if(obj.offsetWidth == iTarget) {
+						clearInterval(timer);
+					} else {
+						/*动态赋值*/
+						obj.style.width = obj.offsetWidth + speed + 'px';
+					}
+				}, 30);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+
+</html>

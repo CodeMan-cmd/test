@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oTxt = document.getElementById('txt1');
+				var oBtn = document.getElementById('btn1');
+				var oBtn2 = document.getElementById('btn2');
+				
+				oBtn.onclick = function() {
+					/*开一个网页*/
+					/*window.open('about:blank','_self');*/
+					/*在现有网页*/
+					var oNewWin=window.open('about:blank');
+					oNewWin.document.write(oTxt.value);
+				};
+				
+			};
+		</script>
+	</head>
+
+	<body>
+		<textarea id="txt1" rows="10" cols="40"></textarea>
+		<input type="button" id="btn1" value="运行" />
+		<input type="button" id="btn2" value="关闭" />
+	</body>
+</html>

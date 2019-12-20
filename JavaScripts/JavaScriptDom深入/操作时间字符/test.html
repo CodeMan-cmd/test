@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				width: 300px;
+				height: 300px;
+				border: 1px solid red;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				/*一秒 每秒刷新一次*/
+				setInterval(function (){
+					var dates = document.getElementById('div1');
+					var oDates = new Date();
+					var oYear = oDates.getFullYear();
+					var oMonth = oDates.getMonth();
+					var oDate = oDates.getDate();
+					var oHours = oDates.getHours();
+					var oMinutes = oDates.getMinutes();
+					var oSeconds = oDates.getSeconds();
+					var oDay = oDates.getDay();
+					dates.innerHTML = oYear + '年' + oMonth + '月' + oDate + '日' + oHours + '时' + oMinutes + '分' + oSeconds + '秒' + oDay + '星期';
+				}, 1000);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="div1"></div>
+	</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oTab = document.getElementById('tab1');
+				var oLdColor = '';
+				for(var i = 0; i < oTab.tBodies[0].rows.length; i++) {
+					oTab.tBodies[0].rows[i].onmouseover = function() {
+						oLdColor = this.style.background;
+						this.style.background = 'green';
+					};
+					oTab.tBodies[0].rows[i].onmouseout = function() {
+						this.style.background = oLdColor;
+					};
+					if(i % 2) {
+						oTab.tBodies[0].rows[i].style.background = '';
+					} else {
+						oTab.tBodies[0].rows[i].style.background = '#ccc';
+					};
+				};
+			};
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<table border="1px" width="500px" id="tab1">
+				<thead>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年齡</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>mr-zhang</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>mr-li</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>mr-wang</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>mr-jia</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>mr-yi</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</body>
+
+</html>

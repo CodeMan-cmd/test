@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var str='apc xpc p3pc bpc s2pc tpc1 @#!@#~';
+			//var re=/[apx]pc/g;
+			//var re=/[a-z]pc/g;
+			
+			//var re=/[0-9]pc/g;
+			
+			var re=/[^0-9a-z]/g; //0到9a到z都不要 全部查看
+			alert(str.match(re));//apc,xpc,ppc
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html onclick="alert('html');">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				padding: 100px;
+			}
+		</style>
+	</head>
+	<body onclick="alert('body');">
+		<!--层级传递body-->
+		<div style="background: green;" onclick="alert(this.style.background)">
+			<!--层级传递到green-->
+			<div style="background: red;" onclick="alert(this.style.background)">
+				<!--层级传递到red-->
+				<div style="background: black;" onclick="alert(this.style.background)">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

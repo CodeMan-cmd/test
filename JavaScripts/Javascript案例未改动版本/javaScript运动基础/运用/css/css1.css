@@ -1,0 +1,44 @@
+			* {
+				margin: 0px;
+				padding: 0px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			#div11{
+				position: relative;
+				top: 100px;
+			}
+			#div2 {
+				height: 120px;
+				width: 400px;
+				border: 1px solid red;
+				/*相对定位*/
+				position: relative;
+				/*给一个元素中设置overflow:hidden,那么该元素的内容若超出了给定的宽度和高度属性,那么超出的部分将会被隐藏,不占位*/
+				overflow: hidden;
+			}
+			
+			#div2 ul li {
+				margin-top: 10px;
+				margin-left: 10px;
+				list-style: none;
+				float: left;
+			}
+			#div2 ul li img{
+				width: 120px;
+				height: 100px;
+			}
+			#playimages {
+				width: 400px;
+				height: 400px;
+				border: 1px solid red;
+				/*相对定位*/
+				position: relative;
+				/*给一个元素中设置overflow:hidden,那么该元素的内容若超出了给定的宽度和高度属性,那么超出的部分将会被隐藏,不占位*/
+				overflow: hidden;
+			}
+			
+			#div1 img {
+				border: 1px solid red;
+			}

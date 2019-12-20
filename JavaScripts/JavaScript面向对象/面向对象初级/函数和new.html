@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*构造概述*/
+			function createPerson(name, qq) {
+				/*系统偷偷给咱们做
+				 *var this=new Object();
+				 * */
+				this.name = name;
+				this.qq = qq;
+				this.showName = function() {
+					alert('我的名字\t' + this.name);
+				}
+				this.showqq = function() {
+					alert('我的qq\t' + this.qq);
+				}
+				/*
+				 * 出厂
+				 * return obj,obj2;
+				 * */
+			};
+
+			var obj = new createPerson('张三', '123');
+			var obj2 = new createPerson('里斯', '321');
+			/*对比对象*/
+			alert(obj.showName==obj2.showName);
+			/*对比对象里面方法*/
+			alert(obj.showName()==obj2.showName());
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

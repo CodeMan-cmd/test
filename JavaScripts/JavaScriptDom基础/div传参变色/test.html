@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1 {
+				width: 200px;
+				height: 200px;
+				background: red;
+			}
+		</style>
+		<script>
+			function show(color) {
+				var oDiv = document.getElementById('div1');
+				oDiv.style.background = color;
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="变绿" onclick="show('green')" />
+		<input type="button" value="变黄" onclick="show('yellow')" />
+		<input type="button" value="变黑" onclick="show('black')" />
+		<div id="div1">div1</div>
+		
+	</body>
+
+</html>

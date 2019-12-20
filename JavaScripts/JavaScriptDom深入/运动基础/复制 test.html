@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			#div1 {
+				width: 800px;
+				height: 200px;
+				background: black;
+				/*相对定位*/
+				position: relative;
+				/*给一个元素中设置overflow:hidden,那么该元素的内容若超出了给定的宽度和高度属性,那么超出的部分将会被隐藏,不占位*/
+				overflow: hidden;
+			}
+			
+			#div1 ul {
+				/*相对于浏览器的绝对定位*/
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			
+			#div1 ul li {
+				margin-left: 7px;
+				width: 200px;
+				height: 200px;
+				border: 1px solid beige;
+				list-style: none;
+				float: left;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var oDiv = document.getElementById('div1');
+				var oUl = document.getElementsByTagName('ul')[0];
+				var oLi = document.getElementsByTagName('li');
+				var speed=2;
+				/*复制出一个ul的全部*/
+				oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+				/*计算出ul长度*/
+				oUl.style.width = (oLi[0].offsetWidth * oLi.length) + (7 * oLi.length) + 'px';
+				function times() {
+					/*oUl的left宽度 小于 -oUl的宽度 能除以二 就让 oUl的left宽度回复成0*/
+					if(oUl.offsetLeft < -oUl.offsetWidth / 2) {
+						oUl.style.left = '0';
+					};
+					if(oUl.offsetLeft > 0) {
+						oUl.style.left = -oUl.offsetWidth / 2 + 'px';
+					};
+					oUl.style.left = oUl.offsetLeft + speed + 'px';
+				};
+				/*启动 times 并且保存设置变量timer*/
+				var timer = setInterval(times, 30);
+				/*移动oDiv 关闭timer*/
+				oDiv.onmouseover = function() {
+					clearInterval(timer);
+				};
+				/*失去oDiv 启动times*/
+				oDiv.onmouseout = function() {
+					timer = setInterval(times, 30);
+				};
+				/*向左*/
+				document.getElementsByTagName('a')[0].onclick=function(){
+					speed=-2;
+				}
+				/*向右*/
+				document.getElementsByTagName('a')[1].onclick=function(){
+					speed=2;
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<a href="javascript:;">向左走</a>
+			<a href="javascript:;">向右走</a>
+			<div id="div1">
+				<ul>
+					<li><img src="img/01.gif" /></li>
+					<li><img src="img/02.gif" /></li>
+					<li><img src="img/03.gif" /></li>
+					<li><img src="img/04.gif" /></li>
+					<li><img src="img/05.gif" /></li>
+					<li><img src="img/06.gif" /></li>
+				</ul>
+			</div>
+		</center>
+	</body>
+
+</html>

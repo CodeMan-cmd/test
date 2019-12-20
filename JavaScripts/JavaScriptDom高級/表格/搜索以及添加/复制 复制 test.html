@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oName = document.getElementById('name');
+				var oAge = document.getElementById('age');
+				var oBtn = document.getElementById('btn1');
+				var oTab = document.getElementById('tab1');
+				var id = oTab.tBodies[0].rows.length + 1;
+				oBtn.onclick = function() {
+					var oTr = document.createElement('tr');
+
+					var oTd = document.createElement('td');
+					oTd.innerHTML = id++;
+					oTr.appendChild(oTd);
+
+					var oTd = document.createElement('td');
+					oTd.innerHTML = oName.value;
+					oTr.appendChild(oTd);
+
+					var oTd = document.createElement('td');
+					oTd.innerHTML = oAge.value;
+					oTr.appendChild(oTd);
+
+					var oTd = document.createElement('td');
+					oTd.innerHTML = "<a href='javascript:;'>删除</a>"
+					oTr.appendChild(oTd);
+
+					oTd.getElementsByTagName('a')[0].onclick = function() {
+						/*删除a-li-ul*/
+						if(oTab.tBodies[0].removeChild(this.parentNode.parentNode)) {
+							show();
+						};
+					};
+					oTab.tBodies[0].appendChild(oTr);
+				};
+				var oBtn2 = document.getElementById('btn2');
+				var oTxt = document.getElementById('search');
+				oBtn2.onclick = function() {
+					for(var i = 0; i < oTab.tBodies[0].rows.length; i++) {
+						/*toLowerCase() 忽略大小写都转小写*/
+						var sTab=oTab.tBodies[0].rows[i].cells[1].innerHTML.toLowerCase();
+						var sTxt=oTxt.value.toLowerCase();
+						//找到返回数组位置 如果没找到返回-1 空返回0
+						if(sTab.search(sTxt)!=-1) {
+							oTab.tBodies[0].rows[i].style.background = 'yellow';
+						}else if(sTab.search(sTxt)==-1){
+							oTab.tBodies[0].rows[i].style.background = '';
+						}
+					};
+				};
+			};
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<input type="text" id="search" />
+			<input type="button" id="btn2" value="搜索" /><br/>
+			<input type="text" id="name" />
+			<input type="text" id="age" />
+			<input type="button" id="btn1" value="提交" />
+			<table border="1px" width="500px" id="tab1">
+				<thead>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年齡</td>
+					<td>操作</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Mr-zhang</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>mr-li</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>mr-wang</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>mr-jia</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>mr-yi</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>mr-jia</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>mr-yi</td>
+						<td>1</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</body>
+
+</html>

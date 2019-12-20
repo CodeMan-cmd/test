@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div2 {
+				width: 200px;
+				height: 200px;
+				background: green;
+			}
+		</style>
+		<script>
+			function setStyle(property, value, value2) {
+				var oDiv = document.getElementById('div2');
+				if(oDiv.style.width == '200px' || oDiv.style.height == '200px') {
+					oDiv.style[property] = value;
+					oDiv.style[property] = value;
+				} else {
+					oDiv.style[property] = value2;
+					oDiv.style[property] = value2;
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="变宽" onclick="setStyle('width','400px','200px')" />
+		<input type="button" value="变高" onclick="setStyle('height','400px','200px')" />
+		<div id="div2">div2</div>
+	</body>
+
+</html>

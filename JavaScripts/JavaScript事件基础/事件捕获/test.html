@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var obtn=document.getElementById('btn1');
+				obtn.onclick=function(){
+					alert(1);
+				}
+				//ie兼容 火狐
+				obtn.setCapture();
+			};
+		</script>
+	</head>
+	<body>
+		<input id="btn1" type="button" value="按钮" />
+	</body>
+</html>

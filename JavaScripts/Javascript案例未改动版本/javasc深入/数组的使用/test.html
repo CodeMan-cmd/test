@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var arr = [1, 2, 3, 4, 5, 6];
+			//刪除：splice(起点 长度)
+			arr.splice(2,3);
+			//插入：splice(起点 长度 元素···)
+			arr.splice(2,0,'11','22');
+			//修改：splice(起点 长度 元素)
+			arr.splice(2,2,'a','b');
+			//尾部添加
+			arr.push(10);
+			//尾部删除
+			arr.pop();
+			alert(arr);
+			
+			//数组连接
+			var a=[1,2,3];
+			var b=[4,5,6];
+			alert(a.concat(b));
+			
+			//join数组分隔符
+			var arr=[1,2,3,4,5];
+			var a=arr.join('👉');
+			alert(a);
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

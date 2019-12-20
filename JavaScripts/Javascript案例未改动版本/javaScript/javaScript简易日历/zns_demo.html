@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				//moz火狐不允许别人复制
+				-moz-user-select: none;
+				/*火狐*/
+				-webkit-user-select: none;
+				/*webkit浏览器*/
+				-ms-user-select: none;
+				/*IE10*/
+				-khtml-user-select: none;
+				/*早期浏览器*/
+				user-select: none;
+			}
+			
+			div ul li {
+				width: 70px;
+				height: 60px;
+				background: #2C2A25;
+				margin: 11px;
+				list-style-type: none;
+				color: beige;
+				float: left;
+			}
+			
+			.active {
+				background: beige;
+				color: red;
+			}
+			
+			#tab {
+				margin-top: 100px;
+				width: 277px;
+				height: 500px;
+				background: #DFEDE7;
+			}
+			
+			.text {
+				float: left;
+				width: 250px;
+				height: 150px;
+				margin-left: 12px;
+				border: 2px solid #F3FAF3;
+				background: #F1F5F1;
+			}
+			
+			.ac {
+				float: left;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var arr = [
+					'1月份好主人！陪主人看雪花！',
+					'2月份好主人！陪主人做雪人！',
+					'3月份好主人！陪主人看烟花！',
+					'4月份好主人！陪主人放孔明灯！',
+					'5月份好主人！陪主人睡觉哈哈！',
+					'6月份好主人！陪主人吃粽子！',
+					'7月份好主人！陪主人钓鱼！',
+					'8月份好主人！陪主人旅游！',
+					'9月份好主人！陪主人吃月饼！',
+					'10月份好主人！陪主人看电影',
+					'11月份好主人！迟来十一月秋风吹。散落一地的记忆，黄花落叶是写不尽的诗意，驻守观望，那一片空旷的蹈田还有谁在守望。思念如潮起，终有潮落时。',
+					'12月份好主人！天外飞仙来喝彩，恭贺新婚百花开。汩汩暖流奔入海，点点滴滴都是爱。洞房花烛沙漏快，红绡帐里谁更坏。地老天荒这一拜，天上人间不分开'
+				];
+				var oDiv = document.getElementById('tab');
+				var ali = oDiv.getElementsByTagName('li');
+				var oTxt = oDiv.getElementsByTagName('div')[0];
+				for(var i = 0; i < ali.length; i++) {
+					ali[i].index = i;
+					ali[i].onclick = function() {
+						for(var i = 0; i < ali.length; i++) {
+							ali[i].className = '';
+						}
+						this.className = 'active';
+						oTxt.innerHTML='<h2 class="ac">'+(this.index+1)+'月份</h2><p class="ac">'+arr[this.index]+'</p>';
+					};
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<div id="tab" class="calendar">
+				<ul>
+					<li class="active">
+						<h2>1</h2>
+						<p>JAN</p>
+					</li>
+					<li>
+						<h2>2</h2>
+						<p>FER</p>
+					</li>
+					<li>
+						<h2>3</h2>
+						<p>MAR</p>
+					</li>
+					<li>
+						<h2>4</h2>
+						<p>APR</p>
+					</li>
+					<li>
+						<h2>5</h2>
+						<p>MAY</p>
+					</li>
+					<li>
+						<h2>6</h2>
+						<p>JUN</p>
+					</li>
+					<li>
+						<h2>7</h2>
+						<p>JUL</p>
+					</li>
+					<li>
+						<h2>8</h2>
+						<p>AUG</p>
+					</li>
+					<li>
+						<h2>9</h2>
+						<p>SEP</p>
+					</li>
+					<li>
+						<h2>10</h2>
+						<p>OCT</p>
+					</li>
+					<li>
+						<h2>11</h2>
+						<p>NOV</p>
+					</li>
+					<li>
+						<h2>12</h2>
+						<p>DEC</p>
+					</li>
+				</ul>
+				<div class="text">
+					<h2 class="ac">1月活动</h2><br/><br/>
+					<p class="ac">1月份好主人！陪主人看雪花！</p>
+				</div>
+			</div>
+		</center>
+	</body>
+
+</html>

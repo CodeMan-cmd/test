@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				margin: 10px;
+				background: red;
+				opacity: 0.3;
+			}
+		</style>
+		<script>
+			/*让浏览器让文档执行后在执行Javascript 一下函数*/
+			window.onload = function() {
+				/*获取集合div*/
+				var aDiv = document.getElementsByTagName('div');
+				/*循环div长度从0开始*/
+				for(var i = 0; i < aDiv.length; i++) {
+					/*为了alpha不被抢*/
+					aDiv[i].alpha = 30;
+					/*浮动上去如果获取的是第一个*/
+					aDiv[i].onmouseover = function() {
+						/*startMove（第aDiv[i].onmouseover个div，itarget）*/
+						/*this就是浮上去后的div*/
+						startMove(this, 100);
+					};
+					/*startMove（第aDiv[i].onmouseout个div，itarget）*/
+					/*this就是离开后的div*/
+					aDiv[i].onmouseout = function() {
+						startMove(this, 30);
+					};
+				};
+			};
+			/*设置固定透明度*/
+			/*var alpha=30;*/
+			function startMove(obj, itarget) {
+				clearInterval(obj.timer);
+				obj.timer = setInterval(function() {
+					/*如果alpha等于了目标点*/
+					if(obj.alpha == itarget) {
+						/*关闭定时器*/
+						clearInterval(obj.timer);
+					} else {
+						/*目标减去alpha除以6的速度*/
+						var speed = (itarget - obj.alpha) / 6;
+						/*速度取一个整数大于0向上 小于0的时候向下*/
+						speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+						/*alpha加上speed 原本的透明度（-）或者是（+）*/
+						obj.alpha += speed;
+						/*透明度赋值ie浏览器算法*/
+						obj.style.filter = "alpha(opacity:+'+obj.alpha+')";
+						/*透明度赋值主流浏览器算法*/
+						obj.style.opacity = obj.alpha / 100;
+					};
+				}, 30);
+			};
+		</script>
+	</head>
+
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+
+</html>

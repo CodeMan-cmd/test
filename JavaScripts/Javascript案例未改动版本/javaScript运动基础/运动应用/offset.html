@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 200px;
+				height: 100px;
+				background: red;
+				border: 200px solid black;
+			}
+		</style>
+		<script>
+			function getStyle(obj,name){
+				/*当前样式currentStyle*/
+				if (obj.currentStyle) {
+					return obj.currentStyle[name];
+				} else{
+					/*获取计算样式getComputedStyle*/
+					return getComputedStyle(obj,false)[name];
+				}
+			};
+			setInterval(function(){
+				var oDiv=document.getElementById('div1');
+				var cur=parseInt(getStyle(oDiv,'width'));
+				/*offsetWidth会考虑到盒模型有关的所有宽*/
+				/*oDiv.style.width=oDiv.offsetWidth-1+'px';*/
+				/*就只会读取到行间样式*/
+				/*oDiv.style.width=parseInt(oDiv.style.width)-1+'px';*/
+				oDiv.style.width=cur-1+'px';
+			},30);
+		</script>
+	</head>
+	<body>
+		<div id="div1" style="width: 200px;"></div>
+	</body>
+</html>

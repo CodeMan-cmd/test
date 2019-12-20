@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				
+				var oUl=document.getElementById('ull');
+				
+				/*firstElementChild获取子节点 的第一个 标签*/
+				if(oUl.firstElementChild){
+					oUl.firstElementChild.style.background='red';
+				}else{
+					oUl.firstChild.style.background='red';
+				};
+				
+				/*lastElementChild获取子节点 尾部标签 */
+				if(oUl.lastElementChild){
+					oUl.lastElementChild.style.background='red';
+				}else{
+					oUl.lastChild.style.background='red';
+				};
+				
+				/*nextElementSibling*/
+				if (oUl.nextElementSibling) {
+					oUl.nextElementSibling.style.background='red';
+				} else{
+					oUl.nextSibling.style.background='red';
+				};
+				
+				/*previousElementSibling*/
+				if (oUl.previousElementSibling) {
+					oUl.previousElementSibling.style.background='green';
+				} else{
+					oUl.previousSibling.style.background='green';
+				};
+			};
+		</script>
+	</head>
+	<body>
+		<ul id="ull">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<ul><li>1</li></ul>
+		<ul><li>2</li></ul>
+		<ul><li>3</li></ul>
+	</body>
+</html>

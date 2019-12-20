@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oTxt1 = document.getElementById('txt1');
+				var oTxt2 = document.getElementById('txt2');
+				var oBtn = document.getElementById('btn1');
+				
+				oBtn.onclick=function(){
+					/*.+任意个任意字符*/
+					/*<[^<>]>除了尖括号*/
+					///<[^<>]+>/g; 查询出尖括号  但是里面没有尖括号    的并且使任意字符    查询所有字符   
+					var re=/<[^<>]+>/g;
+					/*replace跟换成空*/
+					oTxt2.value=oTxt1.value.replace(re,'');
+					
+				};
+			}
+		</script>
+	</head>
+
+	<body>
+		<textarea id="txt1" rows="10" cols="40"></textarea>
+		<input type="button" id="btn1" value="转换" />
+		<textarea id="txt2" rows="10" cols="40"></textarea>
+	</body>
+
+</html>

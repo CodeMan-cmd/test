@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			
+			body {
+				background: black;
+			}
+			
+			#div1 {
+				width: 666px;
+				background: black;
+				color: #475579;
+				font-size: 100px;
+				margin-top: 333px;
+				padding: 20px;
+				border-radius: 70px;
+				box-shadow: 0px 0px 50px #4B9B75 inset, -6px -6px 100px #0C7751;
+			}
+			
+			#div3 {
+				color: #F59809;
+				font-size: 20px;
+				position: absolute;
+				bottom: 450px;
+				left: 600px;
+			}
+			#div2 {
+				color: #475579;
+				font-size: 80px;
+				position: absolute;
+				bottom: 410px;
+				left: 500px;
+				animation: myfirst 3s;
+			}
+			
+			@keyframes myfirst {
+				0% {
+					transform: translateY(0px);
+				}
+				50% {
+					transform: translateY(-10px);
+				}
+				100% {
+					transform: translateY(0px);
+				}
+			}
+			
+			#div2:hover {
+				transform: translateY(-10px);
+			}
+			
+			#div2 {
+				animation-iteration-count: 2;
+			}
+		</style>
+		<script>
+			function toDou() {
+				if(arguments[0] < 10) {
+					return '0' + arguments[0];
+				} else {
+					return '' + arguments[0];
+				};
+			};
+			window.onload = function() {
+				function tick() {
+					var aSpan = document.getElementsByTagName('span');
+					var oDate = new Date();
+					var str = toDou(oDate.getHours()) + toDou(oDate.getMinutes()) + toDou(oDate.getSeconds());
+					for(var i = 0; i < aSpan.length; i++) {
+						aSpan[i].innerHTML = str[i];
+					}
+					setInterval(tick, 1000);
+				}
+				tick()
+			};
+
+			function toBottom() {
+				var aDiv = document.getElementById('div2');
+				var aDiv2 = document.getElementById('div3');
+				aDiv2.innerHTML = "主人我是你的时钟！";
+			}
+
+			function toRed() {
+				var aDiv = document.getElementById('div2');
+				var aDiv2 = document.getElementById('div3');
+				aDiv2.innerHTML = "";
+			}
+		</script>
+	</head>
+
+	<body>
+		<center>
+			<div id="div2" onmouseover="toBottom()" onmouseout="toRed()">😘</div>
+			<div id="div3"></div>
+			<div id="div1">
+				<span>0</span>
+				<span>0</span>&nbsp;:
+				<span>0</span>
+				<span>0</span>&nbsp;:
+				<span>0</span>
+				<span>0</span>
+			</div>
+		</center>
+	</body>
+
+</html>

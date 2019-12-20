@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				document.onclick=function(ev){
+					/*鼠标点击的位置坐标   横坐标  和 纵坐标*/
+					/*IE*/
+					/*alert(event.clientX+'，'+event.clientY);*/
+					
+					/*火狐*/
+					/*alert(ev.clientX+','+ev.clientY);*/
+									
+					/*修复兼容性*/
+					var oEvent=ev||event;
+					alert(oEvent.clientX+','+oEvent.clientY);
+				}
+			};
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

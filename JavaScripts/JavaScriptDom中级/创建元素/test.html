@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oBtn = document.getElementById('btn1');
+				var oUl = document.getElementById('ull');
+				var oText = document.getElementById('text');
+
+				oBtn.onclick = function() {
+					/*生成出li*/
+					var oLi = document.createElement('li');
+					/*给oli设置文字*/
+					oLi.innerHTML = oText.value;
+					/*父级.appendChild(子节点) 这个属性是插入到末尾*/
+					oUl.appendChild(oLi);
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<input type="text" id="text" />
+		<input type='button' id="btn1" value='创建li' />
+		<ul id="ull">
+		</ul>
+	</body>
+
+</html>

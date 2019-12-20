@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function show(a,b){
+				alert('this是'+this+'\na是:'+a+'\nb是:'+b);
+			}
+			/*可以改变show里面的this*/
+			//show(1,2);
+			show.call('abc',1,2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

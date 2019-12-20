@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*数组排序*/
+			/*var arr=['float','width','alpha','zoom','left'];
+			arr.sort();
+			alert(arr);*/
+			
+			/*sort这个函数返回2个函数*/
+			var arr = [12, 8, 99, 112,12,4];
+			arr.sort(function() {
+				//减出来 正负相等 进行排序
+				return arguments[0]-arguments[1];
+			/*	if(arguments[0] < arguments[1]) {
+					return -1; //表示小
+				} else if(arguments[0] > arguments[1]) {
+					return 1; //表示大
+				} else {
+					return 0; //表示相等
+				}*/ 
+			});
+			alert(arr);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

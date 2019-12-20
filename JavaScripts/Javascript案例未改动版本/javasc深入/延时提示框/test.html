@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div {
+				float: left;
+				margin: 10px;
+			}
+			
+			#div1 {
+				width: 50px;
+				height: 50px;
+				background: red;
+			}
+			
+			#div2 {
+				width: 250px;
+				height: 180px;
+				background: #CCCCCC;
+				display: none;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var oDiv1 = document.getElementById('div1');
+				var oDiv2 = document.getElementById('div2');
+				var timer1 = null;
+				var timer2 = null;
+				
+				/*移动上oDiv1显示  移动上oDiv1关闭timer2两个隐藏*/
+				oDiv1.onmouseover = function() {
+					clearTimeout(timer2);
+					oDiv2.style.display = 'block';
+				};
+				
+				/*失去oDiv1隐藏 延迟一秒*/
+				oDiv1.onmouseout = function() {
+					timer1 = setTimeout(function() {
+						oDiv2.style.display = 'none';
+					}, 500);
+				};
+				
+				/*移动上oDiv1 关闭timer1隐藏定时器*/
+				oDiv2.onmouseover = function() {
+					clearTimeout(timer1);
+				};
+				
+				/*失去oDiv2后 一秒钟隐藏oDiv2*/
+				oDiv2.onmouseout = function() {
+					timer2 = setTimeout(function() {
+						oDiv2.style.display = 'none';
+					}, 500);
+				};
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="div1"></div>
+		<div id="div2"></div>
+	</body>
+
+</html>

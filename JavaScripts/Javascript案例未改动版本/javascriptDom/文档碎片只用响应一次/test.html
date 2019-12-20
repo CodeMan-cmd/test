@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function() {
+				var oUl = document.getElementById('ull');
+				/*创建文档碎片 高级浏览器几乎没有提速的表现 反而减低速度*/
+				var oFarg = document.createDocumentFragment();
+				for(var i = 0; i < 213312; i++) {
+					var oLi = document.createElement("li");
+					/*装进文档碎片*/
+					oFarg.appendChild(oLi);
+				}
+				/*响应网页*/
+				oUl.appendChild(oFarg);
+			}
+		</script>
+	</head>
+
+	<body>
+		<ul id="ull">
+
+		</ul>
+	</body>
+
+</html>

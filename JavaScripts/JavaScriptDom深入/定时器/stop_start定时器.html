@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*box-shadow: -10px 0px 10px red, 0px -10px 10px #000, 10px 0px 10px green, 0px 0px 10px red inset,0px 10px 10px blue;*/
+				/*左右深度   上下深度  范围周长  颜色*/
+				/*box-shadow:5px 5px 10px #A3ABA8;*/
+				/*box-shadow: 0 0 10px #f00;*/
+				/*border: 3px solid #778D49;*/
+				/*box-shadow:-5px -5px 10px #778D49;*/
+		</style>
+		<script>
+			window.onload = function() {
+				var oBtn1 = document.getElementById('btn1');
+				var oBtn2 = document.getElementById('btn2');
+				var timer = null;
+				oBtn1.onclick = function() {
+					timer = setInterval(function() {
+						alert('开启');
+					}, 2000)
+				};
+				oBtn2.onclick = function() {
+					clearInterval(timer);
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="开启" id="btn1" />
+		<input type="button" value="关闭" id="btn2" />
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+			ie9方式  ie9后面就不能用了
+			attachevent(事件名称，函数),绑定事件处理函数
+			detachevent(事件名称，函数)，解除绑定
+			dom方式
+			addeventlistener(事件名称 ，函数，捕获)
+			removeeventlistener(事件名称，函数，捕获)
+		-->
+		<script>
+			function myAddEventListener(obj, ev, fn) {
+				if(obj.addEventListener) {
+					obj.addEventListener(ev, fn, false);
+				} else {
+					obj.attachEvent('on' + ev, fn);
+				}
+			}
+			window.onload = function() {
+				var oBtn = document.getElementById('btn1');
+				myAddEventListener(oBtn,'click',function(){
+					alert(1);
+				})
+				myAddEventListener(oBtn,'click',function(){
+					alert(2);
+				})
+			};
+		</script>
+	</head>
+
+	<body>
+		<input type="button" id="btn1" value="按钮" />
+	</body>
+
+</html>

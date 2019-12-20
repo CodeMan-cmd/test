@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function A() {
+				//this=A
+				this.abc = 12;
+			}
+			//原型
+			//class=prototype
+			A.prototype.show = function() {
+				alert(this.abc);
+			}
+
+			
+			function B() {
+				//this=B
+				this.ab=13;
+				//继承A
+				A.call(this);
+			}
+			B.prototype.show2 = function() {
+				alert(this.ab);
+			}
+			
+			for(var i in A.prototype) {
+				B.prototype[i] = A.prototype[i];
+			}
+			
+			var obj = new B();
+			obj.show();
+			obj.show2();
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

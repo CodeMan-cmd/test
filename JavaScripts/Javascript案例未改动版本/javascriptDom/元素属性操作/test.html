@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oTxt = document.getElementById('txt1');
+				var oBtn = document.getElementById('btn1');
+				/*设置*/
+				/*oBtn.onclick = function() {
+					oTxt.value = 'asd1'; //一种
+					oTxt['value'] = 'asd2' //两中
+					oTxt.setAttribute('value', 'asd3'); //三种
+				}*/
+				/*获取*/
+				oBtn.onclick = function() {
+					/*设置*/
+					var oValue1=oTxt.setAttribute('value','123'); //三种
+					/*获取*/
+					var oValue2=oTxt.getAttribute('value');
+					alert(oValue2);
+					/*删除*/
+					var oValue3=oTxt.removeAttribute('value');
+				};
+			};
+		</script>
+	</head>
+
+	<body>
+		<input id="txt1" type="text" />
+		<input id="btn1" type="button" value="按钮" />
+	</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var a=55;
+						if (a%2==0) {
+							alert("双数");
+						} else{
+							alert("单数");
+						}
+						a&2==0?alert('双数'):alert('单数');
+
+			for(var i = 0; i < 5; i++) {
+				if(i == 2) {
+					break; 		//整个循环中断
+					continue; 	//本次循环中断
+				}
+				alert(i)
+			}
+			
+			/*真：true，非零数字 非空字符串 非空对象*/
+			/*假：false,数字零 空字符串 空对象*/
+			var a=null;
+			if (a) {
+				alert('真的');
+			}else {
+				alert('假的');
+			}
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

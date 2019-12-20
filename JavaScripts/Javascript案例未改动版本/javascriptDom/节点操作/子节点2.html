@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*children我觉得更为方便*/
+			window.onload = function() {
+				var oUL = document.getElementById('ull');
+				for(var i = 0; i < oUL.children.length; i++) {
+					/*alert(oUL.childNodes[i].nodeType);*/
+					/*nodeType==3 -->文本节点*/
+					/*nodeTpye==1 -->元素节点*/
+					oUL.children[i].style.background = 'green';
+					oUL.children[i].style. = 'green';
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<ul id="ull">
+			<li></li>
+			<li></li>
+		</ul>
+	</body>
+
+</html>

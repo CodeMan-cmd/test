@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload = function() {
+				var oTab=document.getElementById('tab1');
+				var oBtn=document.getElementById('btn1');
+				oBtn.onclick=function(){
+					/*添加集合*/
+					var arr=[];
+					/*给ul赋值给集合*/
+					for (var i=0;i<oTab.tBodies[0].rows.length;i++) {
+						arr[i]=oTab.tBodies[0].rows[i];
+					};
+					/*进行排序*/
+					arr.sort(function(){
+						var tr1=parseInt(arguments[0].cells[0].innerHTML);
+						var tr2=parseInt(arguments[1].cells[0].innerHTML);
+						return tr1-tr2;
+					});
+					/*返回给页面*/
+					for (var j=0;j<arr.length;j++) {
+						oTab.tBodies[0].appendChild(arr[j]);
+					};
+				};
+			};
+		</script>
+	</head>
+
+	<body>
+		<center>
+		<input type="button" id="btn1" value="排序" />
+			<table border="1px" width="500px" id="tab1">
+				<thead>
+					<td>ID</td>
+					<td>姓名</td>
+					<td>年齡</td>
+				</thead>
+				<tbody>
+					<tr>
+						<td>2</td>
+						<td>mr-zhang</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>mr-li</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>mr-wang</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		</center>
+	</body>
+
+</html>

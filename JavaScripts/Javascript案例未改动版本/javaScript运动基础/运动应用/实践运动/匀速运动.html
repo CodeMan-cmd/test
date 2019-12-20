@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1 {
+				width: 1px;
+				height: 300px;
+				position: absolute;
+				left: 200px;
+				top: 0;
+				background: black;
+			}
+			
+			#div2 {
+				width: 1px;
+				height: 300px;
+				position: absolute;
+				left: 400px;
+				top: 0;
+				background: black;
+			}
+			
+			#div3 {
+				width: 200px;
+				height: 250px;
+				position: absolute;
+				left: 600px;
+				top: 50;
+				background: black;
+			}
+		</style>
+		<script>
+			var timer=null;
+			function startMove(iTarget) {
+				var oDiv = document.getElementById('div3');
+				clearInterval(timer);
+				timer=setInterval(function() {
+					var speed = 0;
+					if(oDiv.offsetLeft < iTarget) {
+						speed = 5;
+					} else {
+						speed = -5;
+					};
+					if (Math.abs(iTarget-oDiv.offsetLeft)<=7) {
+						clearInterval(timer);
+						oDiv.style.left=iTarget+'px';
+					} else{
+						oDiv.style.left = oDiv.offsetLeft + speed + 'px';
+					};
+				}, 30);
+			};
+		</script>
+	</head>
+
+	<body>
+		<input type="button" value="到200" onclick="startMove(200)" />
+		<input type="button" value="到400" onclick="startMove(400)" />
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+	</body>
+
+</html>

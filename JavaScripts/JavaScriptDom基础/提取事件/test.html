@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			/*onload这句话是等到所有html加载完成后加载script里的函数*/
+			window.onload = function() {
+				var oBtn = document.getElementById('btn1');
+				oBtn.onclick = function() {
+					alert('a');
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<input id="btn1" type="button" value="按钮" />
+
+	</body>
+
+</html>

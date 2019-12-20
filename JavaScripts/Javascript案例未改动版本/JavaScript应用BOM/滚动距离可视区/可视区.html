@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			window.onload=function(){
+				var btn1=document.getElementById('btn1');
+				var btn2=document.getElementById('btn2');
+				var btn3=document.getElementById('btn3');
+				
+				btn1.onclick=btn2.onclick=btn3.onclick=function(){
+						alert('宽度：'+document.documentElement.clientWidth);  //可视区宽度
+						alert('高度：'+document.documentElement.clientHeight); //可视区高度
+						var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;//兼容ie和 火狐Google
+						alert('滚动：'+scrollTop);
+						
+				};
+			};
+		</script>
+	</head>
+	<body style="height: 2000px;">
+		<input id="btn1" type="button" value="可视区宽" />
+		<input id="btn2" type="button" value="可视区高" />
+		<input id="btn3" type="button" value="滚动高度" />
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#div1 {
+				width: 150px;
+				height: 200px;
+				background: green;
+				position: absolute;
+				left: -150px;
+				border-radius: 0px 80px 80px 0px;
+			}
+			
+			#div1 span {
+				position: absolute;
+				width: 20px;
+				height: 60px;
+				line-height: 20px;
+				background: blue;
+				right: -20px;
+				top: 70px;
+				border-radius: 0px 10px 10px 0px ;
+			}
+			
+			#div1 a {
+				text-decoration: none;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var oDiv = document.getElementById('div1');
+				oDiv.onmouseover = function() {
+					startMove(0);
+				};
+				oDiv.onmouseout = function() {
+					startMove(-150);
+				};
+			};
+			var timer = null;
+			function startMove(iTarget) {
+				var oDiv = document.getElementById('div1');
+				clearInterval(timer);
+				var speed=0;
+				if (oDiv.offsetLeft>iTarget) {
+					speed=-1;
+				}else{
+					speed=1;
+				}
+				timer = setInterval(function() {
+					if(oDiv.offsetLeft == iTarget) {
+						clearInterval(timer);
+					} else {
+						oDiv.style.left = oDiv.offsetLeft+speed + 'px';
+					};
+				});
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="div1">
+			<a href="http://www.4399.com">4399</a><br />
+			<a href="http://www.hao123.com">hao123</a><br />
+			<a href="http://www.baidu.com">百度</a>
+			<span>分享到</span>
+		</div>
+	</body>
+
+</html>

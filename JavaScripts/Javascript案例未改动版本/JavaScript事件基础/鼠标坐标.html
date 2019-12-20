@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				position: absolute;
+			}
+		</style>
+		<script>
+			/*onmousemove 当前的位置*/
+			document.onmousemove=function(ev){
+				/*oEvent ev或者是event*/
+				var oEvent=ev||event;
+				var oDiv=document.getElementById('div1');
+				/*获取scrolltop*/
+				var scrollleft=document.documentElement.scrollLeft||document.body.scrollLeft;
+				var scrolltop=document.documentElement.scrollTop||document.body.scrollTop;
+				/*获取left位置=鼠标的位置*/
+				/*clientX只能获取可视区域*/
+				oDiv.style.left=oEvent.clientX+scrollleft+'px';
+				/*获取top位置=鼠标的位置*/
+				/*clientY只能获取可视区域*/
+				oDiv.style.top=oEvent.clientY+scrolltop+'px';
+			};
+		</script>
+	</head>
+	<body style="height: 2000px; width: 2000px;">
+		<div id="div1"></div>
+	</body>
+</html>

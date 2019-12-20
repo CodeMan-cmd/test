@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				background: red;
+				opacity: 0.3;
+			}
+		</style>
+		<script>
+			window.onload=function(){
+				var oDiv=document.getElementById('div1');
+				oDiv.onmouseover=function(){
+					startMove(100);
+				};
+				oDiv.onmouseout=function(){
+					startMove(30);
+				};
+			};
+			
+			var alpha=30;
+			var timer=null;
+			function startMove(iTarget){
+				var oDiv=document.getElementById('div1');
+				clearInterval(timer);
+				timer=setInterval(function(){
+					/*speed速度 判断 减还是加 加到规定的数值停止*/
+					var speed=0;
+					if (alpha<iTarget) {
+						speed=10;	
+					}else{
+						speed=-10
+					};
+					/*alpha透明度 */
+					if (alpha==iTarget) {
+						clearInterval(timer);
+					} else{
+						/*x = x + y*/
+						alpha+=speed;
+						/*透明度除以100 得到真实透明度*/
+						oDiv.style.opacity=alpha/100;
+					};
+				},30);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

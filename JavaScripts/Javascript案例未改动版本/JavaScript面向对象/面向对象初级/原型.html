@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<!--
+			
+			类  模子
+			对象  产品 成品
+		-->
+		<script type="text/javascript">
+			var arr = new Array(1, 1, 1, 1, 1);
+			var arr2 = new Array(11, 11, 11, 11, 11);
+
+				Array.prototype.sum=function(){ 	//类似于class
+				/*arr.sum = function() {  */        //类似于行间样式
+					var result = 0;
+					for(var i = 0; i < this.length; i++) {
+						result += this[i];
+					}
+					return result;
+				};
+			alert(arr.sum());
+			alert(arr2.sum());
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

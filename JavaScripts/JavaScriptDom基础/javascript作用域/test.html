@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>作用域</title>
+		<script>
+			function aaa(){ /*父函数*/
+				var a=12;
+				function bbb(){ /*子函数*/
+					alert(a);
+				}
+				bbb();
+			}
+			aaa(); 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
