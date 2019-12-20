@@ -1,0 +1,17 @@
+package dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import pojo.Easybuy_user;
+@Repository("userMapper")
+public interface UserMapper {
+	//注册
+	public int insertUser(@Param("user") Easybuy_user user);
+	//登录
+	public int selectUser(@Param("user") Easybuy_user user);
+	//异步判断
+	public List<Easybuy_user> selectJudgment(@Param("loginName") String loginName,@Param("password") String password);
+}

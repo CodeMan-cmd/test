@@ -1,0 +1,7 @@
+package cn.strutsdemo;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class HelloWorIdAction3 extends ActionSupport {
+
+}

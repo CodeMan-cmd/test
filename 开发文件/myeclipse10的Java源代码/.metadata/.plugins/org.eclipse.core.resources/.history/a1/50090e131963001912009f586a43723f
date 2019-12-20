@@ -1,0 +1,21 @@
+$(".l_user").blur(function() {
+	var strname= $(this).val();
+	var strpwd= $(this).val();
+	$.ajax({
+		url:"asynchronousJudgment?loginName="+strname+"&&password="+strpwd,	
+	   dataType:JSON,
+	   success:function(res){
+		   $(".l_user").next().html(res.message);
+	   }
+	});
+});
+$(".l_pwd").blur(function() {
+	var strname= $(this).val();
+	$.ajax({
+		url:"asynchronousJudgment?loginName="+strname,	
+	   dataType:JSON,
+	   success:function(res){
+		   $(".l_pwd").next().html(res.message);
+	   }
+	});
+});

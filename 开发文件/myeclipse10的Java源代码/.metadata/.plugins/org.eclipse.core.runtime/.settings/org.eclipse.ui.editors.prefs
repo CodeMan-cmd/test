@@ -1,0 +1,11 @@
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.Foreground.SystemDefault=false
+AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground=0,0,0
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+currentLineColor=255,255,255
+eclipse.preferences.version=1
+hyperlinkColor.SystemDefault=false
+lineNumberColor=255,255,255
+lineNumberRuler=true
+overviewRuler_migration=migrated_3.1

@@ -1,0 +1,38 @@
+package cn.strutsdemo;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import entity.User;
+
+public class HellowWorIdAction2 extends ActionSupport {
+	private User user;
+	private String message;
+	@Override
+	public String execute(){
+		User user=new User();
+		user.setName("jason");
+		user.setAge(23);
+		setMessage("展示原始类型和javabena");
+		return SUCCESS;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public HellowWorIdAction2(User user, String message) {
+		super();
+		this.user = user;
+		this.message = message;
+	}
+	public HellowWorIdAction2() {
+		super();
+	}
+}

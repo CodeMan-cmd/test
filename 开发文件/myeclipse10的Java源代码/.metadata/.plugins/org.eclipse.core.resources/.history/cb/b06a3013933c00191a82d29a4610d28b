@@ -1,0 +1,18 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+//注解表示这是控制器
+@Controller
+public class UseController {
+
+	@RequestMapping("/index.jsp")
+	public String SpringService(HttpServletRequest arg0,
+			HttpServletResponse arg1) throws Exception {
+		return "cc";
+	}
+
+}

@@ -1,0 +1,11 @@
+package text;
+
+import java.util.List;
+import dao.Text1DAO;
+import dao.Text1Id;
+
+public class Text {
+public static void main(String[] args) {
+	}
+}
+}

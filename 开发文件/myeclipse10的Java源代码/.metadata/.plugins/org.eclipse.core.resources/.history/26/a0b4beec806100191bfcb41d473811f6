@@ -1,0 +1,25 @@
+package controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import pojo.Easybuy_user;
+
+
+import service.UserService;
+@Controller
+public class IndexController {
+	@Resource
+	private UserService userService;
+	
+	@RequestMapping("/login")
+	public String login(Easybuy_user user){
+		return "Login";
+	}
+	@RequestMapping("/regist")
+	public String regist(Easybuy_user user){
+		return "Regist";
+	}
+}

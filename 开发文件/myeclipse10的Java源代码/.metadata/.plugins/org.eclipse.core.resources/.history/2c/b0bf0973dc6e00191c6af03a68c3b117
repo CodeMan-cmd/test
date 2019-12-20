@@ -1,0 +1,13 @@
+package service;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import pojo.Easybuy_product;
+
+
+public interface ProductService {
+	public List<Easybuy_product> selectProdct();
+	//搜索引擎
+}

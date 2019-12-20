@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/aop  
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd" 
+		xmlns:aop="http://www.springframework.org/schema/aop" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context" 
+		xmlns="http://www.springframework.org/schema/beans"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:tx="http://www.springframework.org/schema/tx" >
+	
+	<!-- 通过bean元素声明需要Spring创建的实例。该实例的类型通过class属性指定，并通过id属性为该实例指定一个名称，以便在程序中使用 -->
+	<!-- <bean id="helloSpring" class="pojo.HelloSpring">
+		property元素用来为实例的属性赋值,此处实际是调用setStr()方法实现赋值操作
+		<property name="str">
+			此处将字符串"Spring"赋值给str属性
+			<value>Java软件工程师</value>
+		</property>
+	</bean> -->
+	
+	 <bean id="userDao" class="dao.UserDaoImpl"></bean>
+	
+	<!-- <bean id="aaa" class="service.UserServiceImpl">
+		<property name="userDao"><bean class="dao.UserDaoImpl"></bean></property>
+		<constructor-arg>
+			<ref bean="userDao"/>
+		</constructor-arg>
+	</bean> -->
+	<import resource="applicationService-dao.xml"/>
+	
+	<!--引入properties文件  -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:database.properties</value>
+		</property>
+	</bean>
+	<!-- 建立Spring配置文件applicationContext-mybatis.xml配置数据源关键代码 -->
+	<!--配置DataSource  -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${user}"></property>
+		<property name="password" value="${password}"></property>
+	</bean>
+	<!--配置 SqlSessionFactoryBean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<!--引用数据源组件  -->
+		<property name="dataSource" ref="dataSource"></property>
+		<!--引用MyBatis配置文件中的配置  -->
+		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+		<!--配置SQL映射文件信息，使用mapperLocations属性扫描式加载SQL映射文件  -->
+		<property name="mapperLocations">
+			<list>
+				<!--表示扫描dao层包下的及其层级子包中任意名称的xml类型文件  -->
+				<value>classpath:dao/**/*.xml</value>
+			</list>
+		</property>
+	</bean>
+	<!--配置sqlSessionTemplate, sqlSessionTemplate类实现了MyBatis和SqlSession接口 -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactory" name="sqlSessionFactory"></constructor-arg>
+	</bean>
+	<!--配置DAO组件并注入SqlSessionTemplate实例  -->
+	<bean id="userMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+		<property name="mapperInterface" value="dao.UserMapper"></property>
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+	</bean>
+	<!--定义事务管理器  -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<!--配置业务Bean，根据属性名称自动装配  -->
+	<!-- <bean id="bbb" class="service.UserServiceImpl" autowire="byName"> 	</bean>-->
+	<!--通过<tx:advice>标签为指定的事务管理设置事务属性  -->
+	<tx:advice id="txAdvice">
+		<tx:attributes>
+			<tx:method name="add*" propagation="REQUIRED"></tx:method>			
+		</tx:attributes>
+	</tx:advice>
+	
+	
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+	<property name="basePackage" value="dao"></property> 
+	</bean> 
+	
+	<!-- <bean id="bbb" class="pojo.User" p:userName="UI平面设计">
+		<property name="userName">
+			<value>软件测试</value>
+		</property>
+	</bean> -->
+	<bean id="UserServiceLogger" class="logger.UserServiceLogger"></bean> 
+	<aop:config>
+		<aop:pointcut id="pointcut" expression="execution(* service..*.*(..))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/> 
+		<aop:aspect ref="UserServiceLogger">
+			<aop:before pointcut-ref="pointcut" method="before" />
+			<aop:after-returning pointcut-ref="pointcut" method="afterReturning" returning="result"/>
+			<aop:after method="after" pointcut-ref="pointcut"/>
+		</aop:aspect> 
+	</aop:config>
+</beans>

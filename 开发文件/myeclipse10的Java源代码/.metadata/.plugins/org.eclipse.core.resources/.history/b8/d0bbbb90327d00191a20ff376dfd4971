@@ -1,0 +1,19 @@
+package packagee;
+
+public class Test {
+		public static void main(String[] args) {
+			int[] a=new int[5];
+			a[0]=1;
+			a[1]=2;
+			a[2]=3;
+			a[3]=4;
+			a[4]=5;
+			int c=1;
+			for (int j = 0; j < a.length-1; j++) {
+				for (int i =5 ; i <c++ ) {
+					System.out.println("*");
+			}
+				System.out.println("\n");
+			}
+}
+}

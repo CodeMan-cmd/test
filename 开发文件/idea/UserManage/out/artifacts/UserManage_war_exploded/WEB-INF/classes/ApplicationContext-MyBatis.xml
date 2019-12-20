@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--读取数据库配置文件-->
+    <context:property-placeholder location="classpath:database.properties"/>
+
+    <!--配置DataSource mybatis-config.xml文件里面的DataSource就没有用了 以为要交给Spring去管理-->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+          p:username="${jdbc.username}"
+          p:password="${jdbc.password}"
+          p:url="${jdbc.url}"
+          p:driverClassName="${jdbc.driver}"
+          p:initialSize="${jdbc.initialSize}"
+          p:maxIdle="${jdbc.maxIdle}"
+          p:minIdle="${jdbc.minIdle}"
+          p:maxWait="${jdbc.maxWait}"
+          p:removeAbandonedTimeout="${jdbc.removeAbandonedTimeout}"
+          p:removeAbandoned="${jdbc.removeAbandoned}"
+          destroy-method="close">
+        <!--SQL 心跳  配置这个是为了数据库断开连接之后在重新连接无需重启整个Web应用-->
+        <!--MySQL 默认有8个小时 如果没有连接动态就会自动断掉所有连接-->
+        <!--开启定时校验-->
+        <property name="testWhileIdle" value="true"/>
+        <!--定时校验的时间间隔 单位为毫秒-->
+        <property name="timeBetweenEvictionRunsMillis" value="60000"/>
+        <!--对获得的连接是否进行校验 默认为 false-->
+        <property name="testOnBorrow" value="false"/>
+        <!--对返回的连接是否进行校验 默认为 false-->
+        <property name="testOnReturn" value="false"/>
+        <!--定义校验所使用的SQL 语句-->
+        <property name="validationQuery" value="select 1"/>
+        <!--每次校验的连接数 一般会用maxActive-->
+        <property name="numTestsPerEvictionRun" value="${jdbc.maxActive}"/>
+    </bean>
+
+    <!--创建了一个 SqlSessionFactory 可用从中获得 SqlSession-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+          p:dataSource-ref="dataSource"
+          p:configLocation="classpath:mybatis-config.xml">
+    </bean>
+
+
+    <!--MapperScannerConfigurer 会自动扫描指定包下面的Mapper.xml文件并通过nameSpace创建对应接口的实例并且实现方法加入的loc容器里面-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+          p:basePackage="dao"/>
+
+
+    <!--把DataSource数据导入事务里面-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--使用@注释进行事务的管理-->
+    <tx:annotation-driven/>
+
+    <!--创建一个事务管理-->
+    <tx:advice id="txAdvice">
+        <tx:attributes>
+            <tx:method name="*" timeout="1000" propagation="REQUIRED"
+                       rollback-for="Exception"/><!-- propagation="SUPPORTS"用在查询比较好 -->
+            <!--<tx:method name="add*" propagation="REQUIRED"/>-->
+            <tx:method name="login" propagation="SUPPORTS"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!--AOP注解扫描-->
+    <aop:aspectj-autoproxy/>
+    <!--定义切面-->
+    <aop:config proxy-target-class="true">
+        <aop:pointcut id="transService" expression="execution(* service..*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="transService"/>
+    </aop:config>
+
+</beans>

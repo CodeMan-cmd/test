@@ -1,0 +1,28 @@
+package service;
+
+import javax.annotation.Resource;
+
+import dao.Shangpin;
+
+public class ProductServiceImp implements ProductService {
+		@Resource
+		private Shangpin shangpin;
+
+		public Shangpin getShangpin() {
+			return shangpin;
+		}
+		
+		public void setShangpin(Shangpin shangpin) {
+			this.shangpin = shangpin;
+		}
+		
+		public ProductServiceImp(Shangpin shangpin) {
+			super();
+			this.shangpin = shangpin;
+		}
+		
+		public ProductServiceImp() {
+			super();
+		}
+
+}

@@ -1,0 +1,20 @@
+package service;
+
+import java.util.List;
+
+import dao.ProfileMapper;
+
+import pojo.Profile;
+
+public class ProfileServiceImp implements ProfileService {
+	private ProfileMapper profileMapper;
+	
+	public List<Profile> selectProfile() {
+		return null;
+	}
+
+	public List<Profile> updateProfile(Profile up) {
+		return null;
+	}
+		
+}

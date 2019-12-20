@@ -1,0 +1,19 @@
+package action;
+
+import org.springframework.stereotype.Controller;
+
+import service.Test1Service;
+
+import com.opensymphony.xwork2.ActionSupport;
+@Controller
+public class Text1Action extends ActionSupport{
+	private Test1Service test1Service;
+
+	public Test1Service getTest1Service() {
+		return test1Service;
+	}
+
+	public void setTest1Service(Test1Service test1Service) {
+		this.test1Service = test1Service;
+	}
+}

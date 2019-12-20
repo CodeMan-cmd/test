@@ -1,0 +1,26 @@
+package util;
+
+import java.util.List;
+
+import dao.Emp;
+import dao.EmpDAO;
+
+public class Text {
+	
+	public static void main(String[] args) {
+		/*EmpDAO dao = new EmpDAO();
+		List<Emp> dap2 = dao.findBydept();
+		for (Emp emp : dap2) {
+				System.out.println(emp);
+		}*/
+		EmpDAO dao = new EmpDAO();
+		List<Emp> dap2 = (List<Emp>) dao.findMax();
+		for (Emp emp : dap2) {
+				System.out.println(emp);
+		}
+		
+	}
+	public  void main2(){
+		
+	}
+}

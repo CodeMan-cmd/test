@@ -1,0 +1,23 @@
+package test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import pojo.User;
+import utils.MyBatisUtil;
+import dao.UserMapper;
+
+public class Test {
+	public static void main(String[] args) throws Exception {
+		List<User> list = new ArrayList<User>();
+		SqlSession session = null;
+		session = MyBatisUtil.createSqlSession();
+		list = session.getMapper(UserMapper.class).selectById(3);
+		for (User user : list) {
+			System.out.println("姓名为:" + user.getUserName() + "\t职位为:"
+					+ user.getRole().getRoleName());
+		}
+	}
+}

@@ -1,0 +1,34 @@
+package set;
+
+/**
+ * Text1 entity. @author MyEclipse Persistence Tools
+ */
+
+public class Text1 implements java.io.Serializable {
+
+	// Fields
+
+	private Text1Id id;
+
+	// Constructors
+
+	/** default constructor */
+	public Text1() {
+	}
+
+	/** full constructor */
+	public Text1(Text1Id id) {
+		this.id = id;
+	}
+
+	// Property accessors
+
+	public Text1Id getId() {
+		return this.id;
+	}
+
+	public void setId(Text1Id id) {
+		this.id = id;
+	}
+
+}

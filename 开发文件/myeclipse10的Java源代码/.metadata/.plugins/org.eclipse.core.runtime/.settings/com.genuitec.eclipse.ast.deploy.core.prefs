@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+tomcat7Server.T_user.IEARProjectName=
+tomcat7Server.T_user.altContextRoot=
+tomcat7Server.T_user.contextRoot=/T_userWEB
+tomcat7Server.T_user.deployIsOverProject=false
+tomcat7Server.T_user.deploymentPath=D\:\\Program Files\\apache-tomcat-7.0.92\\webapps\\T_userWEB
+tomcat7Server.T_user.isDeployed=true
+tomcat7Server.T_user.isExploded=true
+tomcat7Server.T_user.isUptoDate=true
+tomcat7Server.T_user.noFileCopy=false
+tomcat7Server.T_user.shouldBackup=false
+tomcat7Server.T_user.shouldOverwrite=false
+tomcat7Server.T_user.type=WebDeployment

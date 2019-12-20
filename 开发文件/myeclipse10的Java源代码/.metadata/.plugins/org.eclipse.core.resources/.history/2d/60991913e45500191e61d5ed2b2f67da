@@ -1,0 +1,20 @@
+package util;
+
+import java.util.List;
+
+import dao.Emp;
+import dao.EmpDAO;
+
+public class Text {
+	EmpDAO dao = new EmpDAO();
+	public static void main(String[] args) {
+		
+		List<Emp> dap2 = dao.findBydept();
+		for (Emp emp : dap2) {
+				System.out.println(emp);
+		}
+	}
+	public  void mian2(){
+		
+	}
+}

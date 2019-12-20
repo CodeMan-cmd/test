@@ -1,0 +1,16 @@
+package service;
+
+import java.util.List;
+import pojo.Easybuy_product;
+import util.Page;
+
+
+public interface ProductService {
+	public List<Easybuy_product> selectProdct();
+	//搜索引擎
+	public List<Easybuy_product> souSoYinQing(String name);
+	//数据条数
+			public int selectCount();
+			//模糊查询页数和条数
+			public List<Easybuy_product> selectLimit(Easybuy_product product , Page p);
+}

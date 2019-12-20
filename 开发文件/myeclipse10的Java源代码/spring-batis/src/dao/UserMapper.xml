@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+
+	<select id="getAllUser" resultMap="aa">
+		SELECT * FROM smbms_user
+		<where>
+			<include refid="selectUser"></include>
+		</where>
+		LIMIT #{p.qishiyeshu},#{p.meiyetiaoshu}
+	</select>
+
+	<select id="getCountUser" resultType="int">
+		SELECT COUNT(1) FROM smbms_user
+		<where>
+			<include refid="selectUser"></include>
+		</where>
+	</select>
+
+	<sql id="selectUser">
+		<if test="u.userCode!=null and u.userCode!='' ">
+			and userCode LIKE CONCAT('%',#{u.userCode},'%')
+		</if>
+		<if test="u.userName!=null and u.userName!=''">
+			AND userName LIKE CONCAT('%',#{u.userName},'%')
+		</if>
+	</sql>
+
+	<update id="updateUser">
+		UPDATE smbms_user
+		<set>
+			`userCode` = #{u.userCode},`userName` = #{u.userName}
+		</set>
+		WHERE
+		`id` =#{u.id}
+	</update>
+
+	<select id="selectById" resultMap="aa">
+		SELECT userCode,userName FROM
+		smbms_user WHERE id=#{id}
+	</select>
+
+	<insert id="insertUser">
+		INSERT INTO
+		smbms_user(userCode,userName,userPassword)
+		VALUE(#{i.userCode},#{i.userName},#{i.userPassword})
+	</insert>
+
+	<delete id="dateUser">
+		DELETE FROM smbms_user
+		WHERE
+		id = #{d.id}
+	</delete>
+	<select id="resUserCode" resultMap="aa">
+		SELECT * FROM smbms_user WHERE userCode=#{u.userCode}
+	</select>
+	<resultMap type="User" id="aa">
+		<id property="id" column="id" />
+		<result property="userCode" column="userCode" />
+		<result property="userName" column="userName" />
+		<result property="userPassword" column="userPassword" />
+		<result property="gender" column="gender" />
+		<result property="birthday" column="birthday" />
+		<result property="phone" column="phone" />
+		<result property="address" column="address" />
+		<result property="userRole" column="userRole" />
+		<result property="createBy" column="createdBy" />
+		<result property="creationDate" column="creationDate" />
+		<result property="modifBy" column="modifyBy" />
+		<result property="modifyDate" column="modifyDate" />
+	</resultMap>
+</mapper>

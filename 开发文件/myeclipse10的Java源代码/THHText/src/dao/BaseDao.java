@@ -1,0 +1,76 @@
+package dao;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class BaseDao {
+	public Connection getConn() {
+		Connection conn = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			conn = (Connection) DriverManager
+					.getConnection(
+							"jdbc:mysql://localhost:3306/musicwebsites",
+							"root", "123456");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return conn;
+	}
+
+	public void closeAll(ResultSet rs, PreparedStatement ps, Connection conn) {
+		try {
+			if (rs != null) {
+				rs.close();
+			}
+			if (ps != null) {
+				ps.close();
+			}
+			if (conn != null) {
+				conn.close();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	//ÔöÉ¾¸Ä
+	public int updateAll(String sql, Object[] params) {
+		int num = -1;
+		Connection conn = getConn();
+		PreparedStatement ps = null;
+		try {
+			ps = conn.prepareStatement(sql);
+			for (int i = 0; i < params.length; i++) {
+				ps.setObject(i + 1, params[i]);
+			}
+			num = ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			closeAll(null, ps, conn);
+		}
+		return num;
+	}
+	//²éÑ¯
+	public ResultSet getAll(String sql, Object[] params) {
+		Connection conn = getConn();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			ps = conn.prepareStatement(sql);
+			if (params != null) {
+				for (int i = 0; i < params.length; i++) {
+					ps.setObject(i + 1, params[i]);
+				}
+			}
+			rs = ps.executeQuery();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+}

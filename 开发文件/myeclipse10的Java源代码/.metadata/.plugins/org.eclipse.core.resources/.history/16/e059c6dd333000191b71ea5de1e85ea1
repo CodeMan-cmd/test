@@ -1,0 +1,10 @@
+package text;
+
+import text1.text;
+
+public class Text {
+	@text
+	public void getUserByusername(){
+		
+	}
+}

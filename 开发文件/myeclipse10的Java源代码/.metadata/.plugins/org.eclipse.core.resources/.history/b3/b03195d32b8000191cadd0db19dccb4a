@@ -1,0 +1,23 @@
+package com.dbqn.util;
+
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+public class SessionFactory {
+public static SqlSessionFactory sf=null;
+//程序启动的时候 就要去加载这个工厂 把回话造好
+//如何让程序启动 就自动去加载部分代码，用 静态代码块
+static{
+	InputStream is = null;
+	try{
+	is=Resources.getResourceAsStream("mybatis-config.xml");
+	}catch (IOException e) {
+		e.printStackTrace();
+	}
+	sf=new SqlSessionFactoryBuilder().build(is);
+}
+}

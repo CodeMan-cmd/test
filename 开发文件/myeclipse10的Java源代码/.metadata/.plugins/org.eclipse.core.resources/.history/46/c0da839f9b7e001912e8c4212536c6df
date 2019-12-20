@@ -1,0 +1,5 @@
+package com.dbqn.service;
+
+public class UserServiceImp implements UserService {
+
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--这是控制mvc-->
+    <mvc:annotation-driven/>
+    <!--扫描controller控制器-->
+    <context:component-scan base-package="controller" />
+
+    <!--消息转换器-->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!--创建一个默认的charset字符集对象-->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg name="defaultCharset" value="utf-8"></constructor-arg>
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>application/json;charset=UTF-8</value>
+                        <value>text/html;charset=UTF-8</value>
+                        <value>test/plain;charset=UTF-8</value>
+                    </list>
+            </property>
+            </bean>
+            <!--解析json返回页面html-->
+            <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!--资源映射-->
+    <mvc:resources location="/WEB-INF/css" mapping="/css/**" />
+    <mvc:resources location="/WEB-INF/js" mapping="/js/**" />
+    <!--配置"视图解析器"访问路径-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!-- 文件上传对象 -->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 上传的大小是 5MB  5000MB*1024MB 5120000MB 5000GB -->
+        <property name="maxUploadSize" value="5120000"/>
+    </bean>
+
+    <!--引用dubbo服务-->
+    <dubbo:application name="bluebird-management-web"/>
+    <dubbo:registry protocol="zookeeper" address="192.168.88.135:2181"/>
+    <dubbo:reference interface="service.ItemService" id="tbitemInterfaceImpl" timeout="6000"/>
+</beans>

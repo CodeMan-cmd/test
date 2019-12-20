@@ -1,0 +1,5 @@
+package com.dbqn.entity;
+
+public class Role {
+
+}

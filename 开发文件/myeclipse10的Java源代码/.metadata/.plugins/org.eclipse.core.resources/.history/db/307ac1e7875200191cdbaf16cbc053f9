@@ -1,0 +1,8 @@
+package dao;
+
+
+import pojo.Books;
+
+public interface UserMapper {
+	public int insertBooks(Books b);
+}

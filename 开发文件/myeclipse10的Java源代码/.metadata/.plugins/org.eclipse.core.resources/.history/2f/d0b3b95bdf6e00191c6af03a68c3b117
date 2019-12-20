@@ -1,0 +1,12 @@
+package dao;
+
+import java.util.List;
+import org.springframework.stereotype.Repository;
+import pojo.Easybuy_product;
+
+@Repository("shangpin")
+public interface Shangpin {
+		public List<Easybuy_product> selectProdct();
+		//搜索引擎
+		public List<Easybuy_product> souSoYinQing(Easybuy_product name);
+}

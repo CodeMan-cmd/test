@@ -1,0 +1,110 @@
+2019-03-20 17:05:26,736 0      [      Worker-37] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-20 17:05:31,098 4362   [      Worker-37] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-20 17:05:31,099 4363   [      Worker-37] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-20 22:58:29,725 21182989 [      Worker-94] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-20 22:58:32,643 21185907 [      Worker-94] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-20 22:58:32,643 21185907 [      Worker-94] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-21 10:33:55,669 0      [       Worker-4] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 10:34:01,646 5977   [       Worker-4] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-21 10:34:01,647 5978   [       Worker-4] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-21 10:45:15,156 679487 [      Worker-29] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 10:45:20,386 684717 [      Worker-29] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-21 10:45:20,387 684718 [      Worker-29] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-21 11:03:01,392 1745723 [      Worker-49] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 11:03:04,380 1748711 [      Worker-49] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-21 11:03:04,380 1748711 [      Worker-49] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-21 14:15:11,882 13276213 [     Worker-109] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 15:59:58,358 19562689 [     Worker-123] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 16:03:31,467 19775798 [     Worker-133] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 16:03:45,136 19789467 [     Worker-133] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-03-21 16:03:45,137 19789468 [     Worker-133] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-03-21 16:03:45,138 19789469 [     Worker-133] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-03-21 16:03:45,145 19789476 [     Worker-133] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-03-21 16:36:28,339 21752670 [     Worker-149] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-21 16:36:35,526 21759857 [     Worker-149] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-21 16:36:35,526 21759857 [     Worker-149] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-25 11:21:00,849 0      [      Worker-69] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-25 11:21:03,376 2527   [      Worker-69] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-25 11:21:03,376 2527   [      Worker-69] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-25 11:32:04,395 663546 [      Worker-76] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-25 11:32:08,451 667602 [      Worker-76] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-25 11:32:08,451 667602 [      Worker-76] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-25 13:09:28,975 6508126 [      Worker-99] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-25 13:09:31,456 6510607 [      Worker-99] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-25 13:09:31,456 6510607 [      Worker-99] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-25 13:28:49,798 7668949 [     Worker-121] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-25 13:28:52,762 7671913 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-25 13:28:52,762 7671913 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-25 13:37:01,497 8160648 [     Worker-124] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-25 13:37:02,199 8161350 [     Worker-124] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-25 13:37:02,199 8161350 [     Worker-124] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 13:58:47,460 0      [     Worker-103] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 13:58:52,873 5413   [     Worker-103] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 13:58:52,873 5413   [     Worker-103] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:10:03,146 675686 [     Worker-121] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:10:12,491 685031 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:10:12,491 685031 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:22:36,581 1429121 [     Worker-121] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:22:40,731 1433271 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:22:40,731 1433271 [     Worker-121] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:25:25,716 1598256 [     Worker-145] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:25:28,150 1600690 [     Worker-145] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:25:28,150 1600690 [     Worker-145] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:26:44,231 1676771 [     Worker-144] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:26:46,805 1679345 [     Worker-144] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:26:46,805 1679345 [     Worker-144] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:30:06,876 1879416 [     Worker-139] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:30:08,841 1881381 [     Worker-139] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:30:08,841 1881381 [     Worker-139] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 14:31:48,558 1981098 [     Worker-142] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 14:31:50,492 1983032 [     Worker-142] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEXT1. Asking rev.eng. strategy
+2019-03-27 14:31:50,492 1983032 [     Worker-142] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEXT1
+2019-03-27 15:01:19,765 3752305 [     Worker-159] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 15:17:13,876 4706416 [     Worker-167] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-03-27 15:21:30,437 4962977 [     Worker-174] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-01 10:01:49,792 1      [      Worker-46] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-01 10:04:17,979 148188 [      Worker-57] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-01 10:04:31,195 161404 [      Worker-57] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-01 10:04:31,196 161405 [      Worker-57] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-01 10:04:31,197 161406 [      Worker-57] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-01 10:04:31,202 161411 [      Worker-57] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-04 13:44:29,360 0      [      Worker-17] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-04 13:44:34,633 5273   [      Worker-17] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-04 13:44:34,633 5273   [      Worker-17] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-04 13:44:34,633 5273   [      Worker-17] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-04 13:44:34,648 5288   [      Worker-17] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-04 14:03:25,838 1136478 [      Worker-28] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-04 14:03:31,126 1141766 [      Worker-28] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-04 14:03:31,126 1141766 [      Worker-28] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-04 14:03:31,126 1141766 [      Worker-28] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-04 14:03:31,126 1141766 [      Worker-28] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-04 17:07:46,783 0      [       Worker-5] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-04 17:07:50,100 3317   [       Worker-5] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEST2. Asking rev.eng. strategy
+2019-04-04 17:07:50,101 3318   [       Worker-5] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEST2
+2019-04-04 17:07:53,458 6675   [       Worker-5] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-04 17:07:53,459 6676   [       Worker-5] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-04 17:07:53,460 6677   [       Worker-5] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-04 17:07:53,470 6687   [       Worker-5] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-11 11:44:49,582 0      [      Worker-67] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-11 11:44:52,265 2683   [      Worker-67] WARN  ibernate.cfg.reveng.JDBCReader  - The JDBC driver didn't report any primary key columns in TEST2. Asking rev.eng. strategy
+2019-04-11 11:44:52,266 2684   [      Worker-67] WARN  ibernate.cfg.reveng.JDBCReader  - Rev.eng. strategy did not report any primary key columns for TEST2
+2019-04-11 11:44:55,404 5822   [      Worker-67] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-11 11:44:55,405 5823   [      Worker-67] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-11 11:44:55,406 5824   [      Worker-67] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-11 11:44:55,414 5832   [      Worker-67] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-11 13:20:56,950 5767368 [      Worker-91] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-11 13:21:12,937 5783355 [      Worker-91] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-11 13:21:12,938 5783356 [      Worker-91] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-11 13:21:12,939 5783357 [      Worker-91] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-11 13:21:12,945 5783363 [      Worker-91] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-15 08:55:54,959 0      [      Worker-35] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: C:\Users\Administrator\Desktop\myeclipse10的Java源代码\ssh-spring\src\applicationContext.xml(2) Document is invalid: no grammar found.
+2019-04-15 08:55:54,974 15     [      Worker-35] ERROR   org.hibernate.util.XMLHelper  - Error parsing XML: C:\Users\Administrator\Desktop\myeclipse10的Java源代码\ssh-spring\src\applicationContext.xml(2) Document root element "beans", must match DOCTYPE root "null".
+2019-04-15 08:56:18,624 23665  [      Worker-35] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-15 08:56:18,624 23665  [      Worker-35] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-15 08:56:18,624 23665  [      Worker-35] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-15 08:56:18,639 23680  [      Worker-35] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM
+2019-04-15 09:08:39,950 764991 [      Worker-50] WARN  bernate.dialect.Oracle9Dialect  - The Oracle9Dialect dialect has been deprecated; use either Oracle9iDialect or Oracle10gDialect instead
+2019-04-15 09:08:45,035 770076 [      Worker-50] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : generatePreciseFunctions : inline not allowed to replace existing VM
+2019-04-15 09:08:45,035 770076 [      Worker-50] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logInfo : inline not allowed to replace existing VM
+2019-04-15 09:08:45,035 770076 [      Worker-50] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : logError : inline not allowed to replace existing VM
+2019-04-15 09:08:45,051 770092 [      Worker-50] WARN  .hibernate.tool.hbm2x.template  - Velocimacro : VM addition rejected : executeQuery : inline not allowed to replace existing VM

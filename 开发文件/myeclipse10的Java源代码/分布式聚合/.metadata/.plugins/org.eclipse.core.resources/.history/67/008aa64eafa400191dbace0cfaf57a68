@@ -1,0 +1,15 @@
+package haha;
+
+import java.io.Console;
+
+import uit.Ha;
+
+public class IsTheGirlHappy {
+	public static void main(String[] args) {
+		Ha ha = new Ha();
+		Console con = System.console();
+		if (con.readLine().equals(ha.haha().toCharArray())) {
+			System.out.println("对比成功");
+		}
+	}
+}

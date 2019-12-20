@@ -1,0 +1,10 @@
+package deom;
+
+public class Cat extends Kao {
+	public Cat(){
+		System.out.println("Cat");
+	}
+	public void  Show(){
+		
+	}
+}

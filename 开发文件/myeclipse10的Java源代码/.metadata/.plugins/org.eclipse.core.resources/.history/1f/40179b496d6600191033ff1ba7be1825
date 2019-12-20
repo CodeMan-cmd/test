@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+<mapper namespace="dao.Shangpin">
+	<select id="selectProdct" resultMap="cc">
+		SELECT * FROM easybuy_product
+	</select>
+	
+	<resultMap type="Easybuy_product" id="cc">
+	<result property="id" column="id"/>
+	<result property="name" column="name"/>
+	<result property="description" column="description"/>
+	<result property="price" column="price"/>
+	<result property="stock" column="stock"/>
+	<result property="categoryLeve11Id" column="categoryLeve11Id"/>
+	<result property="categoryLeve12Id" column="categoryLeve12Id"/>
+	<result property="categoryLeve13Id" column="categoryLeve13Id"/>
+	<result property="fileName" column="fileName"/>
+	<result property="isDelete" column="isDelete"/>
+	</resultMap>
+</mapper>

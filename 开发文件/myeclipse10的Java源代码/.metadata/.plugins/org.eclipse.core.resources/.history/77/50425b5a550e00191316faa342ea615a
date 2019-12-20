@@ -1,0 +1,8 @@
+package deom;
+
+public class Maina {
+ public static void main(String[] args) {
+	Cat cat=new Cat();
+	cat.Show();
+}
+}

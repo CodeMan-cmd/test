@@ -1,0 +1,38 @@
+package test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import pojo.User;
+import service.UserService;
+
+public class Test {
+    public static void main(String[] args) {
+    	
+		}
+    
+    
+	    /*ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+		User u=new User();
+		u.setUserName("小童");
+		UserService service=(UserService)context.getBean("userService");
+		int addUser=service.addUser(u);
+		if (addUser>0) {
+			System.out.println("新增成功！！！！！");*/
+    
+        /*ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService service=(UserService)context.getBean("userService");
+        List<User> list=new ArrayList<User>();
+        User user=new User();,u
+        user.setUserName("赵");
+        user.setUserRole(3);
+        list=service.findUser(user);
+        for (User u:list){
+            System.out.println("userCode: "
+                    + u.getUserCode() + " and userName: "
+                    + u.getUserName() + " and userRole: "
+                    + u.getUserRole() + " and userRoleName: "
+                    + u.getUserRoleName() + " and address: "
+                    + u.getAddress());
+        }*/
+    }
+}

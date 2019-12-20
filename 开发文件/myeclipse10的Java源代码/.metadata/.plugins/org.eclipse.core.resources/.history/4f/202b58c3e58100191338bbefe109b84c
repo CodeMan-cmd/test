@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	">
+ 
+ 
+ 
+	  <bean id = "userdao" class="com.bdqn.dao.UserDao"></bean>
+	<!--  destroy-method当对象生命结束的时候  会去调destroy-method 方法  
+	 <bean id = "userservice" class="com.bdqn.service.UserService" destroy-method="destory">
+	 	<property name="yyy" ref="userdao"></property> 
+	 	
+	 	<property name="username"  value="zhangsanfeng"></property>
+	 	<property name="date" ref="date"></property>
+	 </bean>-->
+	 <bean id = "date" class="java.util.Date"></bean> 
+	 <bean id = "service" class="com.bdqn.service.UserService" p:username="张三" p:userdao-ref="userdao">
+			<constructor-arg index="0" value="马六"></constructor-arg>
+		<!-- 	<constructor-arg index="1" ref="date"></constructor-arg> -->
+			<constructor-arg index="1" ref="userdao"></constructor-arg> 
+ 	</bean>
+ </beans>

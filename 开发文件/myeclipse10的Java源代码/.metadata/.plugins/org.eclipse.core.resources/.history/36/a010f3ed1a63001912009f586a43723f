@@ -1,0 +1,13 @@
+$(".l_user").blur(function(){
+	alert();
+	var strname= $(this).val();
+	$.ajax({
+		url:"asynchronousJudgment?loginName="+strname,	
+		type:"GET",
+	   dataType:json,
+	   success:function(res){
+		   $(".l_user").next().html(res.message);
+		   $(".l_pwd").next().html(res.message);
+	   }
+	});
+});

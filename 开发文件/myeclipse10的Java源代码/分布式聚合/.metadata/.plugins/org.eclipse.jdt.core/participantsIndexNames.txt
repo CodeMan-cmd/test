@@ -1,0 +1,7 @@
+INDEX VERSION 1.126
+C:\Users\Administrator\Desktop\myeclipse10的Java源代码\分布式聚合\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2369632505.index
+\搞怪\src
+C:\Users\Administrator\Desktop\myeclipse10的Java源代码\分布式聚合\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3118070657.index
+\spring-batis\src
+C:\Users\Administrator\Desktop\myeclipse10的Java源代码\分布式聚合\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\183470453.index
+\spring-batis\src

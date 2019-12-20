@@ -1,0 +1,34 @@
+package service;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Repository;
+
+import pojo.Easybuy_user;
+import dao.UserMapper;
+@Repository("userService")
+public class UserServiceImpl implements UserService {
+	@Resource
+	private UserMapper userMapper;
+
+	public UserMapper getDao() {
+		return userMapper;
+	}
+
+	public void setDao(UserMapper dao) {
+		this.userMapper = dao;
+	}
+
+	public UserServiceImpl(UserMapper dao) {
+		super();
+		this.userMapper = dao;
+	}
+
+	
+
+	public int insertUser(Easybuy_user user) {
+		return userMapper.insertUser(user);
+	}
+
+	public int selectUser(Easybuy_user user) {
+		return userMapper.selectUser(user);
+	}
+}

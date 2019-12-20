@@ -1,0 +1,18 @@
+package dao;
+
+import pojo.User;
+
+import java.util.List;
+
+public interface UserDao {
+    /**
+     * 查询用户列表
+     * @param user
+     * @return
+     */
+    public List<User> getUserList(User user);
+
+    /**
+     * 添加
+     */
+}

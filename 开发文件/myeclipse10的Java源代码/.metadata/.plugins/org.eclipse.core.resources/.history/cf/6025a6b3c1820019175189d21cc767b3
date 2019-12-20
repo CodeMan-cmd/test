@@ -1,0 +1,9 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import service.EmployeeService;
+
+@Controller
+public class IndexController {
+		private EmployeeService employeeService;
+}

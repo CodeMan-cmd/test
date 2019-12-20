@@ -1,0 +1,43 @@
+package cn.strutsdemo;
+
+import com.opensymphony.xwork2.Action;
+
+public class HelloWorIdAction implements Action {
+		private String name="";
+		private String message="";
+		private String password;
+	
+	
+	public String execute() throws Exception {
+		//根据用户输入的姓名，进行“hello”的封装
+		this.setMessage("hello,"+this.getName()+"!");
+		//处理完毕，返回“helloWorld”
+		return "helloWorld";
+	}
+	public String execute() throws Exception{
+		if ("accp".equals(password)) {
+			return "index22";
+		} else {
+			return "helloWorld";
+		}
+		
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+}

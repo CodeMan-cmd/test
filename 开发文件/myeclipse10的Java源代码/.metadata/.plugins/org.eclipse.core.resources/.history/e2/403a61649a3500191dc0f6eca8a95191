@@ -1,0 +1,27 @@
+package test;
+
+/*import java.util.ArrayList;*/
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import pojo.User;
+
+import util.Page;
+import utils.MyBatisUtil;
+import dao.UserMapper;
+
+public class Test {
+	public static void main(String[] args){
+		SqlSession session = null;
+		session = MyBatisUtil.createSqlSession();
+		int i=session.getMapper(UserMapper.class).selectCount();
+		Page p=new Page();
+		p.setZongjiluhsu(i);
+		p.setDangqianyeshu(2);
+		List<User> selectPage=session.getMapper(UserMapper.class).selectPage(p);
+		for (User user : selectPage) {
+			System.out.println(user.getUserName());
+		}
+	}
+}

@@ -1,0 +1,9 @@
+package com.dbqn.dao;
+
+import java.util.List;
+
+import com.dbqn.entity.User;
+
+public class UserMapper {
+		public List<User> selectUser();
+}

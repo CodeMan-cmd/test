@@ -1,0 +1,10 @@
+package deom;
+
+public class Kao {
+	public  kao(){
+		System.out.println("Animals");
+	}
+	public virtual void Show(){
+		System.out.println("Animals:Show()");
+	}
+}

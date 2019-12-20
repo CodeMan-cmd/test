@@ -1,0 +1,12 @@
+package service;
+
+import java.util.List;
+
+import pojo.T_user;
+
+public interface ServiceUser {
+	public int insertUser(T_user user);
+	public int deleteUser(int user);
+	public List<T_user> updateUser(T_user user);
+	public List<T_user> selectUser();
+}

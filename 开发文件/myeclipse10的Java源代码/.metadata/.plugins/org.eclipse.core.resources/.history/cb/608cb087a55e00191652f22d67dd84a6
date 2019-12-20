@@ -1,0 +1,25 @@
+package test;
+
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Test test=new Test();
+	}
+	public void select(){
+		
+	}
+	public void delete(){
+		
+	}
+	public void update(){
+		
+	}
+	public void insert(){
+		
+	}
+
+}

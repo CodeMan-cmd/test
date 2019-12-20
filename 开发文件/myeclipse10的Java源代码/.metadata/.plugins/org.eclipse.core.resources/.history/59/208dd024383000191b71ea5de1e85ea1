@@ -1,0 +1,43 @@
+package text;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import pojo.User;
+
+import dao.UserMapper;
+
+
+public class Text {
+public static void main(String[] args) {
+	String resource = "mybatis-config.xml";
+	SqlSession sqlSession = null;
+	// 获取mybatis-config.xml的输入流
+	try {
+		InputStream is = Resources.getResourceAsStream(resource);
+		// 2创建SqlSessionFactory对象，完成对配置文件的读取
+		SqlSessionFactory factory = new SqlSessionFactoryBuilder()
+				.build(is);
+		// 3创建sqlSession
+		sqlSession = factory.openSession();
+		/*// 4调用mapper文件对数据进行操作,必须将mapper文件引入到mybatis-config.xml中
+		count = sqlSession.selectOne("dao.UserMapper.selectByRoleId");*/
+	List<User> select=sqlSession.getMapper(UserMapper.class).select(3);
+	for (User user : select) {
+		System.out.println("姓名："+user.getUserName()+"/n职务："+user.getUserCode());
+	}
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}finally{
+		sqlSession.close();
+	}
+
+}
+}

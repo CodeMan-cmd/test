@@ -1,0 +1,8 @@
+package service;
+import java.util.List;
+
+import pojo.Easybuy_user;
+
+public interface UserService {
+	public boolean selectUser();
+}

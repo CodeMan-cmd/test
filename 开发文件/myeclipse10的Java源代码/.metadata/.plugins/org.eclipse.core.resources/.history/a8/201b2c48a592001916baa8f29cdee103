@@ -1,0 +1,17 @@
+package dao;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import pojo.T_user;
+
+@Repository("userMapper")
+public interface UserMapper {
+	public int insertUser(T_user user);
+	public int deleteUser(int id);
+	public List<T_user> updateUser(@Param("user")T_user user);
+	public List<T_user> selectUser();
+	public int selectByIdUser(int id);
+}

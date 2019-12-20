@@ -1,0 +1,48 @@
+package service;
+
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+
+import pojo.Easybuy_product;
+import util.Page;
+
+import dao.Shangpin;
+@Repository("productService")
+public class ProductServiceImp implements ProductService {
+		@Resource
+		private Shangpin shangpin;
+		public Shangpin getShangpin() {
+			return shangpin;
+		}
+		
+		public void setShangpin(Shangpin shangpin) {
+			this.shangpin = shangpin;
+		}
+		
+		public ProductServiceImp(Shangpin shangpin) {
+			super();
+			this.shangpin = shangpin;
+		}
+		
+		public ProductServiceImp() {
+			super();
+		}
+
+		public List<Easybuy_product> selectProdct() {
+			return shangpin.selectProdct();
+		}
+		public List<Easybuy_product> selectLimit(Easybuy_product name2, Page p) {
+			// 保存总计录数
+			p.setZongjilushu(selectCount());
+			return shangpin.selectLimit(name2, p);
+		}
+		public int selectCount() {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+
+}

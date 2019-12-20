@@ -1,0 +1,5 @@
+package com.bdqn.dao;
+
+public class UserMapper {
+
+}

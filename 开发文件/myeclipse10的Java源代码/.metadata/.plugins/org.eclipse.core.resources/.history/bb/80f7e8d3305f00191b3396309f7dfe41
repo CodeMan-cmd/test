@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 创建一个default包，继承自Struts2的struts-default包 -->
+	<constant name="struts.custom.i18n.resources" value="message"/>
+	<package name="default" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor name="MyTimer1" class="interceptor.MyTimerInterceptor"></interceptor>
+			<interceptor name="MyTimer2" class="interceptor.MyTimerInterceptor1"></interceptor>
+			<interceptor-stack name="MyStacks">
+				<interceptor-ref name="MyTimer1"></interceptor-ref>
+				<interceptor-ref name="MyTimer2"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="MyStacks"></default-interceptor-ref>
+		
+		
+		
+		
+		<!-- 接收处理用户的/helloWorld.action请求 ，
+			 并根据返回结果，完成跳转 -->
+		
+		<action name="qqq" class="action.EmpAction">
+			<result name="success" type="dispatcher" >index.jsp</result>
+			<result name="input">index.jsp</result>
+			<result name="login">Login.jsp</result>
+		</action>
+		
+		<action name="save" class="action.EmpAction" method="save">
+			<result name="success" type="dispatcher" >index.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

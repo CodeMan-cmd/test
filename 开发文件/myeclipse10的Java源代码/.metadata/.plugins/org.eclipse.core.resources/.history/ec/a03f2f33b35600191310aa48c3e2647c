@@ -1,0 +1,13 @@
+package cn.strutsdemo;
+
+import com.opensymphony.xwork2.Action;
+
+public class HelloWorIdAction implements Action {
+		private String name;
+		private String message;
+	public String execute() throws Exception {
+		//根据用户输入的姓名，进行“hello”的封装
+		return null;
+	}
+
+}

@@ -1,0 +1,110 @@
+package controller;
+import java.util.List;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import pojo.Easybuy_product;
+import pojo.Easybuy_user;
+
+import service.ProductService;
+import service.UserService;
+import util.Page;
+import util.SecurityUtils;
+@Controller
+public class IndexController {
+	@Resource
+	private UserService userService;
+	@Resource
+	private ProductService productService;
+	
+	@RequestMapping("/login")
+	public String login(Easybuy_user user){
+		return "Login";
+	}
+	@RequestMapping("/regist")
+	public String regist(Easybuy_user user){
+		return "Regist";
+	}
+	@RequestMapping("/index")
+	public String index(HttpServletRequest req){
+		return "Index";
+	}
+	@RequestMapping("/product")
+	public String product(){
+		return "Product";
+	}
+	@RequestMapping("selectUser")
+	public String selectUser(@RequestParam(value="loginName",required=false) String loginName,
+							@RequestParam(value="password",required=false) String password,
+							HttpServletRequest req){
+		List<Easybuy_user> login=userService.selectUser(loginName, SecurityUtils.md5Hex(password));
+		
+		if (login.size()>0) {
+			List<Easybuy_product> selectProdct = productService.selectProdct();
+			req.setAttribute("selectProdct", selectProdct);
+			return "Index";
+		}else {
+			req.setAttribute("no","账号或者密码错误");
+		    return "Login";
+		}
+	}
+	
+	@RequestMapping("/asynchronousJudgment")
+	@ResponseBody
+	public String resist(@RequestParam(value="loginName",required=false) String loginName){
+		List<Easybuy_user> selectName=userService.selectJudgment(loginName);
+		if (selectName.size()>0) {
+			return "{\"message\":\"1\"}";
+		}else {
+			return "{\"message\":\"0\"}";
+		}
+	}
+	@RequestMapping("/insertUser")
+	public String insertUser(@RequestParam(value="loginName", required=false) String loginName,
+					@RequestParam(value="password",required=false) String password,
+						@RequestParam(value="email",required=false) String email,
+							@RequestParam(value="mobile",required=false) String mobile,
+							HttpServletRequest req){
+		Easybuy_user user=new Easybuy_user();
+			user.setLoginName(loginName);
+			user.setPassword(SecurityUtils.md5Hex(password));
+			user.setEmail(email);
+			user.setMobile(mobile);
+		if (loginName!=null&&password!=null) {
+			userService.insertUser(user);
+		}
+			req.setAttribute("loginName", loginName);
+			req.setAttribute("password", password);
+		return "Login";
+	}
+	
+	@RequestMapping("/souSoYinQing")
+	public String souSoYinQing(@RequestParam(value="name",required=false) String name,
+			@RequestParam(value="dangqianyema",required=false) String dangqianyema,HttpServletRequest req){
+		List<Easybuy_product> list=productService.souSoYinQing(name);
+		req.setAttribute("list", list);
+		return "BrandList";
+	}
+	@RequestMapping("/selectLimit2")
+	public String selectLimit2(@RequestParam(value="name",required=false) String name,
+			@RequestParam(value="dangqianyema",required=false) String dangqianyema,HttpServletRequest req){
+		Page p = new Page();
+		Easybuy_product name2=new Easybuy_product();
+		if (!"".equals(dangqianyema) && null != dangqianyema) {
+			//当前页数不为空时添加当前页数
+			p.setDangqianyema(Integer.parseInt(dangqianyema));// String类型 强 转换成
+		}
+		if (!"".equals(name) && null!=null)  {
+			name2.setName(name);
+			req.setAttribute("name", name);
+		}
+		List<Easybuy_product> list2= productService.selectLimit(name2, p);
+		req.setAttribute("list2", list2);
+		req.setAttribute("p", p);
+		return "BrandList";
+	}
+}

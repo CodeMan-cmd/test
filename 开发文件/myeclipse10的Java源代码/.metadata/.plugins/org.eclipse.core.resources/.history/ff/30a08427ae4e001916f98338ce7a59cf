@@ -1,0 +1,94 @@
+package dao;
+
+import java.math.BigDecimal;
+
+/**
+ * Text1Id entity. @author MyEclipse Persistence Tools
+ */
+
+public class Text1Id implements java.io.Serializable {
+
+	// Fields
+
+	private String id;
+	private String username;
+	private BigDecimal qiang;
+
+	// Constructors
+
+	/** default constructor */
+	public Text1Id() {
+	}
+
+	/** minimal constructor */
+	public Text1Id(String id, String username) {
+		this.id = id;
+		this.username = username;
+	}
+
+	/** full constructor */
+	public Text1Id(String id, String username, BigDecimal qiang) {
+		this.id = id;
+		this.username = username;
+		this.qiang = qiang;
+	}
+
+	// Property accessors
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public BigDecimal getQiang() {
+		return this.qiang;
+	}
+
+	public void setQiang(BigDecimal qiang) {
+		this.qiang = qiang;
+	}
+
+	public boolean equals(Object other) {
+		if ((this == other))
+			return true;
+		if ((other == null))
+			return false;
+		if (!(other instanceof Text1Id))
+			return false;
+		Text1Id castOther = (Text1Id) other;
+
+		return ((this.getId() == castOther.getId()) || (this.getId() != null
+				&& castOther.getId() != null && this.getId().equals(
+				castOther.getId())))
+				&& ((this.getUsername() == castOther.getUsername()) || (this
+						.getUsername() != null
+						&& castOther.getUsername() != null && this
+						.getUsername().equals(castOther.getUsername())))
+				&& ((this.getQiang() == castOther.getQiang()) || (this
+						.getQiang() != null && castOther.getQiang() != null && this
+						.getQiang().equals(castOther.getQiang())));
+	}
+
+	public int hashCode() {
+		int result = 17;
+
+		result = 37 * result + (getId() == null ? 0 : this.getId().hashCode());
+		result = 37 * result
+				+ (getUsername() == null ? 0 : this.getUsername().hashCode());
+		result = 37 * result
+				+ (getQiang() == null ? 0 : this.getQiang().hashCode());
+		return result;
+	}
+
+}

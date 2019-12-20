@@ -1,0 +1,14 @@
+package com.dbqn.service;
+
+import java.util.List;
+
+import com.dbqn.entity.User;
+
+public class UserServiceImp imlements UserService {
+
+	public List<User> selectUser() {
+		
+		return null;
+	}
+
+}

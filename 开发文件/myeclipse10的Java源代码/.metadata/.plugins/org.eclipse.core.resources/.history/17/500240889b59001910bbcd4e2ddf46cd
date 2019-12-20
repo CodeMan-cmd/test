@@ -1,0 +1,56 @@
+package cn.strutsdemo;
+
+import java.util.Map;
+
+import javax.swing.Spring;
+
+import org.omg.CORBA.Request;
+
+import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ActionContext;
+
+public class HelloWorIdAction implements Action {
+	private String name = "";
+	private String message = "";
+	private String password= "";
+
+	/*
+	 * public String execute() throws Exception { //根据用户输入的姓名，进行“hello”的封装
+	 * this.setMessage("hello,"+this.getName()+"!"); //处理完毕，返回“helloWorld”
+	 * return "helloWorld"; }
+	 */
+	public String execute() throws Exception {
+		if ("accp".equals(password)) {
+			Map<String,Object> session=null;
+			session=ActionContext.getContext().getSession();
+			session.put("gett", name);
+			return "app";
+		} else {
+			return "helloWorld";
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.2.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+	">
+	
+	
+	<context:component-scan base-package="com.bdqn"></context:component-scan>
+	
+	<aop:aspectj-autoproxy  proxy-target-class="false" />
+ <!-- 
+ 	<bean id = "userdao" class="com.bdqn.dao.UserDao"></bean>
+ 
+ 	<bean id = "service" class="com.bdqn.service.impl.UserServiceImpl">
+ 		<property name="userdao" ref="userdao"></property>
+ 	</bean> -->
+ 	
+ 	<!-- <bean id = "log1" class="com.bdqn.log.AopLog"></bean> -->
+ 
+ 	<!--  <aop:config proxy-target-class="false">
+ 	 	告诉spring  谁是增强方法
+ 	 	谁是   切点
+ 	 	<aop:pointcut expression="execution(* com.bdqn.service..*.*(..))" id="pt1"/>
+ 	 	<aop:aspect ref="log1">
+ 	 		<aop:before method="xxx" pointcut-ref="pt1"/>
+ 	 		<aop:after-returning method="yyy" pointcut-ref="pt1" returning="re"/>
+ 	 		<aop:after-throwing method="zzz" pointcut-ref="pt1"/>
+ 	 		<aop:after method="uuu" pointcut-ref="pt1"/>
+ 	 		<aop:around method="kkk" pointcut-ref="pt1"/>
+ 	 	</aop:aspect>
+ 	 </aop:config> -->
+ 
+ </beans>
+ 
+ 
+  

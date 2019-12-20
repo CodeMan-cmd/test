@@ -1,0 +1,30 @@
+package service;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Repository;
+import dao.UserMapper;
+@Repository("userService")
+public class UserServiceImpl implements UserService {
+	@Resource
+	private UserMapper dao;
+
+	public UserMapper getDao() {
+		return dao;
+	}
+
+	public void setDao(UserMapper dao) {
+		this.dao = dao;
+	}
+
+	public UserServiceImpl(UserMapper dao) {
+		super();
+		this.dao = dao;
+	}
+
+	public UserServiceImpl() {
+		super();
+	}
+
+	public boolean selectUser() {
+		return dao.selectUser();
+	}
+}

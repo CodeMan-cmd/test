@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.EmployeeMapper">
+	<select id="employeeSelect">
+		SELECT * FROM employee
+	</select>
+	<delete id="meployeeDelete">
+		DELETE FROM employee WHERE empno=${id.empno};
+	</delete>
+	<insert id="meployeeInsert">
+		INSERT INTO employee(ename,job,sal,hiredate,deptno)
+		VALUES(${p.ename},${p.job},${p.sal},${p.hiredate},${p.deptno});
+	</insert>
+	<update id="meployeeUpdate">
+		UPDATE employee SET
+		ename=${p.ename},job=${p.job},sal=${p.sal},hiredate=${p.hiredate},deptno=${p,deptno}
+		WHERE empno=${p.empno};
+	</update>
+	<resultMap type="Employee" id="ti">
+	<result property="empno" column="empno"/>
+	<result property="ename" column="ename"/>
+	<result property="job" column="job"/>
+	<result property="sal" column="sal"/>
+	<result property="hiredate" column="hiredate"/>
+	<result property="deptno" column="deptno"/>
+	</resultMap>
+</mapper>

@@ -1,0 +1,58 @@
+		* {
+			margin: 0;
+			padding: 0;
+			draggable="false";
+		}
+		@keyframes myfirst {
+			/*from（与 0% 相同）to（与 100% 相同）*/
+			0% {
+				background-image: url(../img/03.jpg);
+				z-index: 99;
+			}
+			40% {
+				background-image: url(../img/02.jpg);
+				z-index: 99;
+			}
+			70% {
+				background-image: url(../img/01.jpg);
+				z-index: 99;
+			}
+			100% {
+				display: none;
+			}
+		}
+		
+		@keyframes myfirst2 {
+			/*from（与 0% 相同）to（与 100% 相同）*/
+			/*transform: translate(-200px,100px)斜这左下走*/
+			0% {
+				transform: translateY(5px);
+			}
+			100% {
+				transform: translateY(-5px);
+			}
+		}
+		
+		.aa {
+			width: 1000px;
+			height: 600px;
+			margin: auto;
+			/*infinite无限循环*/
+			animation: myfirst 3s;
+		}
+		
+		.bb {
+			display: none;
+			margin: auto;
+			/*animation（动画）、transition（过渡）、transform（变形）、translate（移动）。*/
+			animation: myfirst2 10ms infinite;
+		}
+		
+		.bb:hover {
+			animation: myfirst2 0ms;
+			color: #000000;
+			/*透明色*/
+			opacity: 0.3;
+			/*鼠标变成手*/
+			cursor: pointer;
+		}

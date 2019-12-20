@@ -1,0 +1,20 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+</head>
+
+<body>
+	<% String id=Integer.parseInt(getParameter("id")); %>
+	<form action="add2?id=${u.id}" method="post">
+		<c:forEach var="s" items="${upUser}">
+     用户编号：<input type="text" name="userCode" value="${s.userCode} ">
+			<br>
+   用户名：<input type="text" name="userName" value="${s.userName}">
+			<br>
+		</c:forEach>
+		<input type="submit" value="保存修改">
+	</form>
+</body>
+</html>

@@ -1,0 +1,65 @@
+package dao;
+
+import java.math.BigDecimal;
+
+/**
+ * Test2 entity. @author MyEclipse Persistence Tools
+ */
+
+public class Test2 implements java.io.Serializable {
+
+	// Fields
+
+	private BigDecimal id;
+	private Text1 text1;
+	private String name;
+	private BigDecimal password;
+
+	// Constructors
+
+	/** default constructor */
+	public Test2() {
+	}
+
+	/** full constructor */
+	public Test2(Text1 text1, String name, BigDecimal password) {
+		this.text1 = text1;
+		this.name = name;
+		this.password = password;
+	}
+
+	// Property accessors
+
+	public BigDecimal getId() {
+		return this.id;
+	}
+
+	public void setId(BigDecimal id) {
+		this.id = id;
+	}
+
+	public Text1 getText1() {
+		return this.text1;
+	}
+
+	public void setText1(Text1 text1) {
+		this.text1 = text1;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public BigDecimal getPassword() {
+		return this.password;
+	}
+
+	public void setPassword(BigDecimal password) {
+		this.password = password;
+	}
+
+}

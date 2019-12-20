@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+	<select id="selectJudgment"  resultMap="aa">
+		SELECT * FROM easybuy_user WHERE loginName=#{0}
+	</select>
+	<select id="selectUser" resultMap="aa">
+		SELECT loginName,`password` FROM easybuy_user
+		<where>
+			<if test="user.loinName!=null and user.loinName!='' ">
+				loginName=#{user.loginName}
+			</if>
+			<if test="pwd.password!=null and pwd.password!='' ">
+				and `password`=#{pwd.password}
+			</if>
+		</where>
+	</select>
+	<insert id="insertUser" parameterType="Easybuy_user">
+		INSERT INTO
+		easybuy_user(loginName,userName,`password`,email,mobile)
+		VALUES(#{user.loginName},#{user.userName},#{user.password},#{user.email},#{user.mobile})
+	</insert>
+	<resultMap type="Easybuy_user" id="aa">
+		<result property="loginName" column="loginName" />
+		<result property="password" column="password" />
+	</resultMap>
+</mapper>

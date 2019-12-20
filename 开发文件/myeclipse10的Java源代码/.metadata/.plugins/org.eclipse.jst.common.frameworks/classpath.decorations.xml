@@ -1,0 +1,7 @@
+<classpath>
+  <container id="mvc流!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="C:/Users/Administrator/Desktop/myeclipse10的Java源代码/mvc流/WebRoot/WEB-INF/lib/commons-io-2.4.jar">
+      <source-attachment-path>C:/Users/Administrator/Desktop/myeclipse10的Java源代码/mvc流/WebRoot/WEB-INF/lib/fastjson-1.2.13.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

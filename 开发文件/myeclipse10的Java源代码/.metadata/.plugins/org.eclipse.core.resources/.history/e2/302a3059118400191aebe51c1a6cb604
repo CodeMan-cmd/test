@@ -1,0 +1,42 @@
+package utils;
+
+import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+
+import dao.ProfileMapper;
+import pojo.Profile;
+
+public class Test {
+	public static void main(String[] args) {
+		Test test=new Test();
+		System.out.println(test.updateProfile2());
+	}
+	public List<Profile> selectProfile2() {
+		SqlSession session = null;
+		session = MyBatisUtil.createSqlSession();
+		List<Profile> i1=session.getMapper(ProfileMapper.class).selectProfile();
+		return i1;
+	}
+	public Profile updateProfile2(){
+		SqlSession session=null;
+		session=MyBatisUtil.createSqlSession();
+		Profile up=new Profile();
+		//id
+		up.setId(2);
+		//姓名
+		up.setName("童辉煌");
+		//日期
+		up.setBirthday("1999.2.2");
+		//性别
+		up.setGender("男");
+		//职位
+		up.setCareer("java工程师");
+		//住址
+		up.setAddress("花园路");
+		//电话
+		up.setMobile("123232323");
+		Profile i1=session.getMapper(ProfileMapper.class).updateProfile(up);
+		return i1;
+		
+	}
+}

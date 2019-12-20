@@ -1,0 +1,23 @@
+package text;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.junit.Test;
+
+import dao.Text1;
+import dao.Text1DAO;
+
+public class TextJunit {
+
+	@Test
+	public void test() {
+		Text1DAO dao=new Text1DAO();
+		List<Text1> dao2=dao.findAll();
+		for (Text1 text1 : dao2) {
+			System.out.println(text1.getName()+"+"+text1.getId());
+		}
+	}
+
+}

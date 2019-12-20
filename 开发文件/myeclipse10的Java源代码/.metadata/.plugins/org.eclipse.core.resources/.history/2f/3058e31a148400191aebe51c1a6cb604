@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 引入database.properties文件 -->
+	<properties resource="database.properties"></properties>
+	<settings>
+	<!-- 设置resultMap的自动映射级别为NONE(禁止自动匹配) -->
+		<setting name="autoMappingBehavior" value="NONE" />
+	</settings>
+	<typeAliases>
+		<!-- 这里给实体类取别名,方便在mapper配置文件中使用 -->
+		<!--<typeAlias type="pojo.User" alias="user"></typeAlias> -->
+		<!-- 通过package的name属性直接指定包名,MyBatis会自动扫描指定包下的JavaBean,并默认设置一个别名,默认名称是JavaBean的非限定类名 -->
+		<package name="pojo,service"></package>
+	</typeAliases>
+	<!-- 配置mybatis多套运行环境 -->
+	<environments default="development">
+		<environment id="development">
+			<!--配置事务管理,采用JDBC的事务管理 -->
+			<transactionManager type="JDBC"></transactionManager>
+			<!-- POOLED:mybatis自带的数据源,JNDI:基于tomcat的数据源 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}"></property>
+				<property name="url" value="${url}"></property>
+				<property name="username" value="${user}"></property>
+				<property name="password" value="${password}"></property>
+			</dataSource>
+		</environment>
+	</environments>
+	<!-- 将mapper文件加入到配置文件中 -->
+	<mappers>
+		<mapper resource="dao/ProfileMapper.xml"></mapper>
+	</mappers>
+</configuration>

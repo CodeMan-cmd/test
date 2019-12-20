@@ -1,0 +1,12 @@
+$(".l_user").blur(function(){
+	var strname=$(this).val();
+	alert(strname);
+	$.ajax({
+		url:"statics/asynchronousJudgment?loginName="+strname,	
+		type:"GET",
+	   dataType:json,
+	   success:function(res){
+		   $(".l_user").next().html(res.message);
+	   }
+	});
+});

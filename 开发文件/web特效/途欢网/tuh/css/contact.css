@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.n_banner {
+    width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    left: 50%;
+    margin-left: -800px;
+}
+
+.title-comm {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.welinain {
+    text-align: center;
+}
+
+.line {
+    border-top: 1px solid #3bbe7a;
+    width: 30px;
+    margin: 20px auto 40px;
+}
+
+.linh25 {
+    line-height: 25px;
+}
+
+.large-3 {
+    width: 33.33333333%;
+    float: left;
+}
+
+.contactus-item {
+    margin-bottom: 100px;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.contactus-item p {
+    margin: 0 0 5px;
+}
+
+.contact-icon {
+    margin:0 auto;
+    width: 25%;
+    background-color: #3bbe7a;
+    border-radius: 50%;
+    margin-bottom: 10%;
+
+}
+
+.icon-tact {
+    padding: 30% 0;
+    font-size: 30px;
+    color: #fff;
+}

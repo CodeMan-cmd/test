@@ -1,0 +1,19 @@
+package dao;
+
+/**
+ * Text1Id entity. @author MyEclipse Persistence Tools
+ */
+public class Text1Id extends AbstractText1Id implements java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public Text1Id() {
+	}
+
+	/** full constructor */
+	public Text1Id(String id, String username) {
+		super(id, username);
+	}
+
+}

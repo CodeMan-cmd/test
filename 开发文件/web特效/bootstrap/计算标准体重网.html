@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/common.css" />
+
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+				* {
+					/*//moz火狐不允许别人复制*/
+					-moz-user-select: none;
+					/*火狐*/
+					-webkit-user-select: none;
+					/*webkit浏览器*/
+					-ms-user-select: none;
+					/*IE10*/
+					-khtml-user-select: none;
+					/*早期浏览器*/
+					user-select: none;
+				}
+			}
+			
+			.darkBg {
+				background: #3a3a3a;
+			}
+			
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			body {
+				background-color: #FFF;
+			}
+			
+			.snowfall-flakes {
+				animation: sakura 1s linear 0s infinite;
+			}
+			
+			@keyframes sakura {
+				0% {
+					transform: rotate3d(0, 0, 0, 0deg);
+				}
+				25% {
+					transform: rotate3d(1, 1, 0, 60deg);
+				}
+				50% {
+					transform: rotate3d(1, 1, 0, 0deg);
+				}
+				75% {
+					transform: rotate3d(1, 0, 0, 60deg);
+				}
+				100% {
+					transform: rotate3d(1, 0, 0, 0deg);
+				}
+			}
+		</style>
+	</head>
+
+	<body class="darkBg">
+		<div class="container">
+			<span style="color: red;">输入身高测量标准体重</span>
+			<hr />
+			<div class="col-md-9 col-md-push-4">
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<input class="btn btn-info" type="button" value="输入身高" name="val" onclick="FormSubmit()">
+				<input class="btn btn-default" type="text" id="cm" /><br />
+				<span id="dao"></span>
+			</div>
+		</div>
+		<script src="js/jquery-1.12.4.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/snowfall.jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(document).snowfall({
+					image: "./js/img/1.png",
+					flakeCount: 20,
+					minSpeed: 1,
+					minSize: 8,
+					maxSize: 15,
+				});
+				$(document).snowfall({
+					image: "./js/img/1.png",
+					flakeCount: 20,
+					minSpeed: 1,
+					minSize: 8,
+					maxSize: 15,
+				});
+				$(document).snowfall({
+					image: "./js/img/2.png",
+					flakeCount: 20,
+					minSpeed: 1,
+					minSize: 8,
+					maxSize: 15,
+				});
+				$(document).snowfall({
+					image: "./js/img/4.png",
+					flakeCount: 20,
+					minSpeed: 1,
+					minSize: 8,
+					maxSize: 15,
+				});
+			})
+
+			function FormSubmit() {
+				var dao = document.getElementById('dao');
+				var cm = document.getElementById('cm').value;
+				var cm3 = parseInt((cm - 80) * 0.7);
+				if(cm!= "") {
+					alert("主人您的标准体重是：" + cm3 + "kg");
+				} else {
+					alert("不能为空")
+				}
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,19 @@
+#actice指定下面的配置文件端口号
+server:
+  port: 8081
+spring:
+  profiles:
+    active: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
+---
+server:
+  port: 8083
+  servlet:
+    context-path: /boot
+spring:
+  profiles: dev
+

@@ -1,0 +1,90 @@
+package dao;
+
+import java.util.TimeZone;
+
+import sun.util.calendar.AbstractCalendar;
+import sun.util.calendar.CalendarDate;
+
+/**
+ * Text1 entity. @author MyEclipse Persistence Tools
+ */
+public class Text1 extends AbstractCalendar implements java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public Text1() {
+	}
+
+	/** full constructor */
+	public Text1(Text1 id) {
+		super();
+	}
+
+	@Override
+	protected void getCalendarDateFromFixedDate(CalendarDate arg0, long arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected long getFixedDate(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	protected boolean isLeapYear(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int getMonthLength(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getYearLength(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int getYearLengthInMonths(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public CalendarDate newCalendarDate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CalendarDate newCalendarDate(TimeZone arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean normalize(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean validate(CalendarDate arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

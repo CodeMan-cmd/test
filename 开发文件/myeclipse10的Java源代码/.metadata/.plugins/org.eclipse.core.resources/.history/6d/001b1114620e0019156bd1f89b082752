@@ -1,0 +1,12 @@
+package deom;
+
+import java.io.IOException;
+
+public class Maina {
+
+	 public void asdas() throws IOException{
+}
+	 public void qwe() throws Exception{
+		 asdas();
+	 }
+}

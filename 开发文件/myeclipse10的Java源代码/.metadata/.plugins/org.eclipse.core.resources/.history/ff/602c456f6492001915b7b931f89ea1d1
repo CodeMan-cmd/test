@@ -1,0 +1,39 @@
+package controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import pojo.T_user;
+import service.ServiceUser;
+
+@Controller
+public class IndexController {
+	@Resource
+	
+	@RequestMapping("/insetUser")
+	public String insertUser(){
+		return "list";
+		
+	}
+	@RequestMapping("/deleteUser")
+	public String deleteUser(){
+		return "list";
+		
+	}
+	@RequestMapping("/updateUser")
+	public String updateUser(){
+		return "list";
+		
+	}
+	@RequestMapping("/selectUser")
+	public String selectUser(){
+		List<T_user> list=
+		return "list";
+		
+	}
+
+}

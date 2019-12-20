@@ -1,0 +1,23 @@
+package controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.ProfileService;
+
+@Controller
+public class ProfileController {
+	@Resource
+	private ProfileService profileService;
+	
+	@RequestMapping("select")
+	public String selectProfile(){
+		return null;
+	}
+	@RequestMapping("update")
+	public String updatprofile(){
+		return null;
+	}
+}

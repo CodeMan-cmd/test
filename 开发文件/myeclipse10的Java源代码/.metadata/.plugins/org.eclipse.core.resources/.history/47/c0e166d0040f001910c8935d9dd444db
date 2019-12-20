@@ -1,0 +1,52 @@
+package dao;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import entity.Person;
+
+public class PersonDao extends BaseDao {
+	// 查询
+	public List<Person> getAllPerson() {
+		List<Person> list = new ArrayList<Person>();
+		String sql = "select * from person";
+		ResultSet rs =getAll(sql, null);
+		try {
+			while (rs.next()) {
+				list.add(new Person(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getString(6)));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	// 修改
+	public int updatePerson(Person p) {
+		String sql = "update person set name=?,sex=?,age=?,rank=?,department=? where id=?";
+		Object[] params = new Object[] {p.getName(),p.getSex(),p.getAge(),p.getRank(),p.getDepartment(),p.getId()};
+		return updateAll(sql, params);
+	}
+
+	// 根据id查询
+	public Person getByuserId(int id) {
+		Person p = null;
+		String sql = "select * from person where id=?";
+		ResultSet rs = getAll(sql, new Object[] { id });
+		try {
+			if (rs.next()) {
+				p = new Person(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getString(5), rs.getString(6));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return p;
+	}
+
+	// 删除
+	public int deletePerson(int userID) {
+		String sql = "delete from person where id=?";
+		return updateAll(sql, new Object[] { id });
+	}
+}

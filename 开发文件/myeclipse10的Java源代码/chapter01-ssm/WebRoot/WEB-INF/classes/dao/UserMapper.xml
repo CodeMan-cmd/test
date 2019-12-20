@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+
+	<resultMap type="User" id="aaaaa">
+		<result property="id" column="id" />
+		<result property="userName" column="userName"/>
+		<result property="userCode" column="userCode"/>
+	</resultMap>
+	<insert id="addUser">
+		INSERT INTO smbms.smbms_user (userCode,userName,userPassword,birthday)VALUES(#{u.userCode},#{u.userName},#{u.userPassword},#{u.birthday})
+	</insert>
+	
+	<sql id="selectUser1">
+			<where>
+				<if test="u.userCode!=null and u.userCode!=''">
+					and a.userCode LIKE CONCAT('%',#{u.userCode},'%')  
+				</if>
+				<if test="u.userName!=null and u.userName!=''">
+					and a.userName LIKE CONCAT('%',#{u.userName},'%') 
+				</if>
+			</where>
+	</sql>
+	<select id="selectByPR" resultMap="aaaaa" >
+		SELECT id,userCode,userName FROM smbms_user AS a
+			<include refid="selectUser1"></include>
+			LIMIT #{p.qishitiaoshu},#{p.meiyexianshitiaoshu}
+	</select>
+	<select id="selectCountByUser" resultType="int">
+		SELECT COUNT(1) FROM smbms_user AS a	 
+			<include refid="selectUser1"></include>
+	</select>
+	
+	<select id="selectById" parameterType="int" resultType="User">
+		select * from smbms_user where id=#{id}
+	</select>
+	
+	<update id="modifyUserSave">
+		UPDATE smbms.smbms_user 
+		SET 
+		userName =#{u.userName} 
+		WHERE 
+		id = #{u.id}
+	</update>
+	
+	<select id="resUserCode" resultMap="aaaaa">
+		SELECT * FROM smbms_user AS u
+		WHERE u.userCode=#{uc}
+	</select>
+</mapper>

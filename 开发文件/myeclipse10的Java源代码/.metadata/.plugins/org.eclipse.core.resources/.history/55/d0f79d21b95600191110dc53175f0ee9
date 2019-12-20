@@ -1,0 +1,88 @@
+package dao;
+
+import java.math.BigDecimal;
+
+
+/**
+ * Test2Id entity. @author MyEclipse Persistence Tools
+ */
+
+public class Test2Id  implements java.io.Serializable {
+
+
+    // Fields    
+
+     private Text1 text1;
+     private String name;
+     private BigDecimal password;
+
+
+    // Constructors
+
+    /** default constructor */
+    public Test2Id() {
+    }
+
+    
+    /** full constructor */
+    public Test2Id(Text1 text1, String name, BigDecimal password) {
+        this.text1 = text1;
+        this.name = name;
+        this.password = password;
+    }
+
+   
+    // Property accessors
+
+    public Text1 getText1() {
+        return this.text1;
+    }
+    
+    public void setText1(Text1 text1) {
+        this.text1 = text1;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getPassword() {
+        return this.password;
+    }
+    
+    public void setPassword(BigDecimal password) {
+        this.password = password;
+    }
+   
+
+
+
+   public boolean equals(Object other) {
+         if ( (this == other ) ) return true;
+		 if ( (other == null ) ) return false;
+		 if ( !(other instanceof Test2Id) ) return false;
+		 Test2Id castOther = ( Test2Id ) other; 
+         
+		 return ( (this.getText1()==castOther.getText1()) || ( this.getText1()!=null && castOther.getText1()!=null && this.getText1().equals(castOther.getText1()) ) )
+ && ( (this.getName()==castOther.getName()) || ( this.getName()!=null && castOther.getName()!=null && this.getName().equals(castOther.getName()) ) )
+ && ( (this.getPassword()==castOther.getPassword()) || ( this.getPassword()!=null && castOther.getPassword()!=null && this.getPassword().equals(castOther.getPassword()) ) );
+   }
+   
+   public int hashCode() {
+         int result = 17;
+         
+         result = 37 * result + ( getText1() == null ? 0 : this.getText1().hashCode() );
+         result = 37 * result + ( getName() == null ? 0 : this.getName().hashCode() );
+         result = 37 * result + ( getPassword() == null ? 0 : this.getPassword().hashCode() );
+         return result;
+   }   
+
+
+
+
+
+}

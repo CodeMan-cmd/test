@@ -1,0 +1,29 @@
+person:
+  lastName: 张三${random.uuid}
+  age: ${random.int}
+  boss: false
+  birth: 2019/10/19
+  mapp: {k1: v1,k2: 12}
+  lists:
+    - 李四
+    - 张三
+  dog:
+    name: 小狗${person.lastName}
+    age: 19
+#actice指定下面的配置文件端口号
+server:
+  port: 8081
+spring:
+  profiles:
+    active: prod
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
+---
+server:
+  port: 8083
+spring:
+  profiles: dev
+---

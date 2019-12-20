@@ -1,0 +1,5 @@
+#\u8FD9\u662F\u5C5E\u4E8E\u5916\u90E8 \u5982\u679C\u540C\u65F6\u4F7F\u7528\u5185\u90E8\u548C\u5916\u90E8\u5462\u5C31\u662F\u5916\u90E8\u4F18\u5148
+driver=com.mysql.jdbc.Driver
+url=jdbc:mysql://127.0.0.1:3306/smbms?useUnicode=true&characterEncoding=utf-8
+user=root
+password=123456

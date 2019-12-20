@@ -1,0 +1,39 @@
+package entity;
+
+public class UserName {
+	private int id;
+	private String user;
+	private String pwd;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUser() {
+		return user;
+	}
+	public void setUser(String user) {
+		this.user = user;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	@Override
+	public String toString() {
+		return "UserName [id=" + id + ", user=" + user + ", pwd=" + pwd + "]";
+	}
+	public UserName(int id, String user, String pwd) {
+		super();
+		this.id = id;
+		this.user = user;
+		this.pwd = pwd;
+	}
+	public UserName() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+}

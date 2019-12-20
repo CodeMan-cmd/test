@@ -1,0 +1,12 @@
+package deom;
+
+import java.sql.Struct;
+
+
+Struct Maina {
+		public string Name="zhangsan";
+		public Student(){};
+		public void Say(){
+			System.out.println(Names);
+	}
+}

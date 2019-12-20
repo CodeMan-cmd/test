@@ -1,0 +1,13 @@
+package controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.ProductService;
+
+@Controller
+public class IndexControllerShangpin {
+	
+}

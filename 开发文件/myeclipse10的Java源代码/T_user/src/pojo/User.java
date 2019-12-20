@@ -1,0 +1,96 @@
+package pojo;
+
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+public class User {
+	private int id;
+	private String userName;
+	private String userPassword;
+	private String phone;
+	private String gender;
+	private String address;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private Date birthday;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserPassword() {
+		return userPassword;
+	}
+
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public User(int id, String userName, String userPassword, String phone,
+			String gender, String address, Date birthday) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.phone = phone;
+		this.gender = gender;
+		this.address = address;
+		this.birthday = birthday;
+	}
+
+	public User() {
+		super();
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", userName=" + userName + ", userPassword="
+				+ userPassword + ", phone=" + phone + ", gender=" + gender
+				+ ", address=" + address + ", birthday=" + birthday + "]";
+	}
+
+}

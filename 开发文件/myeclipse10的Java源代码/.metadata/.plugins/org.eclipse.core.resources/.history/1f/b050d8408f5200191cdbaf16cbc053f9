@@ -1,0 +1,24 @@
+package controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.BooksService;
+
+@Controller
+public class IndexController {
+	@Resource
+	private BooksService booksService;
+	
+	@RequestMapping("insertBooksAdd")
+	public String insertBooks(){
+		return "KaoTiIndex2";
+	}
+	@RequestMapping("insertBooks")
+	public String insert(){
+		return "KaoTiIndex1";
+	}
+	
+}

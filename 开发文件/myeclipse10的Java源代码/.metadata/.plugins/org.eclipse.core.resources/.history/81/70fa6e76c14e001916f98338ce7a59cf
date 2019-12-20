@@ -1,0 +1,17 @@
+package util;
+
+import java.util.List;
+
+import dao.Text1;
+import dao.Text1DAO;
+
+public class Text {
+public static void main(String[] args) {
+	Text1DAO dao=new Text1DAO();
+    @SuppressWarnings("unchecked")
+	List<Text1> dao2=dao.findAll();
+    for (Text1 text : dao2) {
+		System.out.println(text.getName()+"+"+text.getId());
+	}
+}
+}

@@ -1,0 +1,7 @@
+package dao;
+
+import pojo.Easybuy_user;
+
+public interface UserMapper {
+	public Easybuy_user selectUser(String userName,String password);
+}

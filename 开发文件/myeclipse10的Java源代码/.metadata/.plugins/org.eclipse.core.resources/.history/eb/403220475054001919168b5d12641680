@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+<insert id="insertBooks">
+INSERT INTO books(bookName,bookAuthor,bookPublish,bookPage,bookPrice,createDate) 
+VALUES(#{b.bookName},#{b.bookAuthor},#{b.bookPublish},#{b.bookPage},#{b.bookPrice},#{b.createDate})
+</insert>
+
+<select id="selectBooks" resultMap="aa">
+	SELECT bookId,bookName,bookAuthor,bookPublish,bookPage,bookPrice,createDate FROM books
+</select>
+<select id="getCountUser" resultType="int">
+		SELECT COUNT(1) FROM books
+		<where>
+			<include refid="selectUser"></include>
+		</where>
+	</select>
+	<select id="getAllUser" resultMap="aa">
+		SELECT * FROM books
+		<where>
+			<include refid="selectUser"></include>
+		</where>
+		LIMIT #{p.qishiyeshu},#{p.meiyetiaoshu}
+	</select>
+	<sql id="selectUser">
+		<if test="b.bookPublish!=null and b.bookAuthor!='' ">
+			AND bookPublish LIKE CONCAT('%',#{b.b
+			ookPublish},'%')
+		</if>
+		<if test="b.bookPublish!=null and b.bookAuthor!=''">
+			AND bookAuthor LIKE CONCAT('%',#{b.bookAuthor},'%')
+		</if>
+	</sql>
+	
+	<resultMap type="Books" id="aa">
+		<result property="bookId" column="bookId" />
+		<result property="bookName" column="bookName" />
+		<result property="bookAuthor" column="bookAuthor" />
+		<result property="bookPublish" column="bookPublish" />
+		<result property="bookPage" column="bookPage" />
+		<result property="bookPrice" column="bookPrice" />
+		<result property="createDate" column="createDate" />
+	</resultMap>
+</mapper>

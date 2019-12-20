@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	/*//moz火狐不允许别人复制*/
+	-moz-user-select: none;
+}
+
+ul>li {
+	/*去掉ul所有.*/
+	list-style-type: none;
+	/*字体*/
+	font-family: "楷体";
+	/*字体粗细*/
+	font-weight: bolder;
+}
+
+.divstyle {
+	height: 400px;
+	width: 300px;
+	border: 1px solid #000;
+	/*内边距70px*/
+	float: left;
+	/*渐变*/
+	background: radial-gradient(circle, #6B9391, #B18C4D);
+}
+
+.li1 {
+	/*居中*/
+	text-align: center;
+	background: radial-gradient(circle, #248FDA, #13EB81);
+}
+.li1:hover{
+	/*字体大小*/
+	font-size: 20px;
+	/*鼠标变成手*/
+	cursor: pointer;
+	
+}

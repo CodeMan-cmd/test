@@ -1,0 +1,33 @@
+package controller;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+
+
+import service.UserService;
+@Controller
+public class IndexController {
+	@Resource
+	private UserService userService;
+
+	public IndexController() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public IndexController(UserService userService) {
+		super();
+		this.userService = userService;
+	}
+
+	public UserService getUserService() {
+		return userService;
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
+	
+}

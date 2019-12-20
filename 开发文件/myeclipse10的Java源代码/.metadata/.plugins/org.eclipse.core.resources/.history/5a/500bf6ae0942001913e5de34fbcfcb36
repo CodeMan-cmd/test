@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/p
+		http://www.springframework.org/schema/p/spring-p-3.2.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd"
+		xmlns:aop="http://www.springframework.org/schema/aop" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context" 
+		xmlns="http://www.springframework.org/schema/beans"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:mvc="http://www.springframework.org/schema/mvc">
+	
+	<!--启用注解驱动,默认会帮我们注册默认处理请求，参数和返回值的类  -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<!--自动扫描controller包下所有子文件  -->
+	<context:component-scan base-package="controller"/>
+	<!--静态源文件的引用，mapping：将静态资源映射到指定的路径，
+		location：本地静态资源文件文件所在的目录  -->
+	<mvc:resources location="/statics/" mapping="/statics/**"/>
+	<!--完成视图的对应  -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+	<!--全局异常处理 ，"java.lang.RuntimeException"自定义的异常类，error逻辑视图名 -->
+	<!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+		<property name="exceptionMappings">
+			<props>
+				<prop key="java.lang.RuntimeException">error</prop>
+			</props>
+		</property>
+	</bean> -->
+	
+</beans>

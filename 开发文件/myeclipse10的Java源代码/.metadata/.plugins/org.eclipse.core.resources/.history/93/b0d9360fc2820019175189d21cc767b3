@@ -1,0 +1,17 @@
+package controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import service.EmployeeService;
+
+@Controller
+public class IndexController {
+		private EmployeeService employeeService;
+		
+		@RequestMapping("/")
+		public String employeeSelect(){
+			
+			return "index1.jsp";
+		}
+}

@@ -1,0 +1,9 @@
+package dao;
+
+import java.util.List;
+
+import pojo.Easybuy_user;
+
+public interface UserMapper {
+	public List<Easybuy_user> selectUser();
+}

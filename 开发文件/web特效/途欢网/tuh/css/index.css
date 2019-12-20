@@ -1,0 +1,118 @@
+
+/* 修改轮播图样式 */
+
+.carousel-main .carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff \9;
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+}
+
+.carousel-main .carousel-indicators .active {
+    width: 20px;
+    height: 2px;
+    margin: 1px;
+    background-color: #3bbe7a;
+}
+
+/* 旋转轮播结束 */
+
+
+
+/* 轮播图下方动画开始 */
+
+.title-comm {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.welinain {
+    text-align: center;
+}
+
+.line {
+    border-top: 1px solid #3bbe7a;
+    width: 30px;
+    margin: 20px auto 40px;
+}
+
+.linh25 {
+    line-height: 25px;
+}
+
+.large-3 {
+    width: 33.33333333%;
+    float: left;
+}
+
+.col-div {
+    padding: 25px;
+    overflow: hidden;
+    text-align: center;
+    background-color: rgba(59, 190, 122, .8);
+    color: rgba(255, 255, 255, .8);
+    border-radius: 2px;
+    padding: 18% 10%;
+}
+
+.pu-logo-icon {
+    font-size: 55px;
+    width: 80px;
+    height: 80px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.tabimg {
+    margin-bottom: 25px;
+}
+
+.tabimg .carousel {
+    margin-top: 0;
+    background-color: rgba(59, 190, 122, .8)
+}
+
+.tabimg .carousel .item {
+    clear: both;
+    overflow: hidden;
+}
+
+.tabimg .item img {
+    width: 70%;
+}
+
+.tabimg .item .carousel-caption {
+    width: 30%;
+    left: 70%;
+    top: 16%;
+    padding: 10px;
+}
+
+.tab-icon {
+    font-size: 35px;
+    margin-top: 4%;
+}
+
+.tab-tit {
+    font-size: 18px;
+    margin: 9% 0 5%;
+}
+
+
+@media (min-width: 768px) {
+    .linian-con .linian-div {
+        margin-left: -30px !important;
+        margin-right: -30px !important;
+    }
+}
+
+/* 轮播图下方动画结束 */

@@ -1,0 +1,11 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  </head>
+  
+  <body>
+欢迎你加入Spring MVC大家庭    <h1>登陆成功</h1>
+  </body>
+</html>
+

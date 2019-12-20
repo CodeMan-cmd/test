@@ -1,0 +1,17 @@
+package dao.impl;
+
+import dao.UserDao;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+import pojo.User;
+
+
+import java.util.List;
+
+public class UserDaoImpl extends SqlSessionDaoSupport implements UserDao {
+
+    public List<User> getUserList(User user){
+        return getSqlSession().selectList("dao.UserDao.getUserList",user);
+    }
+
+
+}

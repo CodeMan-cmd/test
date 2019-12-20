@@ -1,0 +1,24 @@
+package test;
+import org.hibernate.validator.internal.util.logging.Log_.logger;
+import org.jboss.logging.Logger;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pojo.User;
+import service.UserService;
+public class Junit {
+
+	@Test
+	public void test() {
+		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+    	User u=new User();
+    	u.setUserName("小童");
+    	UserService service=(UserService)context.getBean("userService");
+    	int addUser=service.addUser(u);
+    	if (addUser>0) {
+    		
+		}
+	}
+
+}

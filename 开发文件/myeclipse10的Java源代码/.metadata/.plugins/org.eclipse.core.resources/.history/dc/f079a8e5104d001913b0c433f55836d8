@@ -1,0 +1,27 @@
+package service;
+
+import javax.annotation.Resource;
+import dao.UserMapper;
+
+public class UserServiceImpl implements UserService {
+	@Resource
+	private UserMapper dao;
+
+	public UserMapper getDao() {
+		return dao;
+	}
+
+	public void setDao(UserMapper dao) {
+		this.dao = dao;
+	}
+
+	public UserServiceImpl(UserMapper dao) {
+		super();
+		this.dao = dao;
+	}
+
+	public UserServiceImpl() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+}

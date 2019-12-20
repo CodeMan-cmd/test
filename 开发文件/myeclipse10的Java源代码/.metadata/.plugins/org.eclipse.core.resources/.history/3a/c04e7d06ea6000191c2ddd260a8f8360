@@ -1,0 +1,10 @@
+package dao;
+
+import org.apache.ibatis.annotations.Param;
+
+import pojo.Easybuy_user;
+
+public interface UserMapper {
+	//注册
+	public int insertUser(@Param("user") Easybuy_user user);
+}

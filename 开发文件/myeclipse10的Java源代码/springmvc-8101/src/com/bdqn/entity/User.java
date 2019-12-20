@@ -1,0 +1,116 @@
+package com.bdqn.entity;
+
+import java.util.Arrays;
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
+
+public class User {
+	
+	private int id;
+	private String username;
+	private String password;
+//	@DateTimeFormat(pattern="yyyy-MM-dd")
+	private Date birthday;
+	private int gender;
+	private String email;
+	private String[] hobby;
+	private String city;
+	private MultipartFile[] upload;
+	public void setUpload(MultipartFile[] upload) {
+		this.upload = upload;
+	}
+	public MultipartFile[] getUpload() {
+		return upload;
+	}
+	
+	
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+	public int getGender() {
+		return gender;
+	}
+
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String[] getHobby() {
+		return hobby;
+	}
+
+	public void setHobby(String[] hobby) {
+		this.hobby = hobby;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	@Override
+	public String toString() {
+		return "User [username=" + username + ", password=" + password
+				+ ", birthday=" + birthday + ", gender=" + gender + ", email="
+				+ email + ", hobby=" + Arrays.toString(hobby) + ", city="
+				+ city + ",id="+id+"]";
+	}
+
+	public User(int id,String username, String password, Date birthday, int gender,
+			String email, String city) {
+		this.username = username;
+		this.password = password;
+		this.birthday = birthday;
+		this.gender = gender;
+		this.email = email;
+		this.city = city;
+		this.id = id;
+	}
+
+	public User() {
+		super();
+	}
+	 
+	
+}

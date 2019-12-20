@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<style>
+			.glyphicon{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+		<div class="btn-group">
+			<!--控制菜单收缩张开-->
+			<button class="btn btn-default glyphicon glyphicon-home" data-toggle="dropdown">下拉框<span class="caret"></span><!--向下小三角--></button>
+			<ul class="dropdown-menu">
+			<li class="active"><a href="#">编程语言</a></li>
+				<li> <a href="#"><span class="glyphicon glyphicon-home">c</span></a></li>
+				<li> <a href="#"><span class="glyphicon glyphicon-camera">java</span></a></li>
+			<li class="active"><a href="#">计算机品牌</a></li>
+				<li> <a href="#"><span class="glyphicon glyphicon-adjust">华为</span></a></li>
+				<li> <a href="#"><span class="glyphicon glyphicon-apple">苹果</span></a></li>
+				<li class="divider"></li><!--分界线-->
+			</ul>
+		</div>
+		</div>
+		<script src="js/jquery-1.12.4.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

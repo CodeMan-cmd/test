@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0px;
+				padding: 0px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+			}
+			
+			body {
+				background: #195239;
+			}
+			
+			#div_ {
+				background: beige;
+				width: 600px;
+				height: 600px;
+				box-shadow: 0px 0px 10px #010202 inset, -6px -6px 100px #010202;
+				position: relative;
+				top: 20px;
+				margin: auto;
+			}
+			
+			#div1 {
+				width: 400px;
+				height: 500px;
+				box-shadow: 0px 0px 10px #010202 inset, -6px -6px 100px #010202;
+				position: absolute;
+			}
+			
+			#div2 {
+				width: 400px;
+				height: 100px;
+				box-shadow: 0px 0px 10px #010202 inset, -6px -6px 100px #010202;
+				position: absolute;
+				top: 500px;
+			}
+			
+			#div3 {
+				width: 200px;
+				height: 600px;
+				box-shadow: 0px 0px 10px #010202 inset, -6px -6px 100px #010202;
+				en;
+				color: red;
+				position: absolute;
+				left: 400px;
+			}
+			
+			#text1 {
+				width: 397px;
+				height: 97px;
+				box-shadow: 0px 0px 10px #010202 inset, -6px -6px 100px #010202;
+				position: absolute;
+				right: 0px;
+			}
+			
+			#liao {
+				width: 300px;
+				height: 400px;
+				position: absolute;
+				left: 50px;
+				top: 30px;
+				overflow-y: scroll;
+				overflow-x: hidden;
+			}
+			
+			#divBqb {
+				width: 208px;
+				height: 20px;
+				position: absolute;
+				top: 450px;
+				left: 1px;
+				display: none;
+			}
+			
+			#sbt1 {
+				width: 70px;
+				position: absolute;
+				top: 75px;
+				left: 320px;
+				cursor: pointer
+			}
+			
+			#divBqb ul li {
+				list-style: none;
+				float: left;
+				cursor: pointer
+			}
+			
+			#liao ul li {}
+			
+			#div1 input {
+				position: absolute;
+				top: 475px;
+				left: 1px;
+			}
+			
+			#div3 ul li {
+				list-style: none;
+				float: left;
+				color: #475579;
+				position: absolute;
+				left: 50px;
+				top: 20px;
+			}
+			
+			ul li a {
+				text-decoration: none
+			}
+			
+			#dl {
+				position: absolute;
+				left: 1440px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function() {
+				var oTxt = document.getElementById('text1');
+				oTxt.onmouseover = function() {
+					if(this.value == '选择输入中······') {
+						oTxt.value = '';
+					};
+				};
+				oTxt.onmouseout = function() {
+					if(this.value == '') {
+						oTxt.value = '选择输入中······';
+					} else {
+						oTxt.value = this.value;
+					};
+
+				};
+				var oDivBqb = document.getElementById('divBqb');
+				var oBtn = document.getElementById('btn1');
+				oBtn.onclick = function() {
+					if(oDivBqb.style.display == 'block') {
+						oDivBqb.style.display = 'none';
+					} else {
+						oDivBqb.style.display = 'block';
+					};
+				};
+				oDivBqb.onmouseout = function() {
+					if(oDivBqb.style.display == 'block') {
+						oDivBqb.style.display = 'none';
+					} else {
+						oDivBqb.style.display = 'block';
+					};
+				};
+				var oA = document.getElementsByTagName('a');
+				for(var i = 0; i < oA.length; i++) {
+					oA[i].onclick = function() {
+						if(oTxt.value == '选择输入中······') {
+							oTxt.value = '';
+							oTxt.value += this.innerHTML;
+						} else {
+							oTxt.value += this.innerHTML;
+						};
+					};
+				};
+				var sbtn = document.getElementById('sbt1');
+				var cul1 = document.getElementById('cUl');
+				sbtn.onclick = function() {
+					if(oTxt.value != '' && oTxt.value != '选择输入中······') {
+						var oLi = document.createElement('li');
+						oLi.innerHTML = oTxt.value;
+						cul1.appendChild(oLi);
+						oTxt.value = '';
+					} else {
+						alert('不能为空');
+					};
+				};
+				setInterval(function() {
+					var div = document.getElementById('liao');
+					/*liao 的top 等于 高度*/
+					div.scrollTop = div.scrollHeight;
+				}, 30)
+			};
+		</script>
+	</head>
+
+	<body>
+		<div id="dl">${name}登录</div>
+		<div id="div_">
+			<div id="div1">
+				<div id="liao">
+					<ul id="cUl">
+
+					</ul>
+				</div>
+				<input type="button" id="btn1" value="😀" />
+				<div id="divBqb">
+					<ul>
+						<li>
+							<a href="javascript:;">😂</a>
+						</li>
+						<li>
+							<a href="javascript:;">😘</a>
+						</li>
+						<li>
+							<a href="javascript:;">😊</a>
+						</li>
+						<li>
+							<a href="javascript:;">😥</a>
+						</li>
+						<li>
+							<a href="javascript:;">👍</a>
+						</li>
+						<li>
+							<a href="javascript:;">👌</a>
+						</li>
+						<li>
+							<a href="javascript:;">😱</a>
+						</li>
+						<li>
+							<a href="javascript:;">❤</a>
+						</li>
+						<li>
+							<a href="javascript:;">😡</a>
+						</li>
+						<li>
+							<a href="javascript:;">🐷</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="div2">
+				<input type="text" autocomplete="off" id="text1" value="选择输入中······" />
+				<input type="button" value="发送" id="sbt1" />
+			</div>
+			<div id="div3">
+				<ul>
+					<li>在线人数${}</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>

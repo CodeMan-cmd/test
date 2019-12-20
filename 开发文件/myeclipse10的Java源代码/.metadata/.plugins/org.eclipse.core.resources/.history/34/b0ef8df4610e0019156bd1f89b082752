@@ -1,0 +1,9 @@
+package deom;
+
+import javax.print.attribute.DateTimeSyntax;
+
+public class Maina {
+
+	 public void asdas(){
+}
+}

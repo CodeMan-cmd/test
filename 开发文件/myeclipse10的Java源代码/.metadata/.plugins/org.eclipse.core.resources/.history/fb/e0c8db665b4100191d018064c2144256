@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:application*.xml</param-value>
+  </context-param>
+    <!--配置Spring MVC的核心控制器  -->
+    <servlet>
+        <servlet-name>SpringMVC</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    	<!--初始化参数  -->
+    	<init-param>
+    		<param-name>contextConfigLocation</param-name>
+    		<param-value>classpath:applicationServlet.xml</param-value>
+    	</init-param>
+    	<load-on-startup>1</load-on-startup>
+    </servlet>
+    <!--元素在Servlet和URL样式之间定义一个映射  -->
+    <servlet-mapping>
+        <servlet-name>SpringMVC</servlet-name><!--元素给出的Servlet名字必须是 在<servlet>元素中声明过的Servlet的名字  -->
+        <url-pattern>/</url-pattern><!--元素指定对应于Servlet的URL路 径，该路径是相对于Web应用程序上下文根的路径  -->
+    </servlet-mapping>
+    <!--监听器  -->
+    <listener>
+    <!--监听全局异常处理  -->
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+</web-app>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--配置处理器映射 HandlerMapping-->
+    <!--<bean name="/index.html" class="controller.LoginController"/>-->
+
+    <!--<bean class="tools.FastJSONDateFormatContext">-->
+    <!--<constructor-arg value="yyyy-MM-dd"/>-->
+    <!--</bean>-->
+
+
+    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="false">
+            <!--管理后台向前台输出的字符编码-->
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <!--更改默认的编码-->
+                <constructor-arg value="UTF-8"/>
+                <!--标识是否输出 Response Headers:Accept-Charset(默认输出)-->
+                <property name="writeAcceptCharset" value="false"/>
+                <!--选择需要的编码的视图类型-->
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html</value>
+                        <value>application/json</value>
+                        <value>application/xml</value>
+                        <value>text/plain</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!--<mvc:default-servlet-handler />-->
+
+    <!--使用这个标签必须加上 mcv:annotation-driven 标签-->
+<!--    <mvc:resources location="/statics/" mapping="/statics/**"/>-->
+
+    <!--扫描注释-->
+    <context:component-scan base-package="controller,service"/>
+
+    <!--Spring 4 ContentNegotiatingViewResolver 的配置-->
+    <!--配置url . 后面类型的支持-->
+    <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+        <property name="order" value="0"/>
+        <property name="contentNegotiationManager">
+            <bean class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+                <!-- 扩展名至mimeType的映射,即 /userDO.json => application/json -->
+                <property name="favorPathExtension" value="true"/>
+                <!-- 用于开启 /userinfo/123?format=json 的支持 -->
+                <property name="favorParameter" value="true"/>
+                <property name="parameterName" value="format"/>
+                <!-- 是否忽略Accept Header -->
+                <property name="ignoreAcceptHeader" value="false"/>
+                <!--扩展名到MIME的映射；favorPathExtension, favorParameter是true时起作用  -->
+                <property name="mediaTypes">
+                    <props>
+                        <prop key="json">application/json</prop>
+                        <prop key="html">text/html</prop>
+                        <prop key="xml">application/xml</prop>
+                        <prop key="txt">text/plain</prop>
+                    </props>
+                </property>
+                <!-- 默认的content type ,在没有扩展名和参数时即: "/userDO/1" 时的默认展现形式  -->
+                <property name="defaultContentType" value="application/json"/>
+            </bean>
+        </property>
+        <!--配置试图解析器-->
+        <property name="viewResolvers">
+            <list>
+                <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/WEB-INF/jsp/"
+                      p:suffix=".jsp"/>
+            </list>
+        </property>
+    </bean>
+
+
+    <!--配置全局异常-->
+    <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                &lt;!&ndash;捕获 RuntimeException 然后跳转到 error 逻辑试图名&ndash;&gt;
+                <prop key="java.lang.RuntimeException">error</prop>
+            </props>
+        </property>
+    </bean>-->
+
+    <!--配置 multipartResolver ,用于文件上传-->
+<!--    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
+<!--        单位为字节-->
+<!--        <property name="maxUploadSize" value="5000000"/>-->
+<!--        <property name="defaultEncoding" value="UTF-8"/>-->
+<!--    </bean>-->
+
+
+</beans>

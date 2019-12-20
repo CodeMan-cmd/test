@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<select id="a" onchange="cget()">
+			<option value="11">1</option>
+			<option value="22">2</option>
+		</select>
+		<script>
+			function cget() {
+				var a = document.getElementById("a");
+				var index = a.selectedIndex;
+				alert("这是尖括号里面的：" + a.options[index].text);
+				alert("这是value值：" + a.options[index].value);
+				 location.href="";
+			}
+		</script>
+	</body>
+
+</html>

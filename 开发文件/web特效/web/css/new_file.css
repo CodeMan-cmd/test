@@ -1,0 +1,58 @@
+   * {
+	margin: 0;
+	padding: 0;
+	/*//moz火狐不允许别人复制*/
+	-moz-user-select: none; /*火狐*/
+  -webkit-user-select: none;  /*webkit浏览器*/
+  -ms-user-select: none;   /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+	}
+    .event {
+    	/*去掉ul所有.*/
+		list-style-type: none;
+    	/*园角*/
+    	border-radius: 4px;
+    	font-size: 12px;	
+    	margin: 0 5px;
+    	display:none;
+    }
+    .event2{
+    	/*去掉ul所有.*/
+		list-style-type: none;
+    	/*园角*/
+    	border-radius: 4px;
+    	font-size: 12px;	
+    	margin: 0 5px;
+    }
+    .blink{
+    	margin: 0 auto;
+    	width: 101px;
+    }
+    @keyframes fade {
+    	from {
+    		opacity: 1.0;
+    		background-color: #4B946A;
+    	}
+    	50% {
+    		opacity: 0.5;
+    	}
+    	60% {
+    		opacity: 0.2;
+    	}
+    	70% {
+    		opacity: 0.1;
+    	}
+    	to {
+    		opacity: 1.0;
+    		background-color: #248FDA
+    	}
+    }
+    
+    .event:hover,.event2:hover{
+    	/*鼠标变成手*/
+    	cursor: pointer;
+    	/*infinite循环运行动画*/
+    	animation: fade 3000ms infinite;
+    	
+    }

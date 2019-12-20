@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--应用boostart-->
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+		<title>12珊格系统</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/common.css" />
+		<style>
+			.container{
+				border: 1px solid  red;
+			}
+			.col-md-9{
+				background: aqua;
+			}
+			.col-md-3{
+				background: peru;
+			}
+		</style>
+	</head>
+	<body>
+		<!--container是主框架类-->
+		<div class="container">
+			<div class="row">
+				<!--push向右-->
+				<!--col-md-9s是宽度-->
+				<div class="col-md-9 col-md-push-3">col-md-3</div>
+				<!--pull向左-->
+				<!--col-md-3是宽度-->
+				<div class="col-md-3 col-md-pull-9">col-md-8</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<!--xs手机大小百分百 sm平板大小百分百  md中等电脑显示  大屏电脑显示-->
+				<div class="col-xs-6 col-sm-6 col-md-6 ">col-md-6</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 ">col-md-3</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 ">col-md-3</div>
+			</div>
+		</div>
+		
+		
+		<h1>基本布局</h1>
+		<p>基本布局</p>
+		<p class="lead">基本布局</p>
+		
+		
+		<p class="text-left">左对齐</p>
+		<p class="text-center">中间对齐</p>
+		<p class="text-right">右对齐</p>
+		<p class="text-justify">两端对齐</p>
+		
+		
+		<!--间隔一行显示-->
+		<ul class="list-inline">
+			<li>首页</li>
+			<li>岗位</li>
+			<li>商城</li>
+			<li>关于我们</li>
+		</ul>
+		<dl class="dl-horizontal">
+			<dt>购物指南</dt>
+			<dd>购物流程 会员价格</dd>
+			<dt>配送方式</dt>
+			<dd>上门自提 海外配送</dd>
+			<dt>售后服务</dt>
+			<dd>售后政策 价格保护 退款说明 取消订单 退换货</dd>
+		</dl>
+		<script src="js/jquery-1.12.4.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

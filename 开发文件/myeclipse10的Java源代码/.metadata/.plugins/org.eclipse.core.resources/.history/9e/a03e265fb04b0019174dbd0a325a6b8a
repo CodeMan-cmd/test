@@ -1,0 +1,45 @@
+package dao;
+
+import java.math.BigDecimal;
+
+/**
+ * Text entity. @author MyEclipse Persistence Tools
+ */
+
+public class Text implements java.io.Serializable {
+
+	// Fields
+
+	private BigDecimal id;
+	private String username;
+
+	// Constructors
+
+	/** default constructor */
+	public Text() {
+	}
+
+	/** full constructor */
+	public Text(String username) {
+		this.username = username;
+	}
+
+	// Property accessors
+
+	public BigDecimal getId() {
+		return this.id;
+	}
+
+	public void setId(BigDecimal id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
+		return this.username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+}

@@ -1,0 +1,21 @@
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>My JSP 'index.jsp' starting page</title>
+  </head>
+  
+  <body>
+  <script type="text/javascript">
+  function fu(x){
+  return x*x;
+  }
+  function text(x,u){
+  		return x+u;
+  }
+  alert(text(10, fu(10)));
+  </script>
+  </body>
+</html>

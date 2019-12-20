@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "person",
+      "type": "com.example.demo.bena.Person",
+      "sourceType": "com.example.demo.bena.Person"
+    }
+  ],
+  "properties": [
+    {
+      "name": "person.age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.birth",
+      "type": "java.util.Date",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.boss",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.dog",
+      "type": "com.example.demo.bena.Dog",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.last-name",
+      "type": "java.lang.String",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.lists",
+      "type": "java.util.List<java.lang.Object>",
+      "sourceType": "com.example.demo.bena.Person"
+    },
+    {
+      "name": "person.mapp",
+      "type": "java.util.Map<java.lang.String,java.lang.Object>",
+      "sourceType": "com.example.demo.bena.Person"
+    }
+  ],
+  "hints": []
+}

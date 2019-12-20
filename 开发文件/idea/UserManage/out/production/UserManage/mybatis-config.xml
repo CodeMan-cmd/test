@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--设置MyBatis全局设置-->
+    <settings>
+        <!--设置mapping文件resultMap没有指定关系的属性给值为null 默认会自动匹配 这样会浪费内存-->
+        <!--<setting name="autoMappingBehavior" value="NONE"/>-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--设置延迟加载-->
+        <setting name="lazyLoadingEnabled" value="false"/>
+    </settings>
+</configuration>

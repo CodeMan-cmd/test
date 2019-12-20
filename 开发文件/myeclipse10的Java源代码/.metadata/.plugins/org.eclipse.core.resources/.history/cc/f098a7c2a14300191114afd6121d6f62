@@ -1,0 +1,16 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  </head>
+  
+  <body>
+	 <form id="form1" action="updateUser" method="post">
+     用户编号：<input type="text" name="userCode" ><br>
+   用户名：<input type="text"  name="userName" ><br>
+   密码： <input type="hidden" name="userPassword" ><br>
+    <input type="submit" value="保存修改">
+</form>
+  </body>
+</html>
+

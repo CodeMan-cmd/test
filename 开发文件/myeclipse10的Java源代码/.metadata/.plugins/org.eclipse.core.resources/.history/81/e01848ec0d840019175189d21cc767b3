@@ -1,0 +1,41 @@
+package utils;
+
+import java.util.List;
+import org.apache.ibatis.session.SqlSession;
+import pojo.Profile;
+import service.ProfileService;
+
+public class Test {
+	public static void main(String[] args) {
+		Test test=new Test();
+		test.updateProfile();
+	}
+	public List<Profile> selectProfile() {
+		SqlSession session = null;
+		session = MyBatisUtil.createSqlSession();
+		List<Profile> i1=session.getMapper(ProfileService.class).selectProfile();
+		return i1;
+	}
+	public List<Profile> updateProfile(){
+		SqlSession session=null;
+		session=MyBatisUtil.createSqlSession();
+		Profile up=new Profile();
+		//id
+		up.setId(2);
+		//姓名
+		up.setName("童辉煌");
+		//日期
+		up.setBirthday("");
+		//性别
+		up.setGender("");
+		//职位
+		up.setCareer("");
+		//住址
+		up.setAddress("");
+		//电话
+		up.setMobile("");
+		List<Profile> i1=session.getMapper(ProfileService.class).updateProfile(up);
+		return i1;
+		
+	}
+}

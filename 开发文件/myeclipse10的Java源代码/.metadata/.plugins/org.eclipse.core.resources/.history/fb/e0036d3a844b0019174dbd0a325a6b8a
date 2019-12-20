@@ -1,0 +1,12 @@
+package util;
+
+import java.util.List;
+
+import dao.Text1DAO;
+
+public class Text {
+	public static void main(String[] args) {
+		Text1DAO dao=new Text1DAO();
+		List<abstracte>dao.findAll();
+	}
+}

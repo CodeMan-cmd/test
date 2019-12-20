@@ -1,0 +1,21 @@
+package dao;
+
+import sun.util.calendar.AbstractCalendar;
+
+/**
+ * Text1 entity. @author MyEclipse Persistence Tools
+ */
+public class Text1 extends AbstractCalendar implements java.io.Serializable {
+
+	// Constructors
+
+	/** default constructor */
+	public Text1() {
+	}
+
+	/** full constructor */
+	public Text1(Text1 id) {
+		super();
+	}
+
+}

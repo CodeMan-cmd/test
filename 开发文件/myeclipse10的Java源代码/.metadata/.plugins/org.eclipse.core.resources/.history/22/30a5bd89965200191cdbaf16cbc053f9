@@ -1,0 +1,10 @@
+package service;
+
+import java.util.List;
+import pojo.Books;
+
+public interface BooksService {
+	public int insertBooks(Books b);
+	public List<Books> selectBooks();
+	public int getCountUser( Books b);
+}

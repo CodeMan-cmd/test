@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+	<!--设置resultMap的自动映射级别为NONE(禁止自动匹配)-->
+		<setting name="autoMappingBehavior" value="NONE" />
+	</settings>
+	<typeAliases>
+		<!-- 通过package的name属性直接指定包名,MyBatis会自动扫描指定包下的JavaBean,并默认设置一个别名,默认名称是JavaBean的非限定类名 -->
+		<package name="pojo"></package>
+	</typeAliases>
+
+
+
+</configuration>

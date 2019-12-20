@@ -1,0 +1,89 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>初始页面</title>
+  </head>
+  <body>
+  <form id="form1" action="select" method="post">
+		<input type="hidden" name="dangqianyema" value="${p.dangqianyema}">
+		出版社类型：<select name="bookPublish"  >
+				<option ></option>
+				<option >机械出版社</option>
+				<option >电子出版社</option>
+			</select><span>${bug1}</span>
+		作者：<input type="text" name="bookAuthor" value="${u.bookAuthor}">
+		<input type="submit" value="查询">
+	</form>
+  <div style="width: 800px; height: 250px;/* border: 1px dashed #000; *//* margin: 0 auto; */">
+  <a href="insertBooksAdd" style="float: right;">增加新书</a>
+  <table width="724" style="width: 100%; height: 100%;border: 1px solid;" >
+  <tbody>
+    <tr>
+      <td width="139"><blockquote>
+        <p>书名
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>作者
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>出版社
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>页数
+        </p>
+      </blockquote></td>
+      <td width="134"><blockquote>
+        <p>价格
+        </p>
+      </blockquote></td>
+    </tr>
+    <c:forEach var="b" items="${list}">
+    <tr>
+    <td style="display: none;">${b.bookId}</td>
+      <td>${b.bookName}</td>
+      <td>${b.bookAuthor}</td>
+      <td>${b.bookPublish}</td>
+      <td>${b.bookPage}</td>
+      <td>${b.bookPrice}</td>
+      <td style="display: none;">${b.createDate}</td>
+    </tr>
+    </c:forEach>
+  </tbody>
+</table>
+</div>
+<a href="javascript:void()" onclick="toTop()">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="javascript:void()" onclick="toTop1()">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="javascript:void()" onclick="toEnd()">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	<a href="javascript:void()" onclick="toEnd1()">尾页</a>&nbsp;&nbsp;&nbsp;&nbsp;
+	当前页数 ${p.dangqianyema }/总页数${p.zongyeshu }
+	<br>
+	<script type="text/javascript" src="statics/js/jquery-1.12.4.js"></script>
+	<script type="text/javascript">
+          function toTop(){
+            $("[name=dangqianyema]").val(1);
+            $("#form1").submit();
+          }
+        function toTop1(){
+           var s=parseInt($("[name=dangqianyema]").val())-1;
+              $("[name=dangqianyema]").val(s);
+            $("#form1").submit();
+          }
+         function toEnd(){
+           var s=parseInt($("[name=dangqianyema]").val())+1;
+              $("[name=dangqianyema]").val(s);
+              $("#form1").submit();
+          }
+          function toEnd1(){
+             var s= ${p.zongyeshu};
+              $("[name=dangqianyema]").val(s);
+              $("#form1").submit();
+          };
+      </script>
+  </body>
+</html>

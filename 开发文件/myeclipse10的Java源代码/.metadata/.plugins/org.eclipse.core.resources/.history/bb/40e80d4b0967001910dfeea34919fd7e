@@ -1,0 +1,30 @@
+$(".l_user").blur(function(){
+	var strname=$(this).val();
+	$.ajax({
+		type:"GET",
+		url:"asynchronousJudgment?loginName="+strname,
+		contentType:'application/x-www-form-urlencoded; charset=UTF-8',
+		dataType:"json",
+		success:function(res){
+			if (res.message==1) {
+				 $(".l_user").next().html("✘");
+			}else if(res.message==0){
+				 $(".l_user").next().html("✔");
+			}
+	   }
+	});
+});
+
+$(".l_pwd").blur(function() {
+	alert(qwe);
+	jQuery.ajax({
+		type:"GET",
+		url:"regist",
+		dataType:"JSON",
+		success:function(res){
+			if (".l_pwd"!=null) {
+				jQuery(".l_pwd").next().html("输入不一致");
+			}
+		}
+	});
+});

@@ -1,0 +1,42 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core"   prefix="c"%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>用户管理区</title>
+  </head>
+  
+  <body>
+  <a href="insertUserIndex" style="margin-left: 700px">添加</a>
+  <table width="949" border="1"style="margin-left: 200px">
+  <tbody>
+    <tr>
+      <td bgcolor="#E3D5D6" style="text-align: center">编号</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">用户名</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">用户密码</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">电话</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">住址</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">性别</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">出生日期</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">修改</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">删除</td>
+    </tr>
+    <c:forEach var="l" items="${list}">
+    <tr>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.id}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.userName}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.userPassword}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.phone}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.gender}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.address}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center">${l.birthday}</td>
+      <td bgcolor="#E3D5D6" style="text-align: center"><a href="update?id=${l.id}">改</a></td>
+      <td bgcolor="#E3D5D6" style="text-align: center"><a href="deleteUser?id=${l.id}">删</a></td>
+    </tr>
+    </c:forEach>
+  </tbody>
+</table>
+  </body>
+</html>

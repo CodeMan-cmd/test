@@ -1,0 +1,33 @@
+package controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import pojo.Easybuy_user;
+
+import service.UserService;
+
+public class IndexController {
+	@Resource
+	private UserService userService;
+
+	@RequestMapping("selectUser")
+	public String selectUser() {
+		return "login";
+	}
+
+	@RequestMapping("selectUser2")
+	public String selectUser2(
+			@RequestParam(value = "userName", required = false) String userName,
+			@RequestParam(value = "password", required = false) String password) {
+		if (userService.selectUser(userName, password).equals(userName) {
+			
+		}
+		
+		return "mainpage";
+	}
+}

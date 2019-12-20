@@ -1,0 +1,5 @@
+package service;
+import pojo.Easybuy_user;
+
+public interface UserService {
+}

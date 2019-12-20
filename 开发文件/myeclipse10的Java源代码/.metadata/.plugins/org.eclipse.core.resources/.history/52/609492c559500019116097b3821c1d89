@@ -1,0 +1,63 @@
+package dao;
+
+import javax.persistence.AttributeOverride;
+import javax.persistence.AttributeOverrides;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+
+/**
+ * Text1 entity. @author MyEclipse Persistence Tools
+ */
+@Entity
+@Table(name="TEXT1"
+    ,schema="TONGHUIHUANG"
+)
+
+public class Text1  implements java.io.Serializable {
+
+
+    // Fields    
+
+     private Text1Id id;
+
+
+    // Constructors
+
+    /** default constructor */
+    public Text1() {
+    }
+
+    
+    /** full constructor */
+    public Text1(Text1Id id) {
+        this.id = id;
+    }
+
+   
+    // Property accessors
+    @EmbeddedId
+    
+    @AttributeOverrides( {
+        @AttributeOverride(name="id", column=@Column(name="ID", precision=22, scale=0) ), 
+        @AttributeOverride(name="name", column=@Column(name="NAME", length=20) ) } )
+
+    public Text1Id getId() {
+        return this.id;
+    }
+    
+    public void setId(Text1Id id) {
+        this.id = id;
+    }
+   
+
+
+
+
+
+
+
+
+}

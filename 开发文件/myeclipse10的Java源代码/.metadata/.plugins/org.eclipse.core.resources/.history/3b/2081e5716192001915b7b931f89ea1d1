@@ -1,0 +1,15 @@
+package dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import pojo.T_user;
+
+@Repository("userMapper")
+public interface UserMapper {
+	public int insertUser();
+	public int deleteUser();
+	public List<T_user> updateUser();
+	public List<T_user> selectUser();
+}

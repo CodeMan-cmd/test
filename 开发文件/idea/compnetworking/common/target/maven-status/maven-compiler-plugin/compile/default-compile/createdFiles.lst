@@ -1,0 +1,5 @@
+common\pojo\EasyUIDataGridResult.class
+common\pojo\SearchResult.class
+common\pojo\QingNiaoResult.class
+common\pojo\ItemSearch.class
+common\pojo\EasyUITreeNode.class

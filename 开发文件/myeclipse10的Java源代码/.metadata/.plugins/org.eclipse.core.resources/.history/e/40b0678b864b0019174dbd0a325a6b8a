@@ -1,0 +1,15 @@
+package util;
+
+import java.util.List;
+import dao.Text1DAO;
+import dao.Text1Id;
+
+public class Text {
+public static void main(String[] args) {
+	Text1DAO dao=new Text1DAO();
+	List<Text1> text1=dao.findAll();
+	for (Text1 text12 : text1) {
+		System.out.println(text12.getUsername());
+	}
+}
+}

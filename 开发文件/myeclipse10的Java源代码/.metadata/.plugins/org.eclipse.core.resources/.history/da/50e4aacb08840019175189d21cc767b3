@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+<mapper namespace="dao.ProfileMapper">
+	<select id="selectProfile">
+		SELECT * FROM profile
+	</select>
+	<update id="updateProfile">
+		UPDATE profile
+		<set>
+			`name`='李四',birthday='1993.3.3',gender='女',career='Java工程师',address='火锅里',mobile='10086'
+
+		</set>
+		<where>
+			WHERE id=2
+		</where>
+	</update>
+</mapper>

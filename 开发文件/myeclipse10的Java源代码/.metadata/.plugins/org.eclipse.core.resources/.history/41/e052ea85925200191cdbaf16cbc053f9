@@ -1,0 +1,48 @@
+package controller;
+
+import java.sql.Date;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import pojo.Books;
+
+import service.BooksService;
+
+@Controller
+public class IndexController {
+	@Resource
+	private BooksService booksService;
+	
+	@RequestMapping("/insertBooksAdd")
+	public String insertBooks(){
+		return "KaoTiIndex2";
+	}
+	@RequestMapping("/insertBooks")
+	public String insert(
+			@RequestParam(value = "bookName", required = false) String bookName,
+			@RequestParam(value = "bookAuthor", required = false) String bookAuthor,
+			@RequestParam(value = "bookPublish", required = false) String bookPublish,
+			@RequestParam(value = "bookPage", required = false) int bookPage,
+			@RequestParam(value = "bookPrice", required = false) Double bookPrice,
+			@RequestParam(value = "createDate", required = false) Date createDate){
+		Books b=new Books(bookName, bookAuthor, bookPublish, bookPage, bookPrice, createDate);
+		if (b!=null) {
+			booksService.insertBooks(b);
+		}
+		return "KaoTiIndex1";
+	}
+	
+	@RequestMapping("/selectBooks")
+	public String selectBooks(HttpServletRequest req){
+		List<Books> list=booksService.selectBooks();
+		
+		return "KaoTiIndex1";
+	}
+}

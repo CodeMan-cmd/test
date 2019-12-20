@@ -1,0 +1,37 @@
+package test;
+
+import java.util.List;
+
+import dao.Text1;
+import dao.Text1DAO;
+
+
+public class Test {
+
+	/**
+	 * @param args
+	 */
+	
+	public static void main(String[] args) {
+		Test test=new Test();
+		test.select();
+		
+	}
+	public void select(){
+		Text1DAO test1dao=new Text1DAO();
+		List<Text1> dao2 =test1dao.select();
+		for (Text1 text1 : dao2) {
+			System.out.println(text1);
+		}
+	}
+	public void delete(){
+		
+	}
+	public void update(){
+		
+	}
+	public void insert(){
+		
+	}
+
+}

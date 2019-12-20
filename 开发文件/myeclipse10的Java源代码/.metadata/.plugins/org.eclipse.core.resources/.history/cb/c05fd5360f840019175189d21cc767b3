@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+<mapper namespace="dao.ProfileMapper">
+	<select id="selectProfile" resultMap="cc">
+		SELECT * FROM profile
+	</select>
+	<update id="updateProfile" parameterType="Profile">
+		UPDATE profile
+		<set>
+			`name`=${up.name},birthday=${up.birthday},gender=${up.gender},career=${up.career},address=${up.address},mobile=${up.mobile}
+		</set>
+		<where>
+			WHERE id=${up.id}
+		</where>
+	</update>
+	<resultMap type="Profile" id="cc">
+	<result column="id" property="id"/>
+	<result column="name" property="name"/>
+	<result column="birthday" property="birthday"/>
+	<result column="gender" property="gender"/>
+	<result column="career" property="career"/>
+	<result column="address" property="address"/>
+	<result column="mobile" property="mobile"/>
+	</resultMap>
+</mapper>

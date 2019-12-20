@@ -1,0 +1,19 @@
+ function toTop(){
+            $("[name=dangqianyema]").val(1);
+            $("#from1").submit();
+          }
+        function toTop1(){
+           var s=parseInt($("[name=dangqianyema]").val())-1;
+              $("[name=dangqianyema]").val(s);
+            $("#from1").submit();
+          }
+         function toEnd(){
+           var s=parseInt($("[name=dangqianyema]").val())+1;
+              $("[name=dangqianyema]").val(s);
+              $("#from1").submit();
+          }
+          function toEnd1(){
+             var s= ${p.zongyeshu};
+              $("[name=dangqianyema]").val(s);
+              $("#from1").submit();
+          };

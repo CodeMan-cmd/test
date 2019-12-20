@@ -1,0 +1,34 @@
+package controller;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.apache.ibatis.session.SqlSession;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import dao.ProfileMapper;
+
+import pojo.Profile;
+
+import service.ProfileService;
+import utils.MyBatisUtil;
+
+@Controller
+public class ProfileController {
+	@Resource
+	private ProfileService profileService;
+	
+	@RequestMapping("select")
+	public String selectProfile(){
+		SqlSession session=null;
+		session=MyBatisUtil.createSqlSession();
+		List<Profile> i1=session.getMapper(ProfileMapper.class).selectProfile();
+		return "index.jsp";
+	}
+	@RequestMapping("update")
+	public String updatprofile(){
+		return null;
+	}
+}

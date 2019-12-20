@@ -1,0 +1,146 @@
+package dao;
+
+import java.util.List;
+import java.util.Set;
+import org.hibernate.LockMode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
+
+import entity.Text1;
+
+/**
+ * A data access object (DAO) providing persistence and search support for Text1
+ * entities. Transaction control of the save(), update() and delete() operations
+ * can directly support Spring container-managed transactions or they can be
+ * augmented to handle user-managed Spring transactions. Each of these methods
+ * provides additional information for how to configure it for the desired type
+ * of transaction control.
+ * 
+ * @see entity.Text1
+ * @author MyEclipse Persistence Tools
+ */
+public class Text1DAO extends HibernateDaoSupport {
+	private static final Logger log = LoggerFactory.getLogger(Text1DAO.class);
+	// property constants
+	public static final String NAME = "name";
+
+	protected void initDao() {
+		// do nothing
+	}
+
+	public void save(Text1 transientInstance) {
+		log.debug("saving Text1 instance");
+		try {
+			getHibernateTemplate().save(transientInstance);
+			log.debug("save successful");
+		} catch (RuntimeException re) {
+			log.error("save failed", re);
+			throw re;
+		}
+	}
+
+	public void delete(Text1 persistentInstance) {
+		log.debug("deleting Text1 instance");
+		try {
+			getHibernateTemplate().delete(persistentInstance);
+			log.debug("delete successful");
+		} catch (RuntimeException re) {
+			log.error("delete failed", re);
+			throw re;
+		}
+	}
+
+	public Text1 findById(java.math.BigDecimal id) {
+		log.debug("getting Text1 instance with id: " + id);
+		try {
+			Text1 instance = (Text1) getHibernateTemplate()
+					.get("dao.Text1", id);
+			return instance;
+		} catch (RuntimeException re) {
+			log.error("get failed", re);
+			throw re;
+		}
+	}
+
+	public List findByExample(Text1 instance) {
+		log.debug("finding Text1 instance by example");
+		try {
+			List results = getHibernateTemplate().findByExample(instance);
+			log.debug("find by example successful, result size: "
+					+ results.size());
+			return results;
+		} catch (RuntimeException re) {
+			log.error("find by example failed", re);
+			throw re;
+		}
+	}
+
+	public List findByProperty(String propertyName, Object value) {
+		log.debug("finding Text1 instance with property: " + propertyName
+				+ ", value: " + value);
+		try {
+			String queryString = "from Text1 as model where model."
+					+ propertyName + "= ?";
+			return getHibernateTemplate().find(queryString, value);
+		} catch (RuntimeException re) {
+			log.error("find by property name failed", re);
+			throw re;
+		}
+	}
+
+	public List findByName(Object name) {
+		return findByProperty(NAME, name);
+	}
+
+	public List findAll() {
+		log.debug("finding all Text1 instances");
+		try {
+			String queryString = "from Text1";
+			return getHibernateTemplate().find(queryString);
+		} catch (RuntimeException re) {
+			log.error("find all failed", re);
+			throw re;
+		}
+	}
+
+	public Text1 merge(Text1 detachedInstance) {
+		log.debug("merging Text1 instance");
+		try {
+			Text1 result = (Text1) getHibernateTemplate().merge(
+					detachedInstance);
+			log.debug("merge successful");
+			return result;
+		} catch (RuntimeException re) {
+			log.error("merge failed", re);
+			throw re;
+		}
+	}
+
+	public void attachDirty(Text1 instance) {
+		log.debug("attaching dirty Text1 instance");
+		try {
+			getHibernateTemplate().saveOrUpdate(instance);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+
+	public void attachClean(Text1 instance) {
+		log.debug("attaching clean Text1 instance");
+		try {
+			getHibernateTemplate().lock(instance, LockMode.NONE);
+			log.debug("attach successful");
+		} catch (RuntimeException re) {
+			log.error("attach failed", re);
+			throw re;
+		}
+	}
+
+	public static Text1DAO getFromApplicationContext(ApplicationContext ctx) {
+		return (Text1DAO) ctx.getBean("Text1DAO");
+	}
+}

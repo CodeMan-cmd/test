@@ -1,0 +1,120 @@
+.carousel-indicators li {
+    display: inline-block;
+    width: 20px;
+    height: 2px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff \9;
+    background-color: #fff;
+    border: none;
+    border-radius: none;
+}
+
+.carousel-indicators .active {
+    width: 20px;
+    height: 2px;
+    margin: 1px;
+    background-color: #3bbe7a;
+}
+
+.title-comm-tuhuan {
+    text-align: center;
+    margin: 100px 0 80px;
+}
+
+.mb8 {
+    margin-bottom: 8px;
+}
+
+.line-tuhuan {
+    border-top: 2px solid #3bbe7a;
+    width: 80px;
+    margin: auto;
+}
+
+.lineheight {
+    margin: 30px auto 26px;
+}
+
+.tuhuan-text {
+    color: #aaa;
+    font-size: 16px;
+}
+
+.tuhuan-item-comm {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.zljh-logo-icon,
+.hzsj-logo-icon,
+.hzgl-logo-icon {
+    background-image: url(../img/health/zljh-logo-icon.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    left: 0;
+    top: 0;
+}
+
+.hzsj-logo-icon {
+    background-image: url(../img/health/hzsj-logo-icon.png);
+}
+
+
+@media (min-width: 768px) {
+    .zljh-logo-icon,
+    .hzsj-logo-icon,
+    .hzgl-logo-icon {
+        background-size: 70px 70px;
+    }
+}
+
+.title-comm {
+    text-align: center;
+    margin: 100px 0 80px;
+}
+
+.welinain {
+    text-align: center;
+}
+
+.line {
+    border-top: 1px solid #3bbe7a;
+    width: 30px;
+    margin: 20px auto 40px;
+}
+
+.foryou-center-row {
+    margin-top: -15px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.foryou-center {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.foryou-center p.biaoti {
+    font-size: 18px;
+    color: #333;
+    padding-top: 13%;
+}
+
+.foryou-center p.line {
+    border-top: 1px solid #3bbe7a;
+    width: 30px;
+    margin: 4% auto;
+    height: 0;
+    text-indent: -9999px;
+}
+
+.foryou-center p:last-child {
+    font-size: 12px;
+}

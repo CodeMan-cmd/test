@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;mybatis-3-mapper.dtd&apos; to &apos;YiMaiWang/src/dao&apos;&#x0D;&#x0A;- Original project: &apos;Chapter-YiMaiWang&apos;&#x0D;&#x0A;- Destination element: &apos;YiMaiWang/src/dao&apos;&#x0D;&#x0A;- Original element: &apos;mybatis-3-mapper.dtd&apos;" description="Copy file" destination="=YiMaiWang/src&lt;dao" element1="src/dao/mybatis-3-mapper.dtd" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1553307233527" units="0" version="1.0"/>
+</session>

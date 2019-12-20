@@ -1,0 +1,74 @@
+package controller;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.http.HttpRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+//注解表示这是控制器
+@Controller
+public class UseController /* extends AbstractController */{
+	/***
+	 * @Override 表示重写 继承是默认的也可以自己写
+	 */
+	/*
+	 * @Override protected ModelAndView handleRequestInternal(HttpServletRequest
+	 * arg0, HttpServletResponse arg1) throws Exception { // TODO Auto-generated
+	 * method stub return null; }
+	 */
+
+	/***
+	 * 
+	 * @param arg0
+	 * @param arg1
+	 * @return
+	 * @throws Exception
+	 */
+	/* @RequestMapping("/index") */
+	/*
+	 * public ModelAndView helloSpringMvc(HttpServletRequest arg0,
+	 * HttpServletResponse arg1) throws Exception { ModelAndView m=new
+	 * ModelAndView(); m.setViewName("cc"); return m; }
+	 */
+	@RequestMapping(value = "/index", method = RequestMethod.GET)
+	public String helloSpringMvc(
+			HttpServletRequest arg0,
+			HttpServletRequest arg1,
+														//false意思是传参也可以不传参也可以进来
+			@RequestParam(value = "username", required = false) String username,
+			@RequestParam(value = "password", required = false) String password)
+			throws Exception {
+		ModelAndView m = new ModelAndView();
+		m.setViewName("cc");
+		arg0.setAttribute("a", username);
+		arg1.setAttribute("b", password);
+		return "cc";
+	}
+
+	@RequestMapping("/loginIndex")
+	public String loginIndex() {
+		/*System.out.println(5/0);*/
+		return "Landing";
+	}
+	@RequestMapping("form1User")														
+	public String form1User(String userName,String password,HttpServletRequest req,HttpServletRequest res){
+		if (!userName.equals("qwe")) {
+			req.setAttribute("error1", "用户名错误！");
+			return "Landing";
+		}else {
+			req.setAttribute("userName", "老板");
+			return "cc";
+		}
+	}
+	@ExceptionHandler(value=RuntimeException.class)
+	public String handlerException(RuntimeException e,HttpServletRequest req){
+								//getMessage允许为空
+		req.setAttribute("e", e.getMessage());
+		return "error";
+	}
+}

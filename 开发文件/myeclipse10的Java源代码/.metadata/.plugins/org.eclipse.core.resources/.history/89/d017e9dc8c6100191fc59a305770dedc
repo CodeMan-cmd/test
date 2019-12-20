@@ -1,0 +1,3 @@
+$(".1_user").blur(function() {
+	alert("光标已经离开");
+});

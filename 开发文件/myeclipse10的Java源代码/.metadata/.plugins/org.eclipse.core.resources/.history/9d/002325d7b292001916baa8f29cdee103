@@ -1,0 +1,67 @@
+package controller;
+import java.util.List;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.sun.org.apache.xpath.internal.operations.Mod;
+
+import dao.UserMapper;
+
+import pojo.T_user;
+import service.ServiceUser;
+
+@Controller
+public class IndexController {
+	@Resource
+	private ServiceUser userService;
+	
+	//删除
+	@RequestMapping("/deleteUser")
+	public String deleteUser(@RequestParam(value="id",required=false)int id){
+		userService.deleteUser(id);
+		return "login";
+	}
+	//查询
+	@RequestMapping("/MVCselectUser")
+	public String selectUser(HttpServletRequest req){
+		List<T_user> list=userService.selectUser();
+		req.setAttribute("list", list);
+		return "login";
+	}
+	//添加
+	@RequestMapping("/insertUser")
+	public String insertUser(T_user user){
+		 userService.insertUser(user);
+			return "login";
+		}
+	//显示修改的id
+	@RequestMapping("/selectById")
+	public String selectById(@RequestParam(value="id",required=false)int id,
+			HttpServletRequest req){
+		 T_user selectByIdUser = userService.selectByIdUser(id);
+		 req.setAttribute("selectByIdUser",selectByIdUser);
+		 //放回修改页面
+		return "update";
+	}
+	//修改
+	@RequestMapping("/updateUser")
+	public String updateUser(@RequestParam(value="id", required=false)String id,
+			T_user user){
+		userService.updateUser(user);
+		//重新查询页面
+		return "MVCselectUser";
+	}
+	//转发update
+	@RequestMapping("/update")
+	public String update(){
+		return "update";
+	}
+	//转发add
+	@RequestMapping("/insert")
+	public String insert(){
+		return "add";
+	}
+}

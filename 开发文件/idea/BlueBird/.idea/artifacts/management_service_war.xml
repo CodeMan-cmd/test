@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="management-service:war">
+    <output-path>$PROJECT_DIR$/management/service/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>management-service</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="service-1.0-SNAPSHOT.war" />
+  </artifact>
+</component>

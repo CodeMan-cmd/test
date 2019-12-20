@@ -1,0 +1,16 @@
+package text;
+
+import java.util.List;
+
+import dao.Text1DAO;
+import dao.Text1Id;
+
+public class Text {
+public static void main(String[] args) {
+	Text1DAO dao=new Text1DAO();
+	List<Text1Id> list = dao.findAll();
+	for (Text1Id text1Id : list) {
+		System.out.println(text1Id.getName());
+	}
+}
+}

@@ -1,0 +1,84 @@
+* {
+	margin: 0;
+	padding: 0;
+	background: radial-gradient(circle, #4894B6, #8BC34A);
+	/*//moz火狐不允许别人复制*/
+	-moz-user-select: none;
+}
+
+body {
+	background: radial-gradient(circle, #4894B6, #8BC34A);
+	/*//moz火狐不允许别人复制*/
+	-moz-user-select: none;
+}
+
+@keyframes myfirst1 {
+	0% {
+		background: radial-gradient(circle, #4894B6, #8BC34A);
+	}
+	40% {
+		background: radial-gradient(circle, #2DBDD1, #B84648);
+	}
+	70% {
+		background: radial-gradient(circle, #5DEA14, #39C585;
+		);
+	}
+	100% {
+		background: radial-gradient(circle, #D0CE2E, #25D9BE);
+	}
+}
+
+@keyframes myfirst2 {
+	0% {
+		position: relative;
+		top: 100px;
+	}
+	40% {
+		position: relative;
+		bottom: 100px;
+	}
+	70% {
+		position: relative;
+		left: 100px;
+	}
+	100% {
+		position: relative;
+		right: 100px;
+	}
+}
+
+.dd {
+	width: 100%;
+	height: 600px;
+	animation: myfirst1 10s;
+}
+
+.ax {
+	animation: myfirst2 5s infinite;
+}
+
+.div2 {
+	margin: auto;
+	width: 300px;
+	height: 50px;
+	position: absolute;
+	top: 200px;
+	left: 800px;
+}
+
+.ax {
+	cursor: pointer;
+}
+
+.rq {
+	cursor: default;
+	font-size: small;
+	color: red;
+	font-size: 50px;
+}
+
+.ax {
+	position: absolute;
+	top: 200px;
+	left: 200px;
+}

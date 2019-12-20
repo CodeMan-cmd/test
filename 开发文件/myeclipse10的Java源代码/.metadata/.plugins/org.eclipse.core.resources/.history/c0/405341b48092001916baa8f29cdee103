@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+
+	<insert id="insertUser">
+		INSERT INTO
+		t_user(userName,userPassword,phone,gender,address,birthday)
+		VALUE(#{userName},#{userPassword},#{phone},#{gender},#{address},#{birthday})
+	</insert>
+
+	<delete id="deleteUser" parameterType="int">
+	DELETE FROM t_user WHERE id=#{id}
+	</delete>
+
+	<select id="selectUser" resultMap="UserResultMap">
+	SELECT * FROM t_user
+	</select>
+	<resultMap type="T_user" id="UserResultMap">
+		<result  column="id" property="id"/>
+		<result  column="userName" property="userName"/>
+		<result  column="userPassword" property="userPassword"/>
+		<result  column="phone" property="phone"/>
+		<result  column="gender" property="gender"/>
+		<result  column="address" property="address"/>
+		<result  column="birthday" property="birthday"/>
+	</resultMap>
+</mapper>

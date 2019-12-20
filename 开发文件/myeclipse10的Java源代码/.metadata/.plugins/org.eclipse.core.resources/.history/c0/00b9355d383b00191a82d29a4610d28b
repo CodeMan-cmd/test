@@ -1,0 +1,38 @@
+package service.impl;
+
+import dao.UserDao;
+import org.springframework.stereotype.Service;
+import pojo.User;
+import service.UserService;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+@Service("userService")
+public class UserServiceImpl  implements UserService {
+
+
+    @Resource
+    private UserDao userDao;
+
+  
+
+	public UserDao getUserDao() {
+        return userDao;
+    }
+
+    public void setUserDao(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public List<User> findUser(User user){
+        return userDao.getUserList(user);
+    }
+
+	@Override
+	public int addUser(User u) {
+		return userDao.addUser(u);
+	}
+
+
+}

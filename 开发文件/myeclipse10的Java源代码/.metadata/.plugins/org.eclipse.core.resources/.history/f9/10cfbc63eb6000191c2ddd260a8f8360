@@ -1,0 +1,12 @@
+package service;
+
+import org.apache.ibatis.annotations.Param;
+
+import pojo.Easybuy_user;
+
+public interface UserService {
+		//注册
+		public int insertUser( Easybuy_user user );
+		//登录
+		public int selectUser( Easybuy_user user );
+}

@@ -1,0 +1,29 @@
+$(".l_user").blur(function() {
+	var strname = $(this).val();
+	var user = $(this).val();
+	$.ajax({
+		type : "GET",
+		url : "asynchronousJudgment?loginName=" + strname,
+		contentType : 'application/x-www-form-urlencoded; charset=UTF-8',
+		dataType : "json",
+		success : function(res) {
+			if (res.message == 1 && user != null) {
+				$(".l_user").next().html("✘");
+			} else if (res.message == 0) {
+				$(".l_user").next().html("✔");
+			}
+		}
+	});
+});
+
+$(".l_pwd").blur(function() {
+	var passwrod = $("#l_pwdw").val();
+	var passwrod2 = $("#l_pwds").val();
+	if (passwrod != passwrod2 && passwrod == null && passwrod2 == null) {
+		$("#l_pwdw").next().html("✘");
+		$("#l_pwds").next().html("✘");
+	} else if (passwrod == passwrod2) {
+		$("#l_pwdw").next().html("✔");
+		$("#l_pwds").next().html("✔");
+	}
+});

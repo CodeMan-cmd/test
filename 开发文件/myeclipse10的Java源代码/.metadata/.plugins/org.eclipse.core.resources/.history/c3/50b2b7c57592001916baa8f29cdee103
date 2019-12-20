@@ -1,0 +1,79 @@
+package pojo;
+
+import java.sql.Date;
+
+public class T_user {
+	public int id;
+	public String userName;
+	public String userPassword;
+	public String phone;
+	public String gender;
+	public String address;
+	public Date birthday;
+	public T_user() {
+		super();
+	}
+	
+	public T_user(int id, String userName, String userPassword, String phone,
+			String gender, String address, Date birthday) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.phone = phone;
+		this.gender = gender;
+		this.address = address;
+		this.birthday = birthday;
+	}
+
+	@Override
+	public String toString() {
+		return "T_user [id=" + id + ", userName=" + userName
+				+ ", userPassword=" + userPassword + ", phone=" + phone
+				+ ", gender=" + gender + ", address=" + address + ", birthday="
+				+ birthday + "]";
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getUserPassword() {
+		return userPassword;
+	}
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Date getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+}

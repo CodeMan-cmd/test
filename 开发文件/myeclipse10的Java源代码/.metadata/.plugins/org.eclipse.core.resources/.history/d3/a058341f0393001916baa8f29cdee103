@@ -1,0 +1,36 @@
+package service;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+
+import pojo.T_user;
+
+import dao.UserMapper;
+@Repository("userService")
+public class ServiceUserImp implements ServiceUser {
+	@Resource
+	public UserMapper userMapper;
+
+	public int insertUser(T_user user) {
+		return userMapper.insertUser(user);
+	}
+
+	public int deleteUser(int id) {
+		return userMapper.deleteUser(id);
+	}
+
+	public T_user updateUser(T_user user) {
+		return userMapper.updateUser(user);
+	}
+
+	public List<T_user> selectUser() {
+		return userMapper.selectUser();
+	}
+
+	public T_user selectByIdUser(int id) {
+		return selectByIdUser(id);
+	}
+}

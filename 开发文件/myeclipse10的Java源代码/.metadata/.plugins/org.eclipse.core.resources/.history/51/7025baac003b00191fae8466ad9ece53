@@ -1,0 +1,33 @@
+package test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import pojo.User;
+import service.UserService;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Test {
+    public static void main(String[] args) {
+        ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+        String[] names = context.getBeanDefinitionNames();
+        for (String item:names){
+            System.out.println(item);
+        }
+        UserService service=(UserService)context.getBean("userService");
+        List<User> list=new ArrayList<User>();
+        User user=new User();
+        user.setUserName("赵");
+        user.setUserRole(3);
+        list=service.findUser(user);
+        for (User u:list){
+            System.out.println("userCode: "
+                    + u.getUserCode() + " and userName: "
+                    + u.getUserName() + " and userRole: "
+                    + u.getUserRole() + " and userRoleName: "
+                    + u.getUserRoleName() + " and address: "
+                    + u.getAddress());
+        }
+    }
+}

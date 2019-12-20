@@ -1,0 +1,7 @@
+package text;
+
+import dao.Text1DAO;
+
+
+public class Text {
+}

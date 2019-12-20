@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:05 +0800] "GET /page/login?redirect=http://localhost:8091/order/order-cart.html HTTP/1.1" 200 4049 http-bio-8089-exec-1 834
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:28 +0800] "GET /page/register HTTP/1.1" 200 7678 http-bio-8089-exec-2 124
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:42 +0800] "GET /user/check/kongming1/1?r=0.707376039277005 HTTP/1.1" 200 48 http-bio-8089-exec-3 473
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:42 +0800] "GET /user/check/13444445555/2?r=0.86205565646513 HTTP/1.1" 200 48 http-bio-8089-exec-5 15
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:42 +0800] "POST /user/register HTTP/1.1" 200 48 http-bio-8089-exec-6 40
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:45 +0800] "GET /page/login HTTP/1.1" 200 4006 http-bio-8089-exec-7 4
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:52 +0800] "POST /user/login HTTP/1.1" 200 82 http-bio-8089-exec-9 304
+0:0:0:0:0:0:0:1 - - [17/Aug/2019:10:19:54 +0800] "GET /user/token/b1a0c5b7-b107-491b-87c7-1aa9d965ff31?callback=jQuery109136&_=1566008393992 HTTP/1.1" 200 144 http-bio-8089-exec-10 101

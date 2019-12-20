@@ -1,0 +1,398 @@
+2019-3-6 17:06:53[DEBUG](MutablePropertySources.java:108) Adding [systemProperties] PropertySource with lowest search precedence
+2019-3-6 17:06:53[DEBUG](MutablePropertySources.java:108) Adding [systemEnvironment] PropertySource with lowest search precedence
+2019-3-6 17:06:53[DEBUG](AbstractEnvironment.java:126) Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2019-3-6 17:06:53[ INFO](AbstractApplicationContext.java:512) Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2e691714: startup date [Wed Mar 06 17:06:53 CST 2019]; root of context hierarchy
+2019-3-6 17:06:53[DEBUG](MutablePropertySources.java:108) Adding [systemProperties] PropertySource with lowest search precedence
+2019-3-6 17:06:53[DEBUG](MutablePropertySources.java:108) Adding [systemEnvironment] PropertySource with lowest search precedence
+2019-3-6 17:06:53[DEBUG](AbstractEnvironment.java:126) Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2019-3-6 17:06:53[ INFO](XmlBeanDefinitionReader.java:316) Loading XML bean definitions from class path resource [applicationContext.xml]
+2019-3-6 17:06:53[DEBUG](DefaultDocumentLoader.java:72) Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2019-3-6 17:06:53[DEBUG](PluggableSchemaResolver.java:140) Loading schema mappings from [META-INF/spring.schemas]
+2019-3-6 17:06:53[DEBUG](PluggableSchemaResolver.java:146) Loaded schema mappings: {http://mybatis.org/schema/mybatis-spring-1.2.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://mybatis.org/schema/mybatis-spring.xsd=org/mybatis/spring/config/mybatis-spring-1.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd}
+2019-3-6 17:06:53[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/tx/spring-tx-3.2.xsd] in classpath: org/springframework/transaction/config/spring-tx-3.2.xsd
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/aop/spring-aop-3.2.xsd] in classpath: org/springframework/aop/config/spring-aop-3.2.xsd
+2019-3-6 17:06:54[DEBUG](DefaultBeanDefinitionDocumentReader.java:99) Loading bean definitions
+2019-3-6 17:06:54[ INFO](XmlBeanDefinitionReader.java:316) Loading XML bean definitions from class path resource [applicationService-dao.xml]
+2019-3-6 17:06:54[DEBUG](DefaultDocumentLoader.java:72) Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/beans/spring-beans-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-3.2.xsd
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/context/spring-context-3.2.xsd] in classpath: org/springframework/context/config/spring-context-3.2.xsd
+2019-3-6 17:06:54[DEBUG](PluggableSchemaResolver.java:118) Found XML schema [http://www.springframework.org/schema/tool/spring-tool-3.2.xsd] in classpath: org/springframework/beans/factory/xml/spring-tool-3.2.xsd
+2019-3-6 17:06:54[DEBUG](DefaultBeanDefinitionDocumentReader.java:99) Loading bean definitions
+2019-3-6 17:06:54[DEBUG](DefaultNamespaceHandlerResolver.java:156) Loaded NamespaceHandler mappings: {http://www.springframework.org/schema/p=org.springframework.beans.factory.xml.SimplePropertyNamespaceHandler, http://www.springframework.org/schema/mvc=org.springframework.web.servlet.config.MvcNamespaceHandler, http://www.springframework.org/schema/util=org.springframework.beans.factory.xml.UtilNamespaceHandler, http://www.springframework.org/schema/jee=org.springframework.ejb.config.JeeNamespaceHandler, http://www.springframework.org/schema/aop=org.springframework.aop.config.AopNamespaceHandler, http://www.springframework.org/schema/jdbc=org.springframework.jdbc.config.JdbcNamespaceHandler, http://www.springframework.org/schema/cache=org.springframework.cache.config.CacheNamespaceHandler, http://mybatis.org/schema/mybatis-spring=org.mybatis.spring.config.NamespaceHandler, http://www.springframework.org/schema/c=org.springframework.beans.factory.xml.SimpleConstructorNamespaceHandler, http://www.springframework.org/schema/tx=org.springframework.transaction.config.TxNamespaceHandler, http://www.springframework.org/schema/task=org.springframework.scheduling.config.TaskNamespaceHandler, http://www.springframework.org/schema/lang=org.springframework.scripting.config.LangNamespaceHandler, http://www.springframework.org/schema/context=org.springframework.context.config.ContextNamespaceHandler}
+2019-3-6 17:06:54[DEBUG](MutablePropertySources.java:108) Adding [systemProperties] PropertySource with lowest search precedence
+2019-3-6 17:06:54[DEBUG](MutablePropertySources.java:108) Adding [systemEnvironment] PropertySource with lowest search precedence
+2019-3-6 17:06:54[DEBUG](AbstractEnvironment.java:126) Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:553) Looking for matching resources in directory tree [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\service]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:615) Searching directory [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\service] for files matching pattern [C:/Users/Administrator/Desktop/myeclipse10的Java源代码/spring_A2/WebRoot/WEB-INF/classes/service/**/*.class]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:354) Resolved location pattern [classpath*:service/**/*.class] to resources [file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\service\UserService.class], file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\service\UserServiceImpl.class]]
+2019-3-6 17:06:54[DEBUG](ClassPathScanningCandidateComponentProvider.java:273) Identified candidate component class: file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\service\UserServiceImpl.class]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:553) Looking for matching resources in directory tree [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:615) Searching directory [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao] for files matching pattern [C:/Users/Administrator/Desktop/myeclipse10的Java源代码/spring_A2/WebRoot/WEB-INF/classes/dao/**/*.class]
+2019-3-6 17:06:54[DEBUG](PathMatchingResourcePatternResolver.java:354) Resolved location pattern [classpath*:dao/**/*.class] to resources [file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserDaoImpl.class], file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserMapper.class]]
+2019-3-6 17:06:54[DEBUG](ClassPathScanningCandidateComponentProvider.java:273) Identified candidate component class: file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserDaoImpl.class]
+2019-3-6 17:06:54[DEBUG](DefaultBeanDefinitionDocumentReader.java:267) Imported 6 bean definitions from relative location [applicationService-dao.xml]
+2019-3-6 17:06:54[DEBUG](BeanDefinitionParserDelegate.java:494) Neither XML 'id' nor 'name' specified - using generated bean name [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0]
+2019-3-6 17:06:54[DEBUG](BeanDefinitionParserDelegate.java:494) Neither XML 'id' nor 'name' specified - using generated bean name [org.mybatis.spring.mapper.MapperScannerConfigurer#0]
+2019-3-6 17:06:54[DEBUG](AbstractBeanDefinitionReader.java:216) Loaded 24 bean definitions from location pattern [applicationContext.xml]
+2019-3-6 17:06:54[DEBUG](AbstractApplicationContext.java:542) Bean factory for org.springframework.context.support.ClassPathXmlApplicationContext@2e691714: org.springframework.beans.factory.support.DefaultListableBeanFactory@2af9150: defining beans [userServiceImpl,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sqlSessionFactory,sqlSessionTemplate,userMapper,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txAdvice,org.mybatis.spring.mapper.MapperScannerConfigurer#0,UserServiceLogger,pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2]; root of factory hierarchy
+2019-3-6 17:06:54[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor' to allow for resolving potential circular references
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-3-6 17:06:54[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0' to allow for resolving potential circular references
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-3-6 17:06:54[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-3-6 17:06:55[DEBUG](MutablePropertySources.java:108) Adding [systemProperties] PropertySource with lowest search precedence
+2019-3-6 17:06:55[DEBUG](MutablePropertySources.java:108) Adding [systemEnvironment] PropertySource with lowest search precedence
+2019-3-6 17:06:55[DEBUG](AbstractEnvironment.java:126) Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+2019-3-6 17:06:55[DEBUG](PathMatchingResourcePatternResolver.java:553) Looking for matching resources in directory tree [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao]
+2019-3-6 17:06:55[DEBUG](PathMatchingResourcePatternResolver.java:615) Searching directory [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao] for files matching pattern [C:/Users/Administrator/Desktop/myeclipse10的Java源代码/spring_A2/WebRoot/WEB-INF/classes/dao/**/*.class]
+2019-3-6 17:06:55[DEBUG](PathMatchingResourcePatternResolver.java:354) Resolved location pattern [classpath*:dao/**/*.class] to resources [file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserDaoImpl.class], file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserMapper.class]]
+2019-3-6 17:06:55[DEBUG](ClassPathScanningCandidateComponentProvider.java:279) Ignored because not a concrete top-level class: file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserDaoImpl.class]
+2019-3-6 17:06:55[DEBUG](ClassPathScanningCandidateComponentProvider.java:273) Identified candidate component class: file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserMapper.class]
+2019-3-6 17:06:55[ WARN](ClassPathMapperScanner.java:223) Skipping MapperFactoryBean with name 'userMapper' and 'dao.UserMapper' mapperInterface. Bean already defined with the same name!
+2019-3-6 17:06:55[ WARN](ClassPathMapperScanner.java:155) No MyBatis mapper was found in '[dao]' package. Please check your configuration.
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2019-3-6 17:06:55[ INFO](PropertiesLoaderSupport.java:172) Loading properties file from class path resource [database.properties]
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.aop.config.internalAutoProxyCreator' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-3-6 17:06:55[DEBUG](AbstractApplicationContext.java:809) Unable to locate MessageSource with name 'messageSource': using default [org.springframework.context.support.DelegatingMessageSource@3de76262]
+2019-3-6 17:06:55[DEBUG](AbstractApplicationContext.java:833) Unable to locate ApplicationEventMulticaster with name 'applicationEventMulticaster': using default [org.springframework.context.event.SimpleApplicationEventMulticaster@68bb39fe]
+2019-3-6 17:06:55[ INFO](DefaultListableBeanFactory.java:603) Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@2af9150: defining beans [userServiceImpl,userDao,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0,dataSource,sqlSessionFactory,sqlSessionTemplate,userMapper,transactionManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,txAdvice,org.mybatis.spring.mapper.MapperScannerConfigurer#0,UserServiceLogger,pointcut,org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,org.springframework.aop.aspectj.AspectJPointcutAdvisor#2,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'userServiceImpl'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'userServiceImpl'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.transaction.config.internalTransactionAdvisor' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2019-3-6 17:06:55[DEBUG](BeanFactoryAdvisorRetrievalHelper.java:87) Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#59d996fb'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#5a034160'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#5a034160'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#75a287d9'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#75a287d9'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#59d996fb'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#19d244d9'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#3ba60fcd'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#3ba60fcd'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#13577a53'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#13577a53'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#19d244d9'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#51a20fb5'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#66b55df1'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#66b55df1'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'pointcut'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#d2aade5'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#d2aade5'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#51a20fb5'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](BeanFactoryAdvisorRetrievalHelper.java:87) Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](BeanFactoryAdvisorRetrievalHelper.java:87) Skipping currently created advisor 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](InjectionMetadata.java:72) Registered injected element on class [service.UserServiceImpl]: ResourceElement for private dao.UserMapper service.UserServiceImpl.userMapper
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'userServiceImpl' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](InjectionMetadata.java:86) Processing injected element of bean 'userServiceImpl': ResourceElement for private dao.UserMapper service.UserServiceImpl.userMapper
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'userMapper'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'userMapper'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'userMapper' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'sqlSessionFactory'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'sqlSessionFactory'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](JakartaCommonsLoggingImpl.java:46) Logging initialized using 'class org.apache.ibatis.logging.commons.JakartaCommonsLoggingImpl' adapter.
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'sqlSessionFactory' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'dataSource'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'dataSource'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'dataSource' to allow for resolving potential circular references
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:55[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:56[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'dataSource'
+2019-3-6 17:06:56[DEBUG](PathMatchingResourcePatternResolver.java:553) Looking for matching resources in directory tree [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao]
+2019-3-6 17:06:56[DEBUG](PathMatchingResourcePatternResolver.java:615) Searching directory [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao] for files matching pattern [C:/Users/Administrator/Desktop/myeclipse10的Java源代码/spring_A2/WebRoot/WEB-INF/classes/dao/**/*.xml]
+2019-3-6 17:06:56[DEBUG](PathMatchingResourcePatternResolver.java:354) Resolved location pattern [classpath:dao/**/*.xml] to resources [file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserMapper.xml]]
+2019-3-6 17:06:56[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'sqlSessionFactory'
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Class not found: org.jboss.vfs.VFS
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) JBoss 6 VFS API is not available in this environment.
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Class not found: org.jboss.vfs.VirtualFile
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Using VFS adapter org.apache.ibatis.io.DefaultVFS
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Find JAR URL: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Not a JAR: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Reader entry: HelloSpring.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Reader entry: User.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Listing file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Find JAR URL: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo/HelloSpring.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Not a JAR: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo/HelloSpring.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Reader entry: ����   1   pojo/HelloSpring  java/lang/Object str Ljava/lang/String; getStr ()Ljava/lang/String; Code	     LineNumberTable LocalVariableTable this Lpojo/HelloSpring; setStr (Ljava/lang/String;)V <init>
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Find JAR URL: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo/User.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Not a JAR: file:/C:/Users/Administrator/Desktop/myeclipse10%e7%9a%84Java%e6%ba%90%e4%bb%a3%e7%a0%81/spring_A2/WebRoot/WEB-INF/classes/pojo/User.class
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Reader entry: ����   1 ^  	pojo/User  java/lang/Object id I userName Ljava/lang/String; userRole userPassword userCode gender Ljava/lang/Integer; birthday Ljava/sql/Date; phone address creationDate modifyBy 
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Checking to see if class pojo.HelloSpring matches criteria [is assignable to Object]
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Checking to see if class pojo.User matches criteria [is assignable to Object]
+2019-3-6 17:06:56[DEBUG](JakartaCommonsLoggingImpl.java:46) Parsed configuration file: 'class path resource [mybatis-config.xml]'
+2019-3-6 17:06:57[DEBUG](JakartaCommonsLoggingImpl.java:46) Parsed mapper file: 'file [C:\Users\Administrator\Desktop\myeclipse10的Java源代码\spring_A2\WebRoot\WEB-INF\classes\dao\UserMapper.xml]'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'sqlSessionFactory'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'userMapper'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'userMapper'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'txAdvice'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'txAdvice'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'txAdvice' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'transactionManager'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'transactionManager'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'transactionManager' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'dataSource'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'transactionManager'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'transactionManager'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean '(inner bean)#24119982'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](NameMatchTransactionAttributeSource.java:95) Adding transactional method [add*] with attribute [PROPAGATION_REQUIRED,ISOLATION_DEFAULT]
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean '(inner bean)#24119982'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'txAdvice'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'txAdvice'
+2019-3-6 17:06:57[DEBUG](AbstractAutoProxyCreator.java:540) Creating implicit proxy for bean 'userServiceImpl' with 0 common interceptors and 5 specific interceptors
+2019-3-6 17:06:57[DEBUG](JdkDynamicAopProxy.java:115) Creating JDK dynamic proxy: target source is SingletonTargetSource for target object [service.UserServiceImpl@a028c67]
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'userServiceImpl'
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'userDao'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'userDao'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](InjectionMetadata.java:72) Registered injected element on class [dao.UserDaoImpl]: ResourceElement for private org.mybatis.spring.SqlSessionTemplate dao.UserDaoImpl.sqlSessionTemplate
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'userDao' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](InjectionMetadata.java:86) Processing injected element of bean 'userDao': ResourceElement for private org.mybatis.spring.SqlSessionTemplate dao.UserDaoImpl.sqlSessionTemplate
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'sqlSessionTemplate'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'sqlSessionTemplate'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'sqlSessionFactory'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'sqlSessionTemplate' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'sqlSessionTemplate'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'userDao'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.context.annotation.internalConfigurationAnnotationProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.context.annotation.internalAutowiredAnnotationProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.context.annotation.internalRequiredAnnotationProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.context.annotation.internalCommonAnnotationProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.beans.factory.config.PropertyPlaceholderConfigurer#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'dataSource'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'sqlSessionFactory'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'sqlSessionTemplate'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'userMapper'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'transactionManager'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.config.internalAutoProxyCreator'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:1557) Invoking afterPropertiesSet() on bean with name 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'org.springframework.transaction.interceptor.TransactionInterceptor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'txAdvice'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer#0'
+2019-3-6 17:06:57[DEBUG](DefaultSingletonBeanRegistry.java:215) Creating shared instance of singleton bean 'UserServiceLogger'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:432) Creating instance of bean 'UserServiceLogger'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:506) Eagerly caching bean 'UserServiceLogger' to allow for resolving potential circular references
+2019-3-6 17:06:57[DEBUG](AbstractAutowireCapableBeanFactory.java:460) Finished creating instance of bean 'UserServiceLogger'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.support.DefaultBeanFactoryPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#2'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractApplicationContext.java:860) Unable to locate LifecycleProcessor with name 'lifecycleProcessor': using default [org.springframework.context.support.DefaultLifecycleProcessor@33af6e]
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'lifecycleProcessor'
+2019-3-6 17:06:57[DEBUG](AbstractBeanFactory.java:243) Returning cached instance of singleton bean 'sqlSessionFactory'
+2019-3-6 17:06:57[DEBUG](PropertySourcesPropertyResolver.java:81) Searching for key 'spring.liveBeansView.mbeanDomain' in [systemProperties]
+2019-3-6 17:06:57[DEBUG](PropertySourcesPropertyResolver.java:81) Searching for key 'spring.liveBeansView.mbeanDomain' in [systemEnvironment]
+2019-3-6 17:06:57[DEBUG](PropertySourcesPropertyResolver.java:103) Could not find key 'spring.liveBeansView.mbeanDomain' in any property source. Returning [null]

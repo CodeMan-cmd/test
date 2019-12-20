@@ -1,0 +1,12 @@
+package dao;
+
+import java.util.List;
+
+import pojo.Address;
+import pojo.User;
+
+public interface UserMapper {
+	public List<User> selectById(int id);
+
+	List<Address> getAddressesById(int id);
+}

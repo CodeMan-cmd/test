@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserMapper">
+	<!-- <select id="selectById" parameterType="int" resultMap="haha"> SELECT 
+		u.userName,r.roleName FROM smbms_user AS u,smbms_role AS r WHERE u.userRole=r.id 
+		AND u.userRole=#{id} </select> -->
+	<select id="selectById" parameterType="User" resultMap="haha">
+		SELECT u.* FROM smbms_user u 
+		<if test="u.userName!=null">
+			AND u.userName LIKE CONCAT('%','#{user.userName}','%');
+		</if>
+		<!-- <if test="u.id!=0"> AND u.gender=r.id </if> -->
+	</select>
+	<resultMap type="User" id="haha">
+		<result property="userName" column="userName"></result>
+		<!-- <association property="role" javaType="Role"> <result column="roleName" 
+			property="roleName" /> </association> -->
+	</resultMap>
+</mapper>

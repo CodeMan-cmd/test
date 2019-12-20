@@ -1,0 +1,22 @@
+package text;
+
+import java.util.List;
+
+import dao.Text;
+import dao.TextDAO;
+
+public class Text1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		TextDAO dao=new TextDAO();
+		List<Text> text=dao.findAll();
+		System.out.println(text.size());
+		for (Text text2 : text) {
+			System.out.println(text2.getUsername());
+		}
+	}
+
+}

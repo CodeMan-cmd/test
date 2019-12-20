@@ -1,0 +1,45 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    
+    <title>初始页面</title>
+  </head>
+  
+  <body>
+  <table width="724" border="1">
+  <tbody>
+    <tr>
+      <td width="139"><blockquote>
+        <p>书名
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>作者
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>出版社
+        </p>
+      </blockquote></td>
+      <td width="139"><blockquote>
+        <p>页数
+        </p>
+      </blockquote></td>
+      <td width="134"><blockquote>
+        <p>价格
+        </p>
+      </blockquote></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td style="display: none;"></td>
+    </tr>
+  </tbody>
+</table>
+  </body>
+</html>

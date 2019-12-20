@@ -1,0 +1,1 @@
+package pojo;public class HelloSpring {	private String str;	public String getStr() {		return str;	}	public void setStr(String str) {		this.str = str;	}	public HelloSpring(String str) {		super();		this.str = str;	}	public HelloSpring() {		super();	}	}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserMapper">
+	 <insert id="insertUser" parameterType="User">
+	INSERT INTO smbms_user(userName)
+	<if test="userName!=null">
+	VALUES(#{userName})
+	</if>
+	</insert>
+	<delete id="deleteUser" parameterType="User">
+	DELETE FROM smbms_user
+	<where>
+	 WHERE id=#{id}
+	</where>
+	</delete>
+	<update id="updateUser" parameterType="User">
+	UPDATE smbms_user 
+	<set>
+	 userName=#{userName} WHERE id=#{id}
+	</set> 
+	</update>
+	<select id="selectUser" parameterType="User" parameterMap="haha">
+	SELECT id,userCode,userName,userPassword,gender,birthday,phone,address,userRole,createdBy FROM smbms_user
+	</select>  
+	<select id="selectCount" resultType="int">
+		SELECT COUNT(1) FROM smbms_user
+	</select>
+	<select id="selectLimit" resultMap="haha">
+		SELECT * FROM smbms_user
+		LIMIT
+		#{l.qishitiaoshu},#{l.meiyexianshitioashu}
+	</select>
+	<select id=""></select>
+	<resultMap type="User" id="haha">
+		<result property="id" column="id"></result>
+		<result property="userCode" column="userCode"></result> 
+		<result property="userName" column="userName"></result>
+	 	<result property="userPassword" column="userPassword"></result>
+		<result property="gender" column="gender"></result>
+		<result property="birthday" column="birthday"></result>
+		<result property="phone" column="phone"></result>
+		<result property="address" column="address"></result>
+		<result property="userRole" column="userRole"></result>
+		<result property="createdBy" column="createdBy"></result> 
+	</resultMap>
+</mapper>

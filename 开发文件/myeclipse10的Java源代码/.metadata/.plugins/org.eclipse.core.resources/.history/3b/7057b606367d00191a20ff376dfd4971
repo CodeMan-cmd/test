@@ -1,0 +1,15 @@
+package packagee;
+
+public class Test {
+		public static void main(String[] args) {
+			int a=5;
+			int j;
+			for (int i = 0; i <=a; i++) {
+				for ( j = 0; j <= a; j++) {
+					System.out.println("*");
+				}
+				a--;
+				System.out.println("\n");
+			}
+}
+}

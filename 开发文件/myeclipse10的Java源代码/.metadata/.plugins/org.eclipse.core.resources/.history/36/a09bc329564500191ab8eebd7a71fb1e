@@ -1,0 +1,15 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head></head>
+  
+  
+  <body>
+  <form action="insertUser" method="post">
+     用户编号：<input type="text" name="userCode"  ><br>
+   用户名：<input type="text"  name="userName" ><br>
+   密码： <input type="hidden" name="userPassword" ><br>
+    <input type="submit" value="添加">
+</form>
+  </body>
+</html>

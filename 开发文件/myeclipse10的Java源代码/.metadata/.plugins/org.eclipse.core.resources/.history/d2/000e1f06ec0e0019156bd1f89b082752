@@ -1,0 +1,10 @@
+package deom;
+
+import java.sql.Struct;
+
+
+public class Maina {
+	public void ay(){
+		System.out.println("Nmae");
+	}
+}

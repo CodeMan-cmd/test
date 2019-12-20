@@ -1,0 +1,12 @@
+package service;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Repository;
+
+import dao.UserMapper;
+@Repository("userService")
+public class ServiceUserImp implements ServiceUser {
+	@Resource
+	public UserMapper userMapper;
+}

@@ -1,0 +1,47 @@
+package controller;
+import java.util.List;
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import pojo.T_user;
+import service.ServiceUser;
+
+@Controller
+public class IndexController {
+	@Resource
+	private ServiceUser userService;
+	
+	
+	@RequestMapping("deleteUser")
+	public String deleteUser(@RequestParam(value="id",required=false)int id){
+		userService.deleteUser(id);
+		return "selectUser";
+	}
+	@RequestMapping("/selectUser")
+	public String selectUser(HttpServletRequest req){
+		List<T_user> listt=userService.selectUser();
+		req.setAttribute("listt", listt);
+		return "list";
+	}
+	@RequestMapping("/insertUser")
+	public String insertUser(T_user user){
+		int insertUser = userService.insertUser(user);
+		if(insertUser>0){
+			return "redirect:/list";
+		}else{
+			return "add";
+		}
+		
+	}
+	@RequestMapping("/update")
+	public String update(){
+		return "update";
+	}
+	@RequestMapping("/insert")
+	public String insert(){
+		return "add";
+	}
+}

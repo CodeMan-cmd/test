@@ -1,0 +1,4 @@
+$(".l_user").blur(function() {
+	var strname= $(this).val();
+	alert(strname);
+});

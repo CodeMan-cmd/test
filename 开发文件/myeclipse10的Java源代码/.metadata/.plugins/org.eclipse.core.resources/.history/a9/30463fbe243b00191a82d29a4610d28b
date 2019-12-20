@@ -1,0 +1,21 @@
+package dao;
+
+import pojo.User;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+public interface UserDao {
+    /**
+     * 查询用户列表
+     * @param user
+     * @return
+     */
+    public List<User> getUserList(User user);
+
+    /**
+     * 添加
+     */
+    public int addUser(@Param("u")User u);
+}

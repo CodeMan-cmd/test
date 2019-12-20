@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"mybatis-3-mapper.dtd">
+<mapper namespace="dao.Shangpin">
+	<select id="selectProdct" resultMap="cc">
+		SELECT * FROM easybuy_product
+	</select>
+	<select id="souSoYinQing" resultMap="cc">
+	SELECT * FROM easybuy_product AS b 
+         WHERE 
+         b.categoryLevel1Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name2.name},'%')
+         )
+         OR
+         b.categoryLevel2Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name2.name},'%')
+         )
+         OR
+         b.categoryLevel3Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name2.name},'%')
+         )
+         OR
+         b.name LIKE CONCAT('%',#{name2.name},'%')
+	</select>
+	<!-- 条数 -->
+	<select id="selectCount" resultType="int">
+	SELECT COUNT(1) FROM easybuy_product
+	</select>
+	<!-- 分页出行数和条数 -->
+	<select id="selectLimit" resultMap="cc">
+		SELECT * FROM easybuy_product 
+		<where>
+			<include refid="souSoYinQing2"/>
+		</where>
+		LIMIT #{p.qishiyeshu},#{p.meiyetiaoshu}
+	</select>
+	<sql id="souSoYinQing2">
+	SELECT * FROM easybuy_product AS b 
+         WHERE 
+         b.categoryLevel1Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name},'%')
+         )
+         OR
+         b.categoryLevel2Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name},'%')
+         )
+         OR
+         b.categoryLevel3Id IN (
+		SELECT a.id FROM easybuy_product_category AS a
+		WHERE a.name LIKE CONCAT('%',#{name},'%')
+         )
+         OR
+         b.name LIKE CONCAT('%',#{name},'%')
+	</sql>
+	<resultMap type="Easybuy_product" id="cc">
+	<result property="id" column="id"/>
+	<result property="name" column="name"/>
+	<result property="description" column="description"/>
+	<result property="price" column="price"/>
+	<result property="stock" column="stock"/>
+	<result property="categoryLeve11Id" column="categoryLevel1Id"/>
+	<result property="categoryLeve12Id" column="categoryLevel2Id"/>
+	<result property="categoryLeve13Id" column="categoryLevel3Id"/>
+	<result property="fileName" column="fileName"/>
+	<result property="isDelete" column="isDelete"/>
+	</resultMap>
+</mapper>

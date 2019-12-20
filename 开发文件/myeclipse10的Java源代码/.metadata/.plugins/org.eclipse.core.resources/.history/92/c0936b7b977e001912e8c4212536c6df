@@ -1,0 +1,19 @@
+package com.dbqn.entity;
+
+import java.sql.Date;
+
+public class User {
+	public Integer id;
+	public String userCode;
+	public String userName;
+	public String userPassword;
+	public Integer gender;
+	public Date birthday;
+	public String phone;
+	public String address;
+	public Integer userRole;
+	public Integer createdBy;
+	public Date creationDate;
+	public Integer modifyBy;
+	public Date modifyDate;
+}

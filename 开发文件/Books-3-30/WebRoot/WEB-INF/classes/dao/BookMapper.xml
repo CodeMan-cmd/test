@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.BookMapper">
+
+	<!-- 分页查询 -->
+	<select id="selectAll" resultMap="bs">
+		SELECT * FROM books 
+		<include refid="selectBooks"/>
+		LIMIT #{page.sqlLimitStartNumber},#{page.pageShowNumber} 
+	</select>
+	<resultMap type="Books" id="bs">
+		<result column="bookid" property="bookid" />
+		<result column="bookName" property="bookName" />
+		<result column="bookAuthor" property="bookAuthor" />
+		<result column="bookPublish" property="bookPublish" />
+		<result column="bookPage" property="bookPage" />
+		<result column="bookPrice" property="bookPrice" />
+		<result column="createDate" property="createDate" />
+	</resultMap>
+	
+	<!-- 模糊查询 -->
+	<select id="selectCountByBook" resultType="int">
+		SELECT COUNT(1) FROM books
+		<include refid="selectBooks"/>
+	</select>
+	<sql id="selectBooks">
+		<if test="text!=null and text!=''">
+			<where>
+				<if test="type==0">
+					and bookName LIKE CONCAT('%',#{text},'%')
+				</if>
+				<if test="type==1">
+					AND bookAuthor LIKE CONCAT('%',#{text},'%')
+				</if>
+				<if test="type==2">
+					AND bookPublish LIKE CONCAT('%',#{text},'%')
+				</if>
+			</where>
+		</if>
+	</sql>
+	
+	<!-- 添加 -->
+	<insert id="addBook">
+		INSERT INTO `books` (`bookName`,
+		`bookAuthor`,`bookPublish`,`bookPage`,`bookPrice`,`createDate`)
+		VALUES
+		(#{b.bookName},#{b.bookAuthor},#{b.bookPublish},#{b.bookPage},#{b.bookPrice},#{b.createDate})
+	</insert>
+</mapper>

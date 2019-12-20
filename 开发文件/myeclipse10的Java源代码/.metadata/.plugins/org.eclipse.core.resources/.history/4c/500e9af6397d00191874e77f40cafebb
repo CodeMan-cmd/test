@@ -1,0 +1,16 @@
+package packagee;
+
+public class Test {
+		public static void main(String[] args) {
+			int a=5;
+			String s="   wo";
+			System.out.println(s);
+			for (int i = 0; i <=a; i++) {
+				for (int  j = 0; j <= a;j++) {
+					System.out.print("*");
+				}
+				a--;
+				System.out.println("\n");
+			}
+}
+}

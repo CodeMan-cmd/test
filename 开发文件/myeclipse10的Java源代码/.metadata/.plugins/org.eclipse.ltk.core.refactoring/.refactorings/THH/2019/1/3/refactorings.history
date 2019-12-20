@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;BaseDao.java&apos; to &apos;BookManage/src/dao&apos;&#x0D;&#x0A;- Original project: &apos;THH&apos;&#x0D;&#x0A;- Destination element: &apos;BookManage/src/dao&apos;&#x0D;&#x0A;- Original element: &apos;dao.BaseDao.java&apos;" description="Copy compilation unit" destination="=BookManage/src&lt;dao" element1="/src&lt;dao{BaseDao.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1547355824816" units="1" version="1.0"/>
+</session>

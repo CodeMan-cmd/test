@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+C:\Users\Administrator\Desktop\myeclipse10的Java源代码\分布式聚合\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1294989568.index
+3512005586.index
+3991700500.index
+653470812.index
+303349579.index
+3361171593.index

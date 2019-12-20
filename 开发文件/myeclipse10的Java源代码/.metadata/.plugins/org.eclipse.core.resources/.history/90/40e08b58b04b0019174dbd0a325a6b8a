@@ -1,0 +1,23 @@
+package text;
+
+import java.util.List;
+
+import dao.Emp;
+import dao.EmpDAO;
+import dao.Text;
+import dao.TextDAO;
+
+public class Text1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		EmpDAO ed=new EmpDAO();
+		List<Emp> findAll = ed.findAll();
+		for (Emp emp : findAll) {
+			System.out.println();
+		}
+	}
+
+}

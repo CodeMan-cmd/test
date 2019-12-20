@@ -1,0 +1,14 @@
+package pojo;
+
+public class Easybuy_product {
+	private int id;					//主键
+	private String name;            //名称
+	private String description;		//描述
+	private double price;			//价格
+	private int stock;				//库存
+	private int categoryLeve11Id;	//分类1
+	private int categoryLeve12Id;	//分类2
+	private int categoryLeve13Id;	//分类3
+	private String fileName;		//文件名称
+	private int isDelete;			//是否删除
+}

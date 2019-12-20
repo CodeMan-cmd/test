@@ -1,0 +1,36 @@
+package service;
+
+import javax.annotation.Resource;
+
+import pojo.Easybuy_user;
+import dao.UserMapper;
+
+public class UserServiceImpl implements UserService {
+	@Resource
+	private UserMapper dao;
+
+	public UserMapper getDao() {
+		return dao;
+	}
+
+	public void setDao(UserMapper dao) {
+		this.dao = dao;
+	}
+
+	public UserServiceImpl(UserMapper dao) {
+		super();
+		this.dao = dao;
+	}
+
+	public UserServiceImpl() {
+		super();
+	}
+
+
+
+	public Easybuy_user selectUser(String userName, String password) 
+		return dao.selectUser(userName, password);
+	}
+
+	
+}

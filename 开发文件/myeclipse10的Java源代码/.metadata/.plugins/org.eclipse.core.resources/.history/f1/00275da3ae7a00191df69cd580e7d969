@@ -1,0 +1,47 @@
+function toTop() {
+	jQuery("#shou").click(function() {
+		jQuery.ajax({
+			type : "post",
+			url : "cc",
+			dataType : "JSON",
+			// 当 AJAX 请求成功完成时，触发
+			success : function(resu) {
+				$("[name=dangqianyema]").val(1);
+			}
+		});
+	});
+}
+
+function toTop1() {
+	jQuery("#shang").click(function() {
+		jQuery.ajax({
+			type : "post",
+			url : "cc",
+			dataType : "JSON",
+			success : function() {
+				var s = parseInt($("[name=dangqianyema]").val()) - 1;
+				$("[name=dangqianyema]").val(s);
+			}
+		});
+
+	});
+}
+function toEnd() {
+	jQuery("#xia").click(function() {
+	
+		jQuery.ajax({
+			type:"post",
+			url:"cc",
+			dataType:"JSON",
+			success:function(){
+				var s = parseInt($("[name=dangqianyema]").val()) + 1;
+				$("[name=dangqianyema]").val(s);
+			}
+		});
+	});
+}
+function toEnd1(abc) {
+	jQuery("#wei").click(function() {
+		$("[name=dangqianyeshu]").val(abc);
+	});
+}

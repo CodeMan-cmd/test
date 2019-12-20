@@ -1,0 +1,11 @@
+package dao;
+
+import java.util.List;
+
+import pojo.Employee;
+
+public  interface EmployeeMapper {
+	public List<Employee> employeeSelect();
+	public int employeeDelete();
+	public List<Employee> employeeUpdate();
+}

@@ -1,0 +1,11 @@
+package dao;
+
+
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import pojo.Books;
+@Repository("userMapper")
+public interface UserMapper {
+	public int insertBooks(@Param("p")Books b);
+}

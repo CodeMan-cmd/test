@@ -1,0 +1,23 @@
+package test;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import pojo.User;
+import service.UserService;
+import sun.util.logging.resources.logging;
+public class Junit {
+
+	@Test
+	public void test() {
+		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+    	User u=new User();
+    	u.setUserName("小童");
+    	UserService service=(UserService)context.getBean("userService");
+    	int addUser=service.addUser(u);
+    	if (addUser>0) {
+    	logging.getBundle("成功");
+		}
+	}
+
+}

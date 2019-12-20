@@ -1,0 +1,1 @@
+package tset;/** * 单例模式 * @author Mister He * */public class BaseDao {	public static BaseDao as=new BaseDao();	/**	 * 私有构造方法	 */	private BaseDao(){			}	/*public synchronized static BaseDao getAs(){		return as= new BaseDao();		 	}*/}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.UserMapper">
+
+	<resultMap type="User" id="map">
+		<result property="id" column="id" />
+		<result property="userName" column="userName" />
+		<result property="userPassword" column="userPassword" />
+		<result property="phone" column="phone" />
+		<result property="gender" column="gender" />
+		<result property="address" column="address" />
+		<result property="birthday" column="birthday" />
+	</resultMap>
+	<!-- 查询所有用户信息 -->
+	<select id="selectAllUser" resultMap="map">
+		select * from t_user
+	</select>
+	<!-- 增加新用户 -->
+	<insert id="addUser">
+		INSERT INTO `t_user` (`userName`,
+		`userPassword`, `phone`, `gender`, `address`, `birthday`)
+		VALUES
+		(#{userName}, #{userPassword}, #{phone}, #{gender}, #{address},
+		#{birthday})
+	</insert>
+	<!-- 根据id查询 -->
+	<select id="getUserById" parameterType="int" resultType="User"> 
+		select * from t_user
+		where id=#{id}
+	</select>
+	<!-- 更新用户信息 -->
+	<update id="updateUser" parameterType="User">
+		update t_user
+		<trim prefix="set" suffixOverrides=",">
+			<if test="userName!=null">userName=#{userName},</if>
+			<if test="userPassword!=null">userPassword=#{userPassword},</if>
+			<if test="phone!=null">phone=#{phone},</if>
+			<if test="gender!=null">gender=#{gender},</if>
+			<if test="address!=null">address=#{address},</if>
+			<if test="birthday!=null">birthday=#{birthday},</if>
+		</trim>
+		where id=#{id}
+	</update>
+	<!-- 删除用户 -->
+	<delete id="deleteUser">
+		DELETE FROM `t_user` WHERE `id` = #{id}
+	</delete>
+</mapper>

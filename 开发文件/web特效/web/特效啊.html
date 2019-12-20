@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>xxx</title>
+		<link rel="stylesheet" href="css/new_file.css" />
+	</head>
+
+	<body>
+		<div id="deviceready" class="blink">
+			<ul>
+				<li class="event2" id="evenn">Device is Ready</li>
+				<li class="event">Device is Ready</li>
+				<li class="event">Device is Ready</li>
+				<li class="event">Device is Ready</li>
+				<li class="event">Device is Ready</li>
+			</ul>
+		</div>
+		<script type="text/jscript">
+			var idd = document.getElementsByClassName("event");
+			var evenn = document.getElementById("evenn");
+			function caiDan() {
+				通过document.getElementById（） 这个方法得到当前对象
+				/*判断当前对象对象的style。display 是否可见 如果不可见，则将其改为可见*/
+				if(idd.style.display == "none") {
+					idd.style.display = "block";
+				} else {
+					//否则将其设置为不可见
+					idd.style.display = "none";
+				}
+			}
+			/*编写一个方法，用来改变菜单项是否可见，来实现菜单的收起和下拉，并传入当前对象的id*/
+			evenn.onclick = function() {
+				alert("123");
+				caiDan();
+			}
+		</script>
+	</body>
+
+</html>
