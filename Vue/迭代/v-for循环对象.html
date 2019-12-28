@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<!--除了val和key在第三个位置还有一个索引-->
+			<p :style="[styleObj2,styleObj]" v-for="(val,key,index) in user">键：{{key}}-----值：{{val}}---索引：{{index}}</p>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				user:{
+					id:1,
+					name:'tong会',
+					gender:'男'
+				},
+				styleObj: {
+					//颜色
+					color: 'red',
+					//粗细
+					'font-weight': 100,
+					//大小
+					'font-size': '20px'
+				},
+				styleObj2: {
+					//斜角
+					'font-style': 'italic',
+					//间隔
+					'letter-spacing':'0.5em'
+				}
+			},
+			methods: {
+			
+			}
+		});
+	</script>
+
+</html>

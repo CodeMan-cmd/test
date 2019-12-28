@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../lib/vue.js"></script>
+		<style>
+			.ball{
+				width: 15px;
+				height: 15px;
+				border-radius: 50%;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<input type="button" value="快到碗里来" @click="flag=!flag" /> 
+			<transition 
+				@before-enter="beforeEnter"
+				@enter="enter"
+				@after-enter="afterEnter">
+				<div class="ball" v-show="flag"></div>
+			</transition>
+		</div>
+	</body>
+	<script>
+		var vm=new Vue({
+			el:"#app",
+			data:{
+				flag:false,
+			},
+			methods:{
+				//表示动画入场之前 此时动画没有开始       可以在里面设置动画起始值
+				beforeEnter(el){
+					//设置动画之前起始位置
+					el.style.transform="translate(0,0)"
+				},
+				//表示动画开始之后的样式          这里可以设置小球完成动画后的结束样式
+				enter(el,done){
+					/*这里要加offset因为offset可以动画重绘*/
+					el.offsetWidth
+					el.style.transform="translate(1000px,450px)"
+					el.style.transition="all 1s ease" //all 全部过度效果 ease 缓慢 1s 时间一秒
+					//如果想让结束后的动画立即消失就得调用done方法
+					//done就是调用了afterEnter 让他在enter期间就隐藏
+					done()
+				},
+				afterEnter(el){
+					//动画完成之后 会调用afterenter
+					//console.log('ko')
+					this.flag=!this.flag
+				}
+			}
+		});
+	</script>
+</html>

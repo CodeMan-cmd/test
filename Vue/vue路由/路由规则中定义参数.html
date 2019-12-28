@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/vue-router.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!--给路由传参数 则不许需要修改path属性 		修改to参数就可以了-->
+			<router-link to='/login?userId=10&&userName=tong' tag='hr'>登录</router-link>
+			<router-link to='/register' tag='hr'>注册</router-link>
+			<router-view ></router-view>
+		</div>
+	</body>
+	<script>
+		var login={
+			//可以省略this在template
+			template:'<h1>登录---{{this.$route.query.userId}}+{{this.$route.query.userName}}</h1>',
+			data(){
+				return{
+					msg:'123'
+				}
+			},
+			created(){//在组件中vue基本的函数加载完成后可以获取到路由传递的userId userName
+				//console.log(this.$route)
+				console.log(this.$route.query.userId)
+			}
+		}
+		var register={
+			template:'<h1>注册</h1>'
+		}
+		
+		var router=new VueRouter({
+			routes:[
+				{path:'/login',component:login},
+				{path:'/register',component:register}
+			]
+		})
+		
+		var vm=new Vue({
+			el:'#app',
+			data:{},
+			methods:{},
+			//简化router:router
+			router
+		});
+	</script>
+</html>

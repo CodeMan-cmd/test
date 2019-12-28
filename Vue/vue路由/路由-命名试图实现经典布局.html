@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../lib/vue.js"></script>
+    <script type="text/javascript" src="../lib/vue-router.js"></script>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: orange;
+            height: 80px;
+        }
+        h1{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        .container {
+            /* 让container里面的排在一行 */
+            display: flex;
+            height: 400px;
+        }
+        
+        .left {
+            background-color: lightgreen;
+            flex: 2;
+        }
+        
+        .main {
+            background-color: lightpink;
+            flex: 8;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <router-view></router-view>
+        <div class="container">
+            <router-view name='left'></router-view>
+            <router-view name='main'></router-view>
+        </div>
+
+    </div>
+</body>
+<script>
+    var header = {
+        template: '<h1 class="header" >Header头部区域</h1>'
+    }
+    var leftBox = {
+        template: '<h1 class="left">left侧边栏区域</h1>'
+    }
+    var mainBox = {
+        template: '<h1 class="main">mainBox主体区域</h1>'
+    }
+
+    //创建路由对象
+    var router = new VueRouter({
+        routes: [{
+            //根目录下
+            path: '/',
+            //命名路由
+            components: {
+                //默认header
+                default: header,
+                //name=left
+                left: leftBox,
+                //name=main
+                main: mainBox
+            }
+        }]
+    })
+
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {},
+        router
+    });
+</script>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+		<!--自定义2组样式 来控制 transition内部的元素实现动画-->
+		<style>
+			/* v-enter是进入之前元素的其实状态     此时还没有开始进入     这是一个时间点 */
+			/* v-leave-to 是动画离开时之后          此时动画已经结束了     这是一个时间点 */
+			
+			.v-enter,
+			.v-leave-to {
+				/*这是动画透明度*/
+				opacity: 0;
+				/*从右往左移动*/
+				transform: translateX(150px);
+			}
+			/* v-enter-active    入场"动画"时间 */
+			/* v-leave-active    离场"动画"时间 */
+			
+			.v-enter-active,
+			.v-leave-active {
+				/* 这里ease       缓慢 all全部过度效果 */
+				transition: all 0.4s ease;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="button" value="toggle" @click="flag=!flag" />
+			<!--使用transition元素 给需要的控制的元素包裹起来-->
+			<!--transition元素是vue官方提供的-->
+			<transition>
+				<h3 v-if="flag">这是一个h3</h3>
+			</transition>
+			
+			<hr/>
+			
+			<input type="button" value="toggle" @click="flag2=!flag2" />
+			<!--使用transition元素 给需要的控制的元素包裹起来-->
+			<!--transition元素是vue官方提供的-->
+			<transition>
+				<h2 v-if="flag2">这是一个h2</h2>
+			</transition>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				flag2: false
+			},
+			methods: {}
+		});
+	</script>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="../../lib/vue.js"></script>
+	<body>
+		<!--父组件传递给子组件使用的是 事件传递机制v-on-->
+		<div id="app">
+			<com2  @func='show'></com2>
+		</div>
+		<template id="tmp1">
+			<div>
+				<h1>这是子组件</h1>
+				<input type="button" value="这是子组件中的按钮 - 点击他触发 父组件传递过来的func" @click="myclick" />
+			</div>
+		</template>
+	</body>
+	<script>
+		var com2={
+			template:'#tmp1',
+			data(){
+				return{
+					sonmsg:{name:'小偷儿子',age:5}
+				}
+			},
+			methods:{
+				myclick(){
+					console.log('ok')
+					//emit 愿意 调用 触发的意思
+					this.$emit('func',this.sonmsg.name,this.sonmsg.age)
+				}
+			}
+		}
+		
+		var vm=new Vue({
+			el:'#app',
+			data:{
+				msgf:null
+			},
+			methods:{
+				show(){
+					this.msgf=arguments[0]			
+					console.log('调用了父组件身上的show方法'+arguments[0]+arguments[1])
+				}
+			},
+			components:{
+				com2
+			}
+		});
+	</script>
+</html>

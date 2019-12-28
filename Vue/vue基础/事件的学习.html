@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			[v-cloak] {
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div id="app">
+			<!--v-cloak 能够决绝插值表达式的闪烁问题-->
+			<!--但是这种标签内插入的方法可以写别的东西-->
+			<p v-cloak>++++++{{massage}}+++++</p>
+			<!--但是v-text是没有闪烁问题的-->
+			<!--v-text会覆盖内容-->
+			<h4 v-text="massage"></h4>
+			
+			<!--可以渲染标签 并且清空内所有内容-->
+			<div v-html="massage2"></div>
+			
+			<!--v-bind:是vue中用于提供绑定的属性指令-->
+			<!--v-bind:中可以写合法的js表达式-->
+			<!--title属性是默认浮动显示的文字-->
+			<input type="button" value="按钮" v-bind:title="mytitle+'123'" />
+			
+			<!--点击弹框-->
+			<input type="button" value="按钮" :title="mytitle" v-on:click="show()" />
+			
+			<!--悬浮弹框-->
+			<input type="button" value="按钮" :title="mytitle" v-on:mouseover="show()" />
+			
+			<!--失去焦点弹框-->
+			<input type="button" value="按钮" :title="mytitle" v-on:mouseout="show()" />
+		</div>
+	</body>
+	<script type="text/javascript" src="../lib/vue.js"></script>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				massage: '123',
+				massage2:'<h1>我是个大大的</h1>',
+				mytitle:'这是自己定义的title'
+			},
+			methods:{//这个methods属性中定义了当前vue实例的所有可用方法
+				show:function(){
+					alert(1);
+				}
+			}
+		});
+	</script>
+
+</html>

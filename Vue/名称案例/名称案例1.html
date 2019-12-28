@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 监听文本框的数据改变 -->
+        <!-- @keyup键盘的事件可以监控文本框数据的改变 -->
+        <input type="text" v-model='firstname' @keyup='getfirstname'>+
+        <input type="text" v-model='lastname' @keyup='getfirstname'>=
+        <input type="text" v-model='fullname'>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstname: '',
+            lastname: '',
+            fullname: ''
+        },
+        methods: {
+            getfirstname() {
+                this.fullname = this.firstname +'童'+ this.lastname
+            }
+        }
+    });
+</script>
+
+</html>

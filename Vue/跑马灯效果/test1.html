@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/vue.js"></script>
+	</head>
+
+	<body>
+		<!--创建一个要控制的区域-->
+		<div id="app">
+			<input type="button" value="浪起来" @click="lang" />
+			<input type="button" value="低调" @click="stop" />
+			<h4>{{massage}}</h4>
+		</div>
+	</body>
+	<script>
+		/***
+		 * 注意vm实例 会监听自己身上 data 中所有数据的改变 只要数据一发生变化 就会自动把 最新的数据 
+		 * 从data上同步到页面中【好处程序员只需要关注数据，不需要考虑如何重新渲染dom页面】
+		 */
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				massage: '猥琐发育，我们能赢！！',
+				timer: null
+			},
+			methods: {
+				lang() {
+					if (this.timer!=null)return;
+					/*使用箭头函数 这样内部的this指向外部的this*/
+					/*箭头函数 箭头是可以给内部外部的this保持一致*/
+					this.timer = setInterval(() => {
+						//console.log(this.massage)
+						//获取到头的字符
+						var start = this.massage.substring(0, 1);
+						//获取到 后面的所有字符
+						var end = this.massage.substring(1);
+						//重新拼接得到新的字符串，并赋值给this.massage
+						this.massage = end + start;
+					}, 400)
+				},
+				stop() {
+					clearInterval(this.timer);
+					/*给这个变量变为空*/
+					this.timer=null;
+				}
+			}
+		});
+		
+	</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+		<!--注意：vue-resource依赖于vue：所以先后于顺序要注意-->
+		<!--this.$http.jsonp-->
+		<script type="text/javascript" src="../lib/vue-resource.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="button" value="get请求" @click="getInfo" />
+			<input type="button" value="post请求" @click="getInfo" />
+			<input type="button" value="jsonp请求" @click="getInfo" />
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {},
+			methods: {
+				getInfo() {//发起get请求
+					this.$http.get('http://vue.studyit.io/api/post').then(result => {
+						console.log(result.body)
+					})
+				},
+				getInfo2() { //发起post请求
+					//通过get请求发送之后，通过then来设置成功的回调函数
+					//手动发起的post没有表单格式，所以有的服务器是处理不了的
+					//通过post方法的第三个参数，设置提交的内容为一个普通表单格式
+					//这里通常都会报一个跨域错误 这是浏览器安全机制 
+					this.$http.post('http://vue.studyit.io/api/post', {/*数据*/}, {emulateJSON:true /*提交给服务器的内容格式*/}).then(result => {
+						/*回调函数*/
+						console.log(result.body)
+					})
+				},
+				getInfo3() { //发起jsonp请求
+					this.$http.jsonp('http://vue.studyit.io/api/post').then(result => {
+						console.log(result.body)
+					})
+				}
+			}
+		});
+	</script>
+
+</html>

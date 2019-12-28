@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+		<style type="text/css">
+			.inner {
+				height: 150px;
+				background-color: darkcyan;
+				margin: auto;
+			}
+			
+			.outer {
+				height: 200px;
+				background-color: darkblue;
+				
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--.stop停止冒泡-->
+		<!--<div id="app" class="inner" @click="div1Handler">
+			<input type="button" value="戳他" @click.stop="btnHandler" />
+		</div>-->
+
+		<!--阻止默认事件-->
+		<!--<a href="http://www.baidu.com" @click.prevent="linkClick">百度！</a>-->
+
+		<!--使用 .capture捕获机制 用stop 也会被捕获事件-->
+		<!--<div id="app" class="inner" @click.capture="div1Handler">
+			<input type="button" value="戳他" @click.stop="btnHandler" />
+		</div>-->
+
+		<!--.self是只能点他才会触发 冒泡和捕获都不能让他触发-->
+		<!--<div id="app" class="inner" @click.self="div1Handler">
+			<input type="button" value="戳他" @click.stop="btnHandler" />
+		</div>-->
+
+		<!--.once只触发一次事件处理函数-->
+		<!--<a href="https://baidu.com" @click.once.prevent="linkClick">百度！</a>-->
+		
+		<!--.self只会阻止自身上的冒泡行为触发，并不会真正阻止 冒泡的行为-->
+		<div class="outer" @click="div2Handler" id="app">
+			<div class="inner" @click.self="div1Handler">
+				<input type="button" value="戳他" @click="btnHandler" />
+			</div>
+		</div>
+	</body>
+	<script>
+		//创建实例 得到 view model
+		var vm = new Vue({
+			//指定控制元素
+			el: '#app',
+			//展示的数据
+			data: {},
+			//触发的方法 
+			methods: {
+				div2Handler() {
+					console.log('这是触发了 inner div 的点击事件')
+				},
+				div1Handler() {
+					console.log('触发单击事件')
+				},
+				btnHandler() {
+					console.log('这是触发了 按钮的 的点击事件')
+				}
+			}
+		});
+	</script>
+
+</html>

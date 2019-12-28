@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="../../lib/vue.js"></script>
+
+	<body>
+		<div id="app">
+			<com1 v-bind:parentmsg='msg'></com1>
+		</div>
+	</body>
+	<script>
+		/*
+		 * 定义组件的时候
+		 * 如果要定义全局组件
+		 * vue.component('组件的名称',{组件的模板对象})
+		 */
+
+		//通过对象啊创建 字面量的形式 定义了一个 组件模板对象
+		var login = {
+			template: '<h1>123321</h1>'
+		}
+
+		//全局组件
+		Vue.component('mylogin', login)
+
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				msg: ' 父组件',
+
+			},
+			methods: {},
+			//这里是私有组件
+			components: {
+				//结论：子组件中 默认无法访问到父组件中的data上的数据和methods中方法
+				com1: {
+					//注意：子组件中的 data数据 如：子组件通过Ajax 请求回来的数据 都可以放到data身上
+					data() {
+						return {
+							title: ' 子123',
+							content: ' 子qqq'
+						}
+					},
+					template: '<h1 @click='change'>本身123321{{parentmsg}}{{title}}{{content}}</h1>',
+					props: ['parentmsg'], //把父组件传递过来的parentmsg 属性。先在props数组中 定义一下  这样才能用这个数组
+				}
+			}
+		});
+	</script>
+
+</html>

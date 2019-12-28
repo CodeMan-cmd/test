@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--导入vue包-->
+		<script src="../lib/vue.js"></script>
+	</head>
+
+	<body>
+		<!--new的vue会控制 这个元素中的所有内容-->
+		<div id="app">{{massage}}</div>
+	</body>
+	
+	<script>
+		//创建一个vue的实例
+		//我们导入包之后，在浏览器的内存中，就多了一个vue 构造函数
+		var vm=new Vue({
+			//表示，当前我们new的这个vue实例，要控制页面上的哪个区域！
+			el:'#app',
+			//data属性存放 的 是el中要用到的数据
+			data:{
+				//通过vue提供的指令 很方便的就渲染到页面上
+				massage:'欢迎学习vue'
+			},
+			methods:{
+				
+			}
+		});
+	</script>
+
+</html>

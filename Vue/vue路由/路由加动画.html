@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../lib/vue.js"></script>
+		<script src="../lib/vue-router.js"></script>
+		<!--路由-->
+		<style>
+			.myactive {
+				color: darkcyan;
+			}
+			.v-enter,
+			.v-leave-to{
+				opacity: 0;
+				transform: translateX(140px);
+			}
+			.v-enter-active,
+			.v-leave-active{
+				transition: all 0.5s ease;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<!--tag='p' 指定变成p标签-->
+			<router-link to="/login" tag='p'>router提供的标签登录</router-link>
+			<router-link to="/registered" tag='p'>router提供的标签注册</router-link>
+			<transition mode='out-in'><!--动画 mode=out-in是先过渡完成在进行下有一个动画-->
+				<router-view></router-view><!--路由-->
+			</transition>
+		</div>
+	</body>
+	<script>
+		//组件模板对象
+		var login = {
+			template: '<h1>登录组件</h1>'
+		}
+		var registered = {
+			template: '<h1>注册组将</h1>'
+		}
+
+		//创建路由对象 路由的包里面就有一个路由的构造函数叫做VueRouter
+		//new路由对象的时候 可以为 构造函数 传递一个配置对象 		routes	表示：路由规则的意思
+		var routerObj = new VueRouter({
+			routes: [
+				//属性一 :path 表示监听 哪个路由链接地址
+				//属性二 :component 如果匹配到path则展示component属性对应的 组件模板对象
+				//默认路由组件对象	路径不会出现改变	{path:'/',component:login},
+				//redirect=重定向
+				{
+					path: '/',
+					redirect: '/login'
+				},
+				{
+					path: '/login',
+					component: login
+				},
+				{
+					path: '/registered',
+					component: registered
+				}
+			],
+			//激活之后默认的class属性就不行了 只能使用自己定义的
+			linkActiveClass: 'myactive'
+		})
+
+		var vm = new Vue({
+			el: '#app',
+			data: {},
+			methods: {},
+			router: routerObj //将路由对象 注册到vm实例上      用来监听URL地址变化
+		});
+	</script>
+
+</html>

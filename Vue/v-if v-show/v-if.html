@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<input type="button" @click="flag=!flag" value="toggle" />
+			<!--v-show和v-if实现方式都是一样但是 show是display隐藏了这行 if是删除了标签和创建操作-->
+			<h3 v-if="flag">这是使用if</h3>
+			<h3 v-show="flag">这是使用show</h3>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				flag: true
+			},
+			methods: {
+				/*方法控制flag*/
+				/*toggle(){
+					this.flag=!this.flag
+				}*/
+			}
+		});
+	</script>
+
+</html>

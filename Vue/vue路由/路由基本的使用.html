@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/vue.js"></script>
+    <!-- vue -->
+    <script src="../lib/vue-router.js"></script>
+    <!-- 路由 -->
+</head>
+
+<body>
+    <div id="app">
+        <router-link to="/login">登录</router-link>
+        <router-link to="/register">注册</router-link>
+        <!-- 容器 -->
+        <router-view></router-view>
+    </div>
+</body>
+<script>
+    //登录组件
+    var login = {
+            template: '<h1>这是登录子组件,这个组件时奔波霸开发的</h1>'
+        }
+        //注册组件
+    var register = {
+        template: '<h1>这是注册子组件,这个组件时霸波奔开发的</h1>'
+    }
+
+    //创建一个路由对象
+    const router = new VueRouter({
+        routes: [ //路由规则数组
+            {
+                path: '/',
+                redirect: '/login'
+            }, {
+                path: '/login',
+                component: login
+            }, {
+                path: '/register',
+                component: register
+            }
+        ],
+        linkActiveClass: 'myactive' //激活相关的类
+    })
+
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {},
+        router,
+        watch: { //监控data中的数据 发生改变就触发这个watch中对应的function函数(这里提供了两值)
+            '$route.path': function(newVal, oldVal) {
+                //newVal新值  oldval被修改的值
+                console.log(newVal + '----' + oldVal)
+                if (newVal === '/login') {
+                    alert('欢迎进入登录页面')
+                } else if (newVal === '/register') {
+                    alert('欢迎进入注册页面')
+                }
+            }
+        }
+    });
+</script>
+
+</html>

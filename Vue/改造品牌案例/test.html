@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+		<script type="text/javascript" src="../lib/vue-resource.js"></script>
+		<link rel="stylesheet" href="../lib/bootstrap-3.3.7/css/bootstrap.css" />
+	</head>
+
+	<body>
+		<div id="app">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">添加品牌</h3>
+				</div>
+				<div class="panel-body form-inline">
+					<label>
+						name:
+						<input type="text" v-model="name" class="form-control" />
+					</label>
+					<input type="button" value="添加" @click="add" class="btn btn-primary" />
+				</div>
+			</div>
+
+			<table class="table table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>name</th>
+						<th>ctime</th>
+						<th>operation</th>
+					</tr>
+					<tbody>
+						<tr v-for='item in list' :key='item.id'>
+							<td>{{item.id}}</td>
+							<td>{{item.name}}</td>
+							<td>{{item.ctime}}</td>
+							<td>
+								<a href="#" @click.prevent="del(item.id)">删除</a>
+							</td>
+						</tr>
+					</tbody>
+				</thead>
+			</table>
+
+		</div>
+	</body>
+	<script>
+		//配置的相对路径的写入点是不能加斜线的只能在Vue.http.options.root中添加拼接斜线
+		//如果我们通过全局配置了，请求的数据接口 艮域名，则，在每一次单独发起http请求的时候请求url路径 应该以相对路径开头
+		Vue.http.options.root='Access-Control-Allow-Origin:http://vue.studyit.io/'
+		//全局启用eumlateJSON
+		Vue.http.options.emulateJSON=true
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				name: '',
+				list: [{ //存放所有品牌的列表	
+						id: 1,
+						name: 'w1',
+						ctime: new Date()
+					},
+					{
+						id: 2,
+						name: 'zhongtai',
+						ctime: new Date()
+					}
+				]
+			},
+			created() { //初始话完成执行这个生命周期函数
+				this.getAllList()
+			},
+			methods: {
+				getAllList() { //获取所有车的品牌列表
+
+					//分析
+					//1由于已经导入Ajax这个包 所以可以直接通过 this.$http 来发起数据请求
+					//2根据接口api文档，知道，获取列表时候，应该发起一个get请求
+					//3this.$http.get('url').then(function(result){})
+					//4当通过then指定回调函数之后，在回调函数中，可以拿到数据服务返回的result
+					//5先判断result.status是否等于0，如果等于0就成功了，可以把result.message赋值给this.list:如果不等于0弹框提示失败
+					/*Access-Control-Allow-Origin跨域资源共享*/
+					this.$http.get('api/getprodlist').then(result => {
+						//通过$http获取到的数据都在result.body中放置
+						var result = result.body
+						if(result.status === 0) {
+							//成功    result.message           
+							this.list = result.message
+						} else {
+							//失败
+							alert('获取数据失败')
+						}
+					})
+				},
+				
+				add(){//添加品牌列表
+				//分析；
+				//1听过查看 数据api接口 发现 要发送一个post请求，this.$http.post
+				//2this.$http.post()中的三个参数
+				//要请求的url地址
+				//要提交服务器的数据要以对象的的形式提交给服务器{name：this。name}
+				//要以哪种表单数据类型提交过去{emulateJSON:true} ：以普通表单格式 将数据提交给服务器  
+				//appliction/x-www-form-urlencoded
+				//在post方法中 使用 .then来设置成功d的回调函数，如果要拿到成功的结果，需要result.body
+				//name=this.name
+				this.$http.post('api/addproduct',{name:this.name}/*,{emulateJSON:true}*/).then(result=>{
+					//直接将获取写到一块
+					if (result.body.status===0) {
+						//成功了
+						//成功了手动获取列表的方法 他就会刷新
+						//所以只需要手动调用getalllist方法 覆盖刷新品牌列表
+						this.getAllList()
+					} else{
+						//失败了
+						alert('添加失败')
+					}
+				})
+			},
+			
+				del(id){//删除品牌列表  //vue.studyit.io/ vue已经配置
+					this.$http.get('http:api/delproduct/'+id).then(result=>{
+						if (result.body.status===0) {
+							//删除成功
+							this.getAllList()
+						}else{
+							alert('删除失败')
+						}
+					})
+				}
+			}
+			
+		});
+	</script>
+
+</html>

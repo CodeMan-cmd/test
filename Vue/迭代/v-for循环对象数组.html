@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			<p :style="[styleObj2,styleObj]" v-for="(user,i) in list">{{i}}---id:{{user.id}}---name:{{user.name}}</p>
+		</div>
+	</body>
+	<script>
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				list:[
+					{id:1,name:'andmi1'},
+					{id:2,name:'andmi2'},
+					{id:3,name:'andmi3'}
+				],
+				styleObj: {
+					//颜色
+					color: 'red',
+					//粗细
+					'font-weight': 100,
+					//大小
+					'font-size': '20px'
+				},
+				styleObj2: {
+					//斜角
+					'font-style': 'italic',
+					//间隔
+					'letter-spacing':'0.5em'
+				}
+			},
+			methods: {
+			
+			}
+		});
+	</script>
+
+</html>

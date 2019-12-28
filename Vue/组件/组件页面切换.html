@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../lib/vue.js" ></script>
+		<style>
+			.v-enter,
+			.v-leave-to{
+				opacity: 0;
+				transform: translateX(150px);
+			}
+			.v-enter-active,
+			.v-leave-active{
+				transition: all 0.5s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<a href="#" @click.prevent="comName='login'">登录</a>
+			<a href="#" @click.prevent="comName='register'">注册</a>
+			<!--vue提供的来展示对应名称的组件-->
+			<!--component是一个占位符 ：is属性是指定要展示组件的名称-->
+			<!--mode='out-in'是结束后再进来 就不会出现页面崩塌的状况了-->
+			<transition mode='out-in'>
+			<component :is="comName"></component>
+			</transition>
+			
+			<!--
+				总结：当前学习了几个vue组件
+				component：指定组件      template：提取组件到文档流里调用            transition:单个动画过渡      transitionGroup：多个动画过渡
+			-->
+		</div>
+	</body>
+	<script>
+		//组件名称是一个字符串
+		Vue.component('login',{
+			template:'<h3>登录组件</h3>'
+		})
+		Vue.component('register',{
+			template:'<h3>注册页面</h3>'
+		})
+		var vm=new Vue({
+			el:'#app',
+			data:{
+				comName:'login'//当前component中的：is组件名称
+			},
+			methods:{}
+		});
+	</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../lib/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='firstname'>+
+        <input type="text" v-model='lastname'>=
+        <input type="text" v-model='fullname'>
+        
+        <!-- 这里是不会重新进入fullname内部运算的-->
+        <p>{{fullname}}</p>
+        <p>{{fullname}}</p>
+        <p>{{fullname}}</p>
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            firstname: '',
+            lastname: ''
+        },
+        methods: {},
+        computed: {
+            /* 在这里面可以定义一些属性
+               这些属性叫做"计算属性"
+               我们在使用这些计算属性的时候
+               把名称直接当作属性来使用不会当作方法去调用*/
+            
+            //计算属性在引用的时候不要加()直接拿着用就可以了
+            //只要计算属性方法体所用到的data属性就会重新返回计算【就是内部属性运用到了就会重新求值】
+            'fullname':function(){
+                return this.firstname+this.lastname
+            }
+        }
+    });
+</script>
+
+</html>
